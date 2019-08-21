@@ -1,5 +1,33 @@
 .sher-box-container{
+    margin-top: 300px;
     display: flex;
     margin: 0 auto;
     justify-content: center;
 }
+
+/* Float four columns side by side */
+.column {
+    float: left;
+
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {
+    margin-top: 100px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

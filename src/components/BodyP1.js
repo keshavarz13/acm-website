@@ -7,7 +7,7 @@ class BodyP1 extends React.Component {
             <div>
                 <div className= "container2">
                     
-                    <img src ={require("./../img/topImage.jpg")} />
+                    <img src ={require("./../img/topImage.JPG")} />
                     <div className = "dark-layer"></div>
                     
                   
