@@ -1,5 +1,5 @@
 import React from "react"
-import "./sher-style.css"
+import "./styles/sher-style.css"
 
 class SherBox extends React.Component { 
     render() { 

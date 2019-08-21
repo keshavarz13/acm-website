@@ -1,6 +1,6 @@
 import React from "react" 
 import SherBox from "./SherBox"
-import "./sher-box-container.css"
+import "./styles/sher-box-container.css"
 
 class SherBoxContainer extends React.Component {
     constructor() { 

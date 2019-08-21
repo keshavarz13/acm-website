@@ -1,5 +1,5 @@
 import React from "react"
-import "./body-style.css"
+import "./styles/body-style.css"
 
 class BodyP1 extends React.Component { 
     render(){
