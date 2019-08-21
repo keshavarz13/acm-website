@@ -16,6 +16,7 @@
 .about-container p { 
     /* font-weight: bold; */
     font-size: 20px ;
+    font-weight: bold;
     background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #0f6947 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
