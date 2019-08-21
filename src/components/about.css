@@ -1,0 +1,22 @@
+.about-container { 
+    margin-left: 15% ; 
+    margin-right: 15% ; 
+
+}
+
+.about-container h4 {
+    font-weight: bold ; 
+    font-size: 30px;
+    background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #32ce92 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+}
+
+.about-container p { 
+    /* font-weight: bold; */
+    font-size: 20px ;
+    background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #0f6947 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}

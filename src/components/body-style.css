@@ -11,12 +11,12 @@ body {
     box-sizing: border-box ; 
 }
 
-.container2 img{
+.blur-image{
 
     width: 100% ; 
     height: 800px;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 
 .timer { 
@@ -31,6 +31,11 @@ body {
     grid-template-columns: auto auto auto auto;
     padding: 10px;
     /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
+
+}
+.timer img {
+    width  : 600px ;
+    height: 200px; 
 
 }
 
@@ -72,4 +77,6 @@ body {
     text-align: center;
 
 }
+
+
 
