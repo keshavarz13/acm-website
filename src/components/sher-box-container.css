@@ -22,12 +22,14 @@
     display: table;
     clear: both;
   }
+
   
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
+  @media only screen and (max-width: 1050px) {
+    /* For desktop: */
+    .sher-box-containe {
       display: block;
-      margin-bottom: 20px;
+      margin-right: 40%;
+      margin-left: 40%;
+     
     }
   }

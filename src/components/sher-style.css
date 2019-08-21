@@ -1,4 +1,5 @@
 .sher-container { 
+
     min-width: 300px;
     min-height: 300px;
     width : 300px ; 
@@ -39,4 +40,16 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media only screen and (max-width: 1050px) {
+    /* For desktop: */
+    .sher-container {
+        margin-left: auto ; 
+        margin-right: auto;
+        align-items: center ;
+        justify-content: center;
+     
+    }
+    
+  }
 
