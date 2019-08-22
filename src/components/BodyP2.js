@@ -33,7 +33,7 @@ class BodyP2 extends React.Component {
                         
                         
 
-                    </div>
+                    </div> 
                 </div>
                 
                         
