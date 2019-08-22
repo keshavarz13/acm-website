@@ -1,7 +1,7 @@
 import React from "react" 
 import Header from "./components/Header"
 import BodyP1 from "./components/BodyP1"
-import SherBox from "./components/SherBox"
+import SherBoxContainer from "./components/SherBoxesContainer"
 
 class App extends React.Component { 
     render(){
@@ -9,11 +9,7 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <BodyP1/>
-                <div>
-                    <SherBox/>
-                    <SherBox/>
-                    <SherBox/>
-                </div>
+                <SherBoxContainer/>
                 
             </div>
           
