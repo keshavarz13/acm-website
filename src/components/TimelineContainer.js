@@ -20,26 +20,18 @@ class TimelineContainer extends React.Component{
                     <TimelineItem
                         key="002"
                         dateText="5th of November 2019"
-                        dateInnerStyle={{ background: '#61b8ff', color: '#000' }}
-                        bodyContainerStyle={{
-                        background: '#ddd',
-                        padding: '20px',
-                        borderRadius: '8px',
-                        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-                        }}
+                        style={{ color: '#61b8ff' }}
+                        dateInnerStyle={{ background: '#61b8ff' }}
                     >
-                        <h3 style={{ color: '#61b8ff' }}>Orientation Day (Iranian Teams Only)</h3>
+                        <h3>Orientation Day</h3>
                         <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
+                            All Iranian team members in on-site contest, are required to be present at the Orientation Day.                                
                         </p>
                     </TimelineItem>
                     <TimelineItem
                         key="003"
                         dateText="8th of November 2019"
+                        style={{ color: '#76bb7f' }}
                         dateInnerStyle={{ background: '#76bb7f' }}
                     >
                         <h3>On-Site Contest</h3>
