@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/acm-website/static/css/main.fb4ecab6.chunk.css",
+    "main.js": "/acm-website/static/js/main.2ad6b5a7.chunk.js",
+    "main.js.map": "/acm-website/static/js/main.2ad6b5a7.chunk.js.map",
+    "runtime~main.js": "/acm-website/static/js/runtime~main.bb3bbd2d.js",
+    "runtime~main.js.map": "/acm-website/static/js/runtime~main.bb3bbd2d.js.map",
+    "static/js/2.e703e8cc.chunk.js": "/acm-website/static/js/2.e703e8cc.chunk.js",
+    "static/js/2.e703e8cc.chunk.js.map": "/acm-website/static/js/2.e703e8cc.chunk.js.map",
+    "index.html": "/acm-website/index.html",
+    "precache-manifest.fae0d98639607744c979fc561a7d4cdb.js": "/acm-website/precache-manifest.fae0d98639607744c979fc561a7d4cdb.js",
+    "service-worker.js": "/acm-website/service-worker.js",
+    "static/css/main.fb4ecab6.chunk.css.map": "/acm-website/static/css/main.fb4ecab6.chunk.css.map",
+    "static/media/aut_icpc2.png": "/acm-website/static/media/aut_icpc2.57213dce.png",
+    "static/media/banner.png": "/acm-website/static/media/banner.c032202b.png",
+    "static/media/banner2.png": "/acm-website/static/media/banner2.fcd6b891.png",
+    "static/media/middleImage.JPG": "/acm-website/static/media/middleImage.c55936e0.JPG",
+    "static/media/topImage.JPG": "/acm-website/static/media/topImage.5c5b9f1a.JPG"
+  }
+}
