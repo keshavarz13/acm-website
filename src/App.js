@@ -10,7 +10,7 @@ class App extends React.Component {
     render(){
         return(
             <div>
-                {/* <Header/> */}
+                <Header/>
                 <BodyP1/>
                 <SherBoxContainer/>
                 <BodyP2/>
