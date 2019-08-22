@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import BodyP1 from "./components/BodyP1"
 import BodyP2 from "./components/BodyP2"
 import About from "./components/About"
+import Map from "./components/Map"
 
 import SherBoxContainer from "./components/SherBoxesContainer"
 
@@ -15,6 +16,7 @@ class App extends React.Component {
                 <SherBoxContainer/>
                 <BodyP2/>
                 <About/>
+                <Map/>
 
                 
             </div>
