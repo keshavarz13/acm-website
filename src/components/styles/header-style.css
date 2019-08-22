@@ -99,12 +99,10 @@
         display: none;        
       
     }
-    /* .nav-link-container { 
-        position: absolute;
-        top: 50% ; 
-        left: 50% ; 
-        width :90% ; 
-        transform: translate(-50%, -70%);
+    .nav-link-container { 
+        position: inline;
+        margin-left:-20px;
+      
         
-    } */
+    }
 }
