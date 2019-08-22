@@ -9,8 +9,8 @@ class Header extends React.Component {
                 <a href="#">Home</a>
                 <a href="#" >Post Result</a>
                 <a href="#">About</a>
-                <img src= {require("./../img/aut_icpc2.png")} height="55" width = "100"/>
-                <p>AUT-ICPC</p>
+                <img src= {require("./../img/aut_icpc2.png")} height="55" width = "170"/>
+           
             </div>
             
          

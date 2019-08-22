@@ -1,0 +1,36 @@
+.sher-container { 
+    width : 300px ; 
+    height: 300px ; 
+    position: relative;
+    border: 1px solid white ; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.sher-container img{
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 1px solid white ; 
+}
+
+.sher-container h1 { 
+    text-align: center ;
+    margin-top: 60% ; 
+    background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #32ce92 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.sher-container p { 
+    position: absolute;
+    text-align: center ;
+    margin-top: -10px ; 
+    font-size: 15px;
+    background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #3f0e99 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
