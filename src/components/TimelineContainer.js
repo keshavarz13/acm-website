@@ -8,36 +8,18 @@ class TimelineContainer extends React.Component{
                 <Timeline lineColor={'#ddd'}>
                     <TimelineItem
                         key="001"
-                        dateText="11/2010 – Present"
+                        dateText="17th to 28th of October 2019"
                         style={{ color: '#e86971' }}
                     >
-                        <h3>Title, Company</h3>
-                        <h4>Subtitle</h4>
+                        <h3>Registration Dates</h3>
                         <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
+                            Registration period of On-Site contest for Iranian teams is from 17th to 28th of October 2019.<br></br>
+                            Others can register until 4th of November 2019.
                         </p>
                     </TimelineItem>
                     <TimelineItem
                         key="002"
-                        dateText="04/2009 – 11/2010"
+                        dateText="5th of November 2019"
                         dateInnerStyle={{ background: '#61b8ff', color: '#000' }}
                         bodyContainerStyle={{
                         background: '#ddd',
@@ -46,15 +28,7 @@ class TimelineContainer extends React.Component{
                         boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                         }}
                     >
-                        <h3 style={{ color: '#61b8ff' }}>Title, Company</h3>
-                        <h4 style={{ color: '#61b8ff' }}>Subtitle</h4>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
+                        <h3 style={{ color: '#61b8ff' }}>Orientation Day (Iranian Teams Only)</h3>
                         <p>
                         Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
                         exercitation. Veniam velit adipisicing anim excepteur nostrud magna
@@ -65,64 +39,13 @@ class TimelineContainer extends React.Component{
                     </TimelineItem>
                     <TimelineItem
                         key="003"
-                        dateComponent={(
-                        <div
-                            style={{
-                            display: 'block',
-                            float: 'left',
-                            padding: '10px',
-                            background: 'rgb(150, 150, 150)',
-                            color: '#fff',
-                            }}
-                        >
-                            11/2008 – 04/2009
-                        </div>
-                        )}
-                    >
-                        <h3>Title, Company</h3>
-                        <h4>Subtitle</h4>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                    </TimelineItem>
-                    <TimelineItem
-                        key="004"
-                        dateText="08/2008 – 11/2008"
+                        dateText="8th of November 2019"
                         dateInnerStyle={{ background: '#76bb7f' }}
                     >
-                        <h3>Title, Company</h3>
-                        <h4>Subtitle</h4>
+                        <h3>On-Site Contest</h3>
                         <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
-                        </p>
-                        <p>
-                        Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                        est.
+                            10:00:00 (UTC)<br></br>
+                            13:30:00 (GMT +3:30 - Iran Standard Time)
                         </p>
                     </TimelineItem>
                     </Timeline>
