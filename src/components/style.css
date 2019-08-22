@@ -14,6 +14,9 @@
     max-height: 80px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-left : 30px; 
+    padding-right: 30px ; 
+    z-index: 1;
 }
 
 .container a {
@@ -24,12 +27,26 @@
     text-decoration: none;
     margin-top: 25px;
     font-family: myFirstFont;
+    z-index: 2;
     
     
 }
 
 
 .container img {
+    float: left;
     margin-left: 60px; 
     margin-top: 6px;
+    z-index: 2;
+}
+
+.container p { 
+    float: left;
+    font-weight: bold; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+    font-size: 20px ; 
+    margin-top: 25px ;
+    margin-left: 10px ; 
+
 }
