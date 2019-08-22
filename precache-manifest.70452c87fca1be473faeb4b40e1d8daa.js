@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c68abe49f67fcb0d8a547d1b58d6b621",
+    "revision": "16a610c297d68f9ebfb393eaf1b7f126",
     "url": "/acm-website/index.html"
   },
   {
-    "revision": "2a9ab88883af4cc7a017",
-    "url": "/acm-website/static/css/main.b079681a.chunk.css"
+    "revision": "6b23cfed8f5d31e016e3",
+    "url": "/acm-website/static/css/main.82606ce4.chunk.css"
   },
   {
     "revision": "d2d82d68c7df91bb776f",
     "url": "/acm-website/static/js/2.e703e8cc.chunk.js"
   },
   {
-    "revision": "2a9ab88883af4cc7a017",
-    "url": "/acm-website/static/js/main.18b08fe8.chunk.js"
+    "revision": "6b23cfed8f5d31e016e3",
+    "url": "/acm-website/static/js/main.a0d594a9.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
     "url": "/acm-website/static/js/runtime~main.bb3bbd2d.js"
+  },
+  {
+    "revision": "8863582d824d649d0d462cfb94a3b4f4",
+    "url": "/acm-website/static/media/Bahij_Palatino_Sans_Arabic-Regular.8863582d.ttf"
   },
   {
     "revision": "57213dceed6a6294e5655091e1d0ad9f",
