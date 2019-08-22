@@ -26,9 +26,9 @@ class SherBoxContainer extends React.Component {
         <div>
             <div className = "sher-box-container">
                 <div className="row">
-                    <div className = "column"><SherBox text= "	 “boys will be boys,” women face higher conduct women face higher conduct." title ="lorem ipsum" url ="https://image.flaticon.com/icons/svg/419/419952.svg" /></div>
-                    <div className = "column"><SherBox text= "	 “boys will be boys,” women face higher conduct women face higher conduct." title ="lorem ipsum" url ="https://image.flaticon.com/icons/svg/1373/1373259.svg" /></div>
-                    <div className = "column"><SherBox text= "	 “boys will be boys,” women face higher conduct women face higher conduct." title ="lorem ipsum" url ="https://image.flaticon.com/icons/svg/755/755262.svg" /></div>
+                    <div className = "column"><SherBox text= "First sher o ver" title ="lorem ipsum" url={require("./../img/trophy.png")} /></div>
+                    <div className = "column"><SherBox text= "Second sher o ver" title ="lorem ipsum" url={require("./../img/group.png")} /></div>
+                    <div className = "column"><SherBox text= "Third sher o ver" title ="lorem ipsum" url={require("./../img/gym.png")} /></div>
                 </div>
            
             </div>
