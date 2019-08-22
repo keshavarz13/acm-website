@@ -1,0 +1,56 @@
+.footer-container {
+    background-color: #20232a ;
+    position: relative;
+    height: 400px;
+   
+}
+.map-container {
+    position: absolute;
+    top: 10% ; 
+    right : 5% ; 
+    width : 40% ; 
+    height: 300px;
+
+    float: right;
+    background-color: aquamarine;
+    
+}
+
+.footer-container img{
+    margin-right: 3%;
+    margin-left: 5%;
+    position: absolute;
+    top: 50% ; 
+    transform: translate(0 , -50%);
+    height: 100px;
+}
+
+.footer-container p { 
+   
+    align-items: center;
+    max-width: 300px;
+    color: white;
+    
+}
+
+.social { 
+    
+        display: grid ; 
+        height: 20px;
+        margin-left: auto; 
+        margin-right: auto;
+        grid-template-columns: auto auto auto ;
+        padding: 10px;
+        /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
+
+}
+.social-item{
+    width :20px;
+    height: 20px;
+}
+
+
+
+
+
+
