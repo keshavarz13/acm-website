@@ -7,7 +7,11 @@ class BodyP2 extends React.Component {
             <div>
                 <div className= "container2">
                     
+<<<<<<< HEAD
                     <img className= "blur-image" src ={require("./../img/second-part.jpg")}  height = "800" width="100%"/>
+=======
+                    <img className= "blur-image" src ={require("./../img/bottomImage.JPG")}  height = "800" width="100%"/>
+>>>>>>> 3aaec0619f88ddacafb9256f6f46d41dde837de7
                     <div className = "dark-layer"></div>
                 
 
