@@ -1,5 +1,6 @@
 .footer-container {
-    background-color: #20232a ;
+    background-color: #191b1f ;
+  
     position: relative;
     height: 400px;
    
@@ -49,8 +50,76 @@
     height: 20px;
 }
 
+@media only screen and (max-width: 400px) {
+    
+    .footer-container{
+        height:600px;
+        display: block;
+    }
+    .footer-container img{
+       
+        width:300 ; 
+        height: 100px; 
+        position: absolute ;
+        left : 45%; 
+        top: 70% ;
+        transform: translate(-50% , 0);
+        height: 100px;
+    }
+    .map-container {
+        position: absolute;
+        transform: translate(-50% , 0);
+        left:50%;
+        width : 100% ; 
+        height: 300px;
+    
+        float: right;
+        background-color: aquamarine;
+        
+    }
+}
 
 
+@media only screen and (max-width: 900px) {
+    
+    .footer-container{
+        height:600px;
+        display: block;
+    }
+    .footer-container img{
+       
+        width:300 ; 
+        height: 100px; 
+        position: absolute ;
+        left : 45%; 
+        top: 70% ;
+        transform: translate(-50% , 0);
+        height: 100px;
+    }
+    .map-container {
+        position: absolute;
+        transform: translate(-50% , 0);
+        left:50%;
+        width : 300px ; 
+        height: 300px;
+    
+        float: right;
+        background-color: aquamarine;
+        
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .footer-container img {
+
+        margin-left: 20%;
+        position: absolute;
+        top: 50% ; 
+        transform: translate(0 , -50%);
+        height: 100px;
+    }
 
 
+}
 
