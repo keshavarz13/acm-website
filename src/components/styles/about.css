@@ -26,3 +26,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
+
+@media only screen and (max-width: 350px) {
+
+    .about-container { 
+        margin-left: 5px;
+        margin-right: 5px; 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+     
+    
+    }
+}

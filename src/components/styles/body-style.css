@@ -35,6 +35,19 @@ body {
 
 }
 
+.banner-container { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid ; 
+    width : 600px;
+    margin-left: auto; 
+    margin-right: auto;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
 
 .banner1 {
     
@@ -50,6 +63,28 @@ body {
     margin-bottom: 3px;
     color: wheat ; 
     text-align: center;
+}
+.timer2 p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+     margin-top: -10px;
+     margin-bottom: 3px;
+     color: wheat ; 
+     text-align: center;
+ }
+ .timer2 { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid ; 
+    width : 600px;
+    margin-left: auto; 
+    margin-right: auto;
+    grid-template-columns: auto  ;
+    padding: 10px;
+    /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
+
 }
 
 .banner2 { 
@@ -93,12 +128,20 @@ body {
 
 
 @media only screen and (max-width: 620px) {
+    .timer{
+        display: none;
+    }
     .banner1{ 
        display: none;
     }
 
     .banner2 { 
         display: block;
+    }
+    .timer-text{
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
   
 }
@@ -107,6 +150,18 @@ body {
 
     .banner2 { 
         display: none;
+    }
+
+    .timer2{
+        display: none;
+    }
+  
+}
+
+@media only screen and (max-width: 830px) {
+
+    .timer-text{
+        font-size: 20px;
     }
   
 }

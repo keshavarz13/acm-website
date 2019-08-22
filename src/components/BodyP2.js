@@ -23,6 +23,17 @@ class BodyP2 extends React.Component {
                         <p>Seconds</p>
 
                     </div>
+                    <div className ="timer2">
+                        <p className  ="timer-number">10</p><p>Days</p>
+                        <p className  ="timer-number">10</p><p>Hours</p>
+                        <p className  ="timer-number">10</p><p>Minutes</p>
+                        <p className  ="timer-number">10</p><p>Seconds</p>
+                        
+                        
+                        
+                        
+
+                    </div>
                 </div>
                 
                         
