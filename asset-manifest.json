@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/acm-website/static/css/main.c4dcf3d0.chunk.css",
+    "main.css": "/acm-website/static/css/main.58fb9f98.chunk.css",
     "main.js": "/acm-website/static/js/main.174e5437.chunk.js",
     "main.js.map": "/acm-website/static/js/main.174e5437.chunk.js.map",
     "runtime~main.js": "/acm-website/static/js/runtime~main.bb3bbd2d.js",
@@ -8,9 +8,9 @@
     "static/js/2.17ef3d3a.chunk.js": "/acm-website/static/js/2.17ef3d3a.chunk.js",
     "static/js/2.17ef3d3a.chunk.js.map": "/acm-website/static/js/2.17ef3d3a.chunk.js.map",
     "index.html": "/acm-website/index.html",
-    "precache-manifest.9583fa6627b2b468a1aa0ded012ff7e7.js": "/acm-website/precache-manifest.9583fa6627b2b468a1aa0ded012ff7e7.js",
+    "precache-manifest.363723d16035cb7f81aafe60bff48856.js": "/acm-website/precache-manifest.363723d16035cb7f81aafe60bff48856.js",
     "service-worker.js": "/acm-website/service-worker.js",
-    "static/css/main.c4dcf3d0.chunk.css.map": "/acm-website/static/css/main.c4dcf3d0.chunk.css.map",
+    "static/css/main.58fb9f98.chunk.css.map": "/acm-website/static/css/main.58fb9f98.chunk.css.map",
     "static/media/body-style.css": "/acm-website/static/media/Bahij_Palatino_Sans_Arabic-Regular.8863582d.ttf",
     "static/media/aut_icpc2.png": "/acm-website/static/media/aut_icpc2.57213dce.png",
     "static/media/banner.png": "/acm-website/static/media/banner.de732a07.png",
