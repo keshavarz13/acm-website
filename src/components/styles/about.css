@@ -27,7 +27,7 @@
     -webkit-text-fill-color: transparent; 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
 
     .about-container { 
         margin-left: 5px;
