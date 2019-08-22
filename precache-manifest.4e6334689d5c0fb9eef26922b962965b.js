@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4562465cdadaf9db94cfa341bfce967a",
+    "revision": "c68abe49f67fcb0d8a547d1b58d6b621",
     "url": "/acm-website/index.html"
   },
   {
-    "revision": "5f1f779cfa117bee010b",
-    "url": "/acm-website/static/css/main.a0f6ab18.chunk.css"
+    "revision": "2a9ab88883af4cc7a017",
+    "url": "/acm-website/static/css/main.b079681a.chunk.css"
   },
   {
     "revision": "d2d82d68c7df91bb776f",
     "url": "/acm-website/static/js/2.e703e8cc.chunk.js"
   },
   {
-    "revision": "5f1f779cfa117bee010b",
-    "url": "/acm-website/static/js/main.37155c30.chunk.js"
+    "revision": "2a9ab88883af4cc7a017",
+    "url": "/acm-website/static/js/main.18b08fe8.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/aut_icpc2.57213dce.png"
   },
   {
-    "revision": "c032202bfc91484d6c4389900ca23a17",
-    "url": "/acm-website/static/media/banner.c032202b.png"
+    "revision": "de732a074e7bdd9ccccaa84640d77774",
+    "url": "/acm-website/static/media/banner.de732a07.png"
   },
   {
-    "revision": "fcd6b891ad64c1ef143587000ce6adb7",
-    "url": "/acm-website/static/media/banner2.fcd6b891.png"
+    "revision": "d33701315c1d6d14223d8ff98a4e8b9c",
+    "url": "/acm-website/static/media/banner2.d3370131.png"
   },
   {
     "revision": "c55936e0a3b92999d096ae29fa3dbd39",
