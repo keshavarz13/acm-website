@@ -9,7 +9,8 @@ class TimelineContainer extends React.Component{
                     <TimelineItem
                         key="001"
                         dateText="17th to 28th of October 2019"
-                        style={{ color: '#e86971' }}
+                        style={{ color: '#4b82c3' }}
+                        dateInnerStyle={{ background: '#4b82c3' }}
                     >
                         <h3>Registration Dates</h3>
                         <p>
@@ -22,8 +23,8 @@ class TimelineContainer extends React.Component{
                     <TimelineItem
                         key="002"
                         dateText="5th of November 2019"
-                        style={{ color: '#61b8ff' }}
-                        dateInnerStyle={{ background: '#61b8ff' }}
+                        style={{ color: '#ffd51e' }}
+                        dateInnerStyle={{ background: '#ffd51e' }}
                     >
                         <h3>Orientation Day</h3>
                         <p>
@@ -33,8 +34,8 @@ class TimelineContainer extends React.Component{
                     <TimelineItem
                         key="003"
                         dateText="8th of November 2019"
-                        style={{ color: '#76bb7f' }}
-                        dateInnerStyle={{ background: '#76bb7f' }}
+                        style={{ color: '#b12b1a' }}
+                        dateInnerStyle={{ background: '#b12b1a' }}
                     >
                         <h3>On-Site Contest</h3>
                         <p>
