@@ -6,7 +6,7 @@
     top : 0 ; 
     left: 0;
     right: 0;
-    width: 100%;
+    width: 90%;
     height: 70px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
@@ -99,12 +99,10 @@
         display: none;        
       
     }
-    /* .nav-link-container { 
-        position: absolute;
-        top: 50% ; 
-        left: 50% ; 
-        width :90% ; 
-        transform: translate(-50%, -70%);
+    .nav-link-container { 
+        position: inline;
+        margin-left:-20px;
+      
         
-    } */
+    }
 }
