@@ -1,3 +1,6 @@
+# AUT-ICPC site
+Source code of the official website of Amirkabir University of Technology(AUT) International Collegiate Programming Contest(ICPC).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
