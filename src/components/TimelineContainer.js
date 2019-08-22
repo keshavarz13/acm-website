@@ -13,7 +13,9 @@ class TimelineContainer extends React.Component{
                     >
                         <h3>Registration Dates</h3>
                         <p>
-                            Registration period of On-Site contest for Iranian teams is from 17th to 28th of October 2019.<br></br>
+                            
+                            The contest will be held both online and on-site.<br></br>
+                            <strong>Registration period of On-Site contest for Iranian teams is from 17th to 28th of October 2019</strong>.<br></br>
                             Others can register until 4th of November 2019.
                         </p>
                     </TimelineItem>
@@ -36,8 +38,9 @@ class TimelineContainer extends React.Component{
                     >
                         <h3>On-Site Contest</h3>
                         <p>
-                            10:00:00 (UTC)<br></br>
-                            13:30:00 (GMT +3:30 - Iran Standard Time)
+                            07:00:00 (UTC)<br></br>
+                            10:30:00 (GMT +3:30 - Tehran, Iran Standard Time)<br></br><br></br>
+                            The online contest will be held at least two hours after the on-site contest.
                         </p>
                     </TimelineItem>
                     </Timeline>
