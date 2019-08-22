@@ -65,6 +65,21 @@ body {
       color: wheat ; 
       text-align: center;
   }
+  .timer { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid ; 
+    max-width : 600px;
+    width : 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    grid-template-columns: auto  auto auto auto;
+    padding: 10px;
+    /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
+
+}
   .timer2 { 
      position: absolute;
      top: 50%;
