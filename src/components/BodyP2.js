@@ -2,7 +2,20 @@ import React from "react"
 import "./styles/body-style.css"
 
 class BodyP2 extends React.Component { 
+    constructor() { 
+        super() 
+        this.state = { 
+            d : 0 ,
+            h : 0 , 
+            m : 0 ,
+            s : 0 ,
+        }
+    }
+
     render(){
+
+ 
+
         return (
             <div>
                 <div className= "container2">
