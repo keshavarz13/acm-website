@@ -1,5 +1,7 @@
 import React from "react"
 import "./styles/body-style.css"
+import "./styles/countdown-style.css"
+import "./countdown"
 
 class BodyP2 extends React.Component { 
     constructor() { 
@@ -25,6 +27,7 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
+                    <div id="flipdown" class="flipdown"></div>
                     <div className ="timer">
                         <p className="timer-number">10</p>
                         <p className="timer-number">10</p>
