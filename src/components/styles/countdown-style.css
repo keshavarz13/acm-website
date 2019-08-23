@@ -1,15 +1,5 @@
 .flipdown.flipdown__theme-dark {
-    font-family: sans-serif;
     font-weight: bold;
-  }
-  /* Rotor group headings */
-  .flipdown.flipdown__theme-dark .rotor-group-heading:before {
-    color: #000000;
-  }
-  /* Delimeters */
-  .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before,
-  .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
-    background-color: #151515;
   }
   /* Rotor tops */
   .flipdown.flipdown__theme-dark .rotor,
@@ -28,7 +18,6 @@
   .flipdown.flipdown__theme-dark .rotor:after {
     border-top: solid 1px #151515;
   }
-  
   
   .flipdown {
     overflow: visible;
@@ -51,6 +40,7 @@
     height: 30px;
     line-height: 30px;
     text-align: center;
+    color: rgb(189, 184, 184);
   }
   
   .flipdown .rotor-group:nth-child(1) .rotor-group-heading:before {

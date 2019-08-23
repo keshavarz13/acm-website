@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-  var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
+  var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 80) + 1;
   var flipdown = new FlipDown(twoDaysFromNow).start()
 });
 

@@ -50,7 +50,6 @@ body {
 .timer p {
     margin-top: -10px;
     margin-bottom: 3px;
-    color: wheat ; 
     text-align: center;
 }
 
@@ -93,7 +92,7 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(189, 184, 184) ; 
+    color: rgb(189, 184, 184); 
     font-size: 55px;
     text-align: center;
 }
@@ -107,9 +106,6 @@ body {
 }
 
 @media only screen and (max-width: 620px) {
-    .timer {
-        display: none;
-    }
     .banner1 { 
         display: none;
     }
@@ -127,13 +123,10 @@ body {
     .banner2 { 
         display: none;
     }
-    .timer2 {
-        display: none;
-    }  
 }
  
 @media only screen and (max-width: 830px) { 
     .timer-text {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
