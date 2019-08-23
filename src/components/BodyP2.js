@@ -27,23 +27,10 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
-                    <div id="flipdown" class="flipdown"></div>
-                    <div className ="timer">
-                        <p className="timer-number">10</p>
-                        <p className="timer-number">10</p>
-                        <p className="timer-number">10</p>
-                        <p className="timer-number">10</p>
-                        <p>Days</p>
-                        <p>Hours</p>
-                        <p>Minutes</p>
-                        <p>Seconds</p>
+                    <div className ="timer">  
+                        <div id="flipdown" class="flipdown"></div>                      
                     </div>
-                    <div className="timer2">
-                        <p className="timer-number">10</p><p>Days</p>
-                        <p className="timer-number">10</p><p>Hours</p>
-                        <p className="timer-number">10</p><p>Minutes</p>
-                        <p className="timer-number">10</p><p>Seconds</p>
-                    </div> 
+
                 </div>
             </div>
         )

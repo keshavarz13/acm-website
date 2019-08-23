@@ -48,15 +48,6 @@ body {
 }
 
 .timer p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: -10px;
-    margin-bottom: 3px;
-    color: wheat ; 
-    text-align: center;
-}
-
-.timer2 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: -10px;
     margin-bottom: 3px;
     color: wheat ; 
@@ -78,21 +69,6 @@ body {
     /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
 }
 
-.timer2 { 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid ; 
-    max-width : 600px;
-    width: 80%;
-    margin-left: auto; 
-    margin-right: auto;
-    grid-template-columns: auto  ;
-    padding: 10px;
-    /* background-image: linear-gradient(to bottom right, rgb(113, 223, 217), rgb(148, 6, 94)); */
-}
- 
 .banner2 { 
     display: block;
     position: absolute;
@@ -100,11 +76,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.timer-number {
-    font-weight: bold;
-    font-size: 60px;
 }
  
 .dark-layer { 
@@ -119,12 +90,11 @@ body {
  
 .timer-text { 
     position: absolute;
-    top: 36%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(189, 184, 184) ; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-    font-size: 35px;
+    font-size: 55px;
     text-align: center;
 }
 
