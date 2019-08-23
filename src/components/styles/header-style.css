@@ -36,10 +36,18 @@
 
 }
 
+.nav-link-container :hover{
+    color: palevioletred;
+}
+
 
 .nav-link-container { 
     margin-right: 20%;
     z-index: 15;
+}
+
+.dropdown-content :hover{
+    color: palevioletred;
 }
 
 
@@ -85,6 +93,9 @@
     float: none;
     color: white;
     padding: 12px 16px;
+    margin-top: -5px;
+    margin-left: 0px;
+    margin-right: 0px;
     text-decoration: none;
     display: block;
     text-align: left;
