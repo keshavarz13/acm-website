@@ -10,7 +10,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     padding-left : 70px; 
     padding-right: 170px ; 
-    z-index:70;
+    z-index: 100;
 }
 
 .dobble-container{
