@@ -5,8 +5,8 @@ import BodyP2 from "./components/BodyP2"
 import About from "./components/About"
 import Footer from "./components/Footer"
 import TimelineContainer from "./components/TimelineContainer"
-
 import SherBoxContainer from "./components/SherBoxesContainer"
+import Register from "./components/Register/Register"
 
 class App extends React.Component { 
     render(){
@@ -18,9 +18,8 @@ class App extends React.Component {
                 <BodyP2/>
                 <About/>
                 <TimelineContainer/>
+                {/* <Register /> */}
                 <Footer/>
-
-                
             </div>
           
         )
