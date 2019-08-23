@@ -6,6 +6,7 @@ import About from "./components/About"
 import Footer from "./components/Footer"
 import TimelineContainer from "./components/TimelineContainer"
 import SherBoxContainer from "./components/SherBoxesContainer"
+import TimeLineContainerView from "./containers/TimeLineContainerView"
 import Register from "./components/Register/Register"
 
 class App extends React.Component { 
@@ -17,7 +18,8 @@ class App extends React.Component {
                 <SherBoxContainer/>
                 <BodyP2/>
                 <About/>
-                <TimelineContainer/>
+                <TimeLineContainerView/>
+                {/* <TimelineContainer name={"mamad"}/> */}
                 {/* <Register /> */}
                 <Footer/>
             </div>

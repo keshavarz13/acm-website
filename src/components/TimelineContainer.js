@@ -1,18 +1,39 @@
 import React from "react"
+import axios from "axios"
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react'
 import background from "./../img/patern.jpg"
 
 class TimelineContainer extends React.Component{
+    
+
     render() {
+        
         return (
             <div style = {{
                 backgroundImage : "url("+background+")",
                 backgroundColor : "rgba(0,0,0,.7)"
             }}>
                 <Timeline lineColor={'#ddd'}>
-                    <TimelineItem
+                    {
+                        this.props.data.map((item,index) => (
+                            <TimelineItem
+                            key = {index.toString()}
+                            dateText = {item.dateText}
+                            style = {item.style}
+                            dateInnerStyle= {item.dateInnerStyle}
+                            >
+                            <h3 style ={{color : "#ffffff"}}>{item.title}</h3>
+                            <p style ={{color : "#ffffff"}}>
+                                {item.innerHTML}
+                            </p>
+                            </TimelineItem>
+                        ))
+                    }
+                    {/* {this.props.data} */}
+                    {/* <TimelineItem
                         key="001"
                         dateText="17th to 28th of October 2019"
+                        // dateText={this.props.name}
                         style={{ color: '#4b82c3' }}
                         dateInnerStyle={{ background: '#4b82c3' }}
                     >
@@ -46,7 +67,7 @@ class TimelineContainer extends React.Component{
                             <strong style ={{color : "#ffffff"}}>10:30:00 (GMT +3:30 - Tehran, Iran Standard Time)</strong><br></br>
                             The online contest will be held at least two hours after the on-site contest.
                         </p>
-                    </TimelineItem>
+                    </TimelineItem> */}
                 </Timeline>
             </div>
         )
