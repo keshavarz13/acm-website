@@ -2,9 +2,12 @@ import React from "react"
 import axios from "axios"
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react'
 import background from "./../img/patern.jpg"
+var HtmlToReactParser = require('html-to-react').Parser;
+var parser = new HtmlToReactParser()
 
 class TimelineContainer extends React.Component{
     
+    // parser = new Parser()
 
     render() {
         
@@ -19,16 +22,18 @@ class TimelineContainer extends React.Component{
                             <TimelineItem
                             key = {index.toString()}
                             dateText = {item.dateText}
-                            style = {item.style}
-                            dateInnerStyle= {item.dateInnerStyle}
+                            style = {JSON.parse(item.style)}
+                            dateInnerStyle= {JSON.parse(item.dateInnerStyle)}
                             >
                             <h3 style ={{color : "#ffffff"}}>{item.title}</h3>
                             <p style ={{color : "#ffffff"}}>
-                                {item.innerHTML}
+                                {parser.parse(item.innerHTML)}
                             </p>
                             </TimelineItem>
                         ))
                     }
+
+
                     {/* {this.props.data} */}
                     {/* <TimelineItem
                         key="001"

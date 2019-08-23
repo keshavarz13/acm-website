@@ -14,6 +14,7 @@ class TimeLineContainerView extends React.Component {
             this.setState({
                 timeLineItems: res.data
             });
+            console.log(res.data)
         });
     };
 
