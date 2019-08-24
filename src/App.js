@@ -16,14 +16,13 @@ class App extends React.Component {
             p : 0 
         }
         
-        this.changePage =this.changePage.bind(this)
+        this.changePage = this.changePage.bind(this)
     }
 
-    changePage(number){
+    changePage(number) {
         this.setState({p:number})
         alert(this.state.p)
     }
-
 
     render(){
         return(
@@ -37,9 +36,7 @@ class App extends React.Component {
                 <BodyP4/>
                 <Footer/>
                  {/* <Register /> */}
-              
             </div>
-          
         )
     }
 }

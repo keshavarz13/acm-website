@@ -2,8 +2,7 @@ import React from "react"
 import "./styles/header-style.css"
 
 class Header extends React.Component { 
-    render(){
-     
+    render() {
       return(
         <div>
             <div className = "container">
@@ -35,17 +34,10 @@ class Header extends React.Component {
                   </div>
 
                   <img src= {require("./../img/header-logo.png")} height="55" width = "170"/>
-
               </div>
-              
-            
             </div>
-            
-          
         </div>
       )
-    
-
     }
 }
 
