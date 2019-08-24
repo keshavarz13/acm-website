@@ -1,6 +1,6 @@
 import React from "react"
 import axios from 'axios'
-import TimelineItem from 'vertical-timeline-component-for-react'
+// import TimelineItem from 'vertical-timeline-component-for-react'
 import TimeLineContainer from "../components/TimelineContainer"
 
 class TimeLineContainerView extends React.Component {
@@ -10,11 +10,11 @@ class TimeLineContainerView extends React.Component {
     }
 
     fetchTimeLineItems = () => {
-        axios.get("http://localhost:8000/api").then(res => {
+        axios.get("http://localhost:8000/api/timelineitems").then(res => {
             this.setState({
                 timeLineItems: res.data
             });
-            console.log(res.data)
+            // console.log(res.data)
         });
     };
 

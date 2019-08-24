@@ -2,17 +2,9 @@ import React from "react"
 import "./styles/body-style.css"
 import "./styles/countdown-style.css"
 import "./countdown"
+import axios from "axios"
 
 class BodyP2 extends React.Component { 
-    constructor() { 
-        super() 
-        this.state={ 
-            d: 0,
-            h: 0, 
-            m: 0,
-            s: 0,
-        }
-    }
 
     render() {
         return (
@@ -27,10 +19,11 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
-                    <div className ="timer">  
-                        <div id="flipdown" class="flipdown"></div>                      
-                    </div>
-
+                    <div id="stopTimer"  time={this.props.data}></div>
+                    {/* <div className ="timer">  
+                        <div id="flipdown" className="flipdown"></div>                      
+                    </div> */}
+                
                 </div>
             </div>
         )

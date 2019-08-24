@@ -18,11 +18,11 @@ class Header extends React.Component {
                   </div>
 
                   <div className ="option">
-                    <div class="dropdown">
-                      <button class="dropbtn">Dropdown 
-                        <i class="fa fa-caret-down"></i>
+                    <div className="dropdown">
+                      <button className="dropbtn">Dropdown 
+                        <i className="fa fa-caret-down"></i>
                       </button>
-                      <div class="dropdown-content">
+                      <div className="dropdown-content">
                         <a href="#">Home</a>
                         <a href="#">Time Line</a>
                         <a href="#">Contact Us</a>

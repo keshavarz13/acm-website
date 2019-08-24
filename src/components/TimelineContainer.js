@@ -1,5 +1,5 @@
 import React from "react"
-import axios from "axios"
+// import axios from "axios"
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react'
 import background from "./../img/patern.jpg"
 var HtmlToReactParser = require('html-to-react').Parser;
@@ -7,8 +7,6 @@ var parser = new HtmlToReactParser()
 
 class TimelineContainer extends React.Component{
     
-    // parser = new Parser()
-
     render() {
         
         return (
