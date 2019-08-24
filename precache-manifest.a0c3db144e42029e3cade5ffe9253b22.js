@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1638596a8ff8c86ff068279014fc7bef",
+    "revision": "1adc3aa0302938306c6651d007b14913",
     "url": "/acm-website/index.html"
   },
   {
-    "revision": "ac73810ed6d95aff4694",
+    "revision": "c1d0d3a5cea6c316d3df",
     "url": "/acm-website/static/css/2.400ebc83.chunk.css"
   },
   {
-    "revision": "4887e081818b74e4d9ff",
-    "url": "/acm-website/static/css/main.9fca6dda.chunk.css"
+    "revision": "1e4471f0d7f473f07ba9",
+    "url": "/acm-website/static/css/main.96639a86.chunk.css"
   },
   {
-    "revision": "ac73810ed6d95aff4694",
-    "url": "/acm-website/static/js/2.47117f10.chunk.js"
+    "revision": "c1d0d3a5cea6c316d3df",
+    "url": "/acm-website/static/js/2.77907a73.chunk.js"
   },
   {
-    "revision": "4887e081818b74e4d9ff",
-    "url": "/acm-website/static/js/main.ca332036.chunk.js"
+    "revision": "1e4471f0d7f473f07ba9",
+    "url": "/acm-website/static/js/main.57fa6bd8.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
@@ -40,6 +40,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/bottomImage.77c70836.JPG"
   },
   {
+    "revision": "2354dadab55f66e19bfda2022fe7e2c8",
+    "url": "/acm-website/static/media/domain.2354dada.svg"
+  },
+  {
+    "revision": "51f8f52c0d18c6d30b3c6e40b0d3e4a3",
+    "url": "/acm-website/static/media/dropDown.51f8f52c.svg"
+  },
+  {
     "revision": "970700edfcd739aff3d146b210325d0c",
     "url": "/acm-website/static/media/group.970700ed.png"
   },
@@ -52,12 +60,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/header-logo.d075027b.png"
   },
   {
+    "revision": "549663b467f9986e71b7fba664db81f6",
+    "url": "/acm-website/static/media/instagram.549663b4.svg"
+  },
+  {
     "revision": "e2b5f4bfc508c5922ace4a56d2002873",
     "url": "/acm-website/static/media/patern.e2b5f4bf.jpg"
   },
   {
+    "revision": "21aa1417a31627658f45dde5293732de",
+    "url": "/acm-website/static/media/sponsor.21aa1417.png"
+  },
+  {
     "revision": "ffc2a85c0dc0a87f2afa48abf3656bdd",
     "url": "/acm-website/static/media/ssc-logo.ffc2a85c.png"
+  },
+  {
+    "revision": "a57dda48369ed3ae0572492041bac990",
+    "url": "/acm-website/static/media/telegram.a57dda48.svg"
   },
   {
     "revision": "5c5b9f1a56b71c95f89d03b019958d49",
