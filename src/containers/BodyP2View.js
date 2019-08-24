@@ -20,7 +20,7 @@ class BodyP2View extends React.Component {
         });
     };
 
-    componentWillMount() {
+    componentDidMount() {
         this.fetchCountdownItem();
     }
 
@@ -28,7 +28,9 @@ class BodyP2View extends React.Component {
         // console.log(this.state.countdowns)
         if (!this.state.countdowns) {
             return <div/>
+
         }
+        // document.
         return (
             <BodyP2 data={this.state.countdowns}></BodyP2>
         )
