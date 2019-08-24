@@ -59,7 +59,7 @@
 .option{
     position: absolute;
     right: 20% ; 
-    top: 20px ; 
+    top: 0px ; 
     color: aliceblue;
     cursor: pointer;
 }
@@ -79,10 +79,11 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0px;
+    right: -10px;
     background-color: #20232a;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 20px;
     z-index: 1;
    
   }
