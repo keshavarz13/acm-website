@@ -97,6 +97,13 @@ body {
     text-align: center;
 }
 
+.flipdown.flipdown__theme-dark { 
+   position: absolute ; 
+   left: 50% ; 
+   top: 50% ; 
+   transform: translate(-50% , -50% )
+}
+
 .timeline-container { 
     position: absolute;
     left: 0;

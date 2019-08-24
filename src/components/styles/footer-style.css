@@ -2,6 +2,7 @@
     background-color: #191b1f ;
     position: relative;
     height: 400px;
+    margin-top: 50px;
 }
 .map-container {
     position: absolute;
