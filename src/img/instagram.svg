@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-46.0041" y1="634.1208" x2="-32.9334" y2="647.1917" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<path style="fill:url(#SVGID_1_);" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192
-	c88.352,0,160-71.648,160-160V160C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112
-	V160C48,98.24,98.24,48,160,48h192c61.76,0,112,50.24,112,112V352z"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-42.2971" y1="637.8279" x2="-36.6404" y2="643.4846" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<path style="fill:url(#SVGID_2_);" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128
-	S326.688,128,256,128z M256,336c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80
-	C336,300.096,300.096,336,256,336z"/>
-<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-35.5456" y1="644.5793" x2="-34.7919" y2="645.3331" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<circle style="fill:url(#SVGID_3_);" cx="393.6" cy="118.4" r="17.056"/>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 291.319 291.319" style="enable-background:new 0 0 291.319 291.319;" xml:space="preserve">
+<g>
+	<path style="fill:#3F729B;" d="M145.659,0c80.44,0,145.66,65.219,145.66,145.66S226.1,291.319,145.66,291.319S0,226.1,0,145.66
+		S65.21,0,145.659,0z"/>
+	<path style="fill:#FFFFFF;" d="M195.93,63.708H95.38c-17.47,0-31.672,14.211-31.672,31.672v100.56
+		c0,17.47,14.211,31.672,31.672,31.672h100.56c17.47,0,31.672-14.211,31.672-31.672V95.38
+		C227.611,77.919,213.4,63.708,195.93,63.708z M205.908,82.034l3.587-0.009v27.202l-27.402,0.091l-0.091-27.202
+		C182.002,82.116,205.908,82.034,205.908,82.034z M145.66,118.239c22.732,0,27.42,21.339,27.42,27.429
+		c0,15.103-12.308,27.411-27.42,27.411c-15.121,0-27.42-12.308-27.42-27.411C118.23,139.578,122.928,118.239,145.66,118.239z
+		 M209.65,193.955c0,8.658-7.037,15.704-15.713,15.704H97.073c-8.667,0-15.713-7.037-15.713-15.704v-66.539h22.759
+		c-2.112,5.198-3.305,12.299-3.305,18.253c0,24.708,20.101,44.818,44.818,44.818s44.808-20.11,44.808-44.818
+		c0-5.954-1.193-13.055-3.296-18.253h22.486v66.539L209.65,193.955z"/>
+</g>
 <g>
 </g>
 <g>
