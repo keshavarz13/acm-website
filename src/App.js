@@ -10,7 +10,7 @@ import BodyP4 from "./components/BodyP4"
 import Register from "./components/Register/Register"
 
 class App extends React.Component { 
-    render(){
+    render() {
         return(
             <div>
                 <Header/>
@@ -19,12 +19,10 @@ class App extends React.Component {
                 <BodyP2/>
                 <About/>
                 <TimelineContainer/>
-                {/* <Register /> */}
                 <BodyP4/>
                 <Footer/>
-              
+                {/* <Register /> */}
             </div>
-          
         )
     }
 }
