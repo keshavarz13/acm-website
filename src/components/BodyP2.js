@@ -24,12 +24,17 @@ class BodyP2 extends React.Component {
                         src={ require("./../img/bottomImage.JPG") } 
                         height="800" width="100%"
                     />
-                    <div className = "dark-layer"></div>                
+                    <div className = "dark-layer"> </div>             
 
                     <p className = "timer-text">Contest starts in</p>
+                    <p className = "timer-text2">REGISTER NOW!</p>
                     <div className ="timer">  
                         <div id="flipdown" class="flipdown"></div>                      
                     </div>
+
+                   
+
+                    
 
                 </div>
             </div>
