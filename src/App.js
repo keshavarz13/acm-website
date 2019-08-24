@@ -20,7 +20,7 @@ class App extends React.Component {
                 <About/>
                 <TimelineContainer/>
                 {/* <Register /> */}
-                {/* <BodyP4/> */}
+                <BodyP4/>
                 <Footer/>
               
             </div>

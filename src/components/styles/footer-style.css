@@ -54,9 +54,7 @@
     width :20px;
     height: 20px;
 }
-.social-container{
-    position: absolute;
-}
+
 
 @media only screen and (max-width: 400px) {
     

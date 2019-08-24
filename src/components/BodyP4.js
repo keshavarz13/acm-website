@@ -1,5 +1,7 @@
 import React from 'react';
 import "./styles/sponsor.css"
+import "./styles/sher-style.css"
+
 
 class BodyP4 extends React.Component { 
     
@@ -8,9 +10,10 @@ class BodyP4 extends React.Component {
 
         return (
             <div className = "part4-container">
-                <div className = "sponsor-container">
-                    <h4>Sponsor</h4>
-                    <img src={require("./../img/patern.jpg")}  />
+                <div className = "sher-container">
+                    <h1>SPONSOR</h1>
+                    <img src={require ("./../img/sponsor.png") } width ="160" height="160" />
+                    <p>snapp!</p>
                 </div>
                 
                 <div className = "register-container">  
