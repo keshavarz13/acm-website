@@ -51,11 +51,9 @@
 }
 
 
-.container img {
-    float: left;
-    margin-left: 2%; 
-    margin-top: 2px;
-    z-index: 2;
+.dobble-container img {
+    position: absolute;
+    z-index: 105;
 }
 
 .option{
