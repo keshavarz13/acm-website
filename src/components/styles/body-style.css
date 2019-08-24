@@ -165,3 +165,11 @@ body {
       
     }
 }
+@media only screen and (max-width:450px) { 
+    .timer-text2{ 
+       
+        font-size: 18px; 
+        top: 58%;
+      
+    }
+}
