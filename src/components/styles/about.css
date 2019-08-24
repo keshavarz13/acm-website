@@ -1,27 +1,21 @@
 .about-container { 
-    margin-left: 15% ; 
-    margin-right: 15% ; 
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    margin-left: 15%; 
+    margin-right: 15%; 
     padding: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
-    
- 
-
 }
 
 .about-container h4 {
-    font-weight: bold ; 
+    font-weight: bold; 
     font-size: 30px;
     background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #32ce92 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-
+    margin-bottom: -10px;
 }
 
 .about-container p { 
-    /* font-weight: bold; */
-    font-size: 20px ;
+    font-size: 20px;
     font-weight: bold;
     background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #0f6947 100%);
     -webkit-background-clip: text;
@@ -29,12 +23,10 @@
 }
 
 @media only screen and (max-width: 520px) {
-
     .about-container { 
         margin-left: 5px;
         margin-right: 5px; 
         padding: 20px;
-        margin-top: 20px;
         margin-bottom: 20px;
     }
 }
