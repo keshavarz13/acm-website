@@ -19,7 +19,7 @@ class Header extends React.Component {
 
                   <div className ="option">
                     <div class="dropdown">
-                      <button class="dropbtn"><img src = {require("./../img/dropDown.png")} width ="32" height ="32"/>
+                      <button class="dropbtn"><img src = {require("./../img/dropDown.svg")} width ="32" height ="32"/>
                         <i class="fa fa-caret-down"></i>
                       </button>
                       <div class="dropdown-content">
