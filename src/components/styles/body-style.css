@@ -111,6 +111,7 @@ body {
     padding-right: 20px;
     padding-left: 20px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .flipdown.flipdown__theme-dark { 
@@ -128,10 +129,6 @@ body {
     height: 650px;
 }
 
-.register-button { 
-    background-color: black;
-    font-size: 30px;
-}
 
 @media only screen and (max-width: 620px) {
     .banner1 { 
