@@ -42,7 +42,7 @@
 .social { 
         display: grid ; 
         height: 20px;
-        width : 70px ;
+        width : 110px ;
         margin-left: auto; 
         margin-right: auto;
         grid-template-columns: auto auto auto ;
@@ -53,6 +53,9 @@
 .social-item {
     width :20px;
     height: 20px;
+}
+.social-container{
+    position: absolute;
 }
 
 @media only screen and (max-width: 400px) {
