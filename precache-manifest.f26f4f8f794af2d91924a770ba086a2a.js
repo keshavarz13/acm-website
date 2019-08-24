@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4437f795679497151c3a6bcf43aba576",
+    "revision": "a8b9d2bcf56a2c361cd49f04eb428af7",
     "url": "/acm-website/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/css/2.400ebc83.chunk.css"
   },
   {
-    "revision": "b47ff459a181edd8540b",
+    "revision": "494f04c711dacf49db3b",
     "url": "/acm-website/static/css/main.1dc14da0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/js/2.18896050.chunk.js"
   },
   {
-    "revision": "b47ff459a181edd8540b",
-    "url": "/acm-website/static/js/main.f17c1b0a.chunk.js"
+    "revision": "494f04c711dacf49db3b",
+    "url": "/acm-website/static/js/main.541129d2.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
