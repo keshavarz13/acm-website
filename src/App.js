@@ -10,18 +10,33 @@ import BodyP4 from "./components/BodyP4"
 import Register from "./components/Register/Register"
 
 class App extends React.Component { 
+    constructor(){
+        super() 
+        this.state={
+            p : 0 
+        }
+        
+        this.changePage =this.changePage.bind(this)
+    }
+
+    changePage(number){
+        this.setState({p:number})
+        alert(this.state.p)
+    }
+
+
     render(){
         return(
             <div>
-                <Header/>
+                <Header changePage = {this.changePage}/>
                 <BodyP1/>
                 <SherBoxContainer/>
                 <BodyP2/>
                 <About/>
                 <TimelineContainer/>
-                {/* <Register /> */}
                 <BodyP4/>
                 <Footer/>
+                 {/* <Register /> */}
               
             </div>
           

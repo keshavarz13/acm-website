@@ -10,7 +10,10 @@ class Header extends React.Component {
               <div className = "dobble-container">
 
                   <div className= "nav-link-container">
-                      <a className="nav-link" href="#">Home</a>
+                      <a className="nav-link" href="#" onClick = {()=>{
+                        this.props.changePage(1)
+                    
+                      }}>Home</a>
                       <a className="nav-link" href="#">Time Line</a>
                       <a className="nav-link" href="#">Contact Us</a>
                       <a className="nav-link" href="#" >Past Result</a>
