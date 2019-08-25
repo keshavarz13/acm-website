@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Paper, Typography, Checkbox, FormControlLabel, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Select, MenuItem, Button, Paper, Typography, Checkbox, FormControlLabel, FormControl, Input, InputLabel } from '@material-ui/core';
 
 
 class contestantFields extends React.Component {
@@ -24,12 +24,12 @@ class contestantFields extends React.Component {
                     />
                     </FormControl>
 
-                    <FormControl margin="normal" required >
-                    <InputLabel htmlFor="username">Gender</InputLabel>
-                    <Input
-                        id="username"
-                        className="text_box"
-                    />
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select className="text_box">
+                            <MenuItem value={10}>Male</MenuItem>
+                            <MenuItem value={20}>Female</MenuItem>
+                        </Select>
                     </FormControl>
                 </div>
 
@@ -42,12 +42,12 @@ class contestantFields extends React.Component {
                     />
                     </FormControl>
 
-                    <FormControl margin="normal" required >
-                    <InputLabel htmlFor="username">Current Educational Level</InputLabel>
-                    <Input
-                        id="username"
-                        className="text_box"
-                    />
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select className="text_box">
+                            <MenuItem value={10}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={20}>Graduate(MSc.)</MenuItem>
+                        </Select>
                     </FormControl>
 
                     <FormControl margin="normal" required >
