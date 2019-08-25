@@ -23,6 +23,7 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
+                    <p className = "timer-text2">REGISTER NOW!</p>
                     <div className ="timer">  
                         <div id="flipdown" className="flipdown"></div>  
                     </div>
