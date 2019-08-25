@@ -1,5 +1,7 @@
 import React from "react" 
 import "./styles/header-style.css"
+import { NavLink } from 'react-router-dom'
+
 
 class Header extends React.Component { 
     render() {
@@ -9,14 +11,11 @@ class Header extends React.Component {
               <div className = "dobble-container">
 
                   <div className= "nav-link-container">
-                      <a className="nav-link" href="#" onClick = {()=>{
-                        this.props.changePage(1)
-                    
-                      }}>Home</a>
+                      <NavLink className="nav-link" exact to="/">Home</NavLink>
                       <a className="nav-link" href="#">Time Line</a>
                       <a className="nav-link" href="#">Contact Us</a>
-                      <a className="nav-link" href="#" >Past Result</a>
-                      <div className="register-container"><a className="register" href="#">Register</a></div>
+                      <NavLink className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                      <NavLink className="nav-link" exact to="/Register">Register</NavLink>
                   </div>
 
                   <div className ="option">
@@ -25,10 +24,11 @@ class Header extends React.Component {
                         <i class="fa fa-caret-down"></i>
                       </button>
                       <div class="dropdown-content">
-                        <a href="#">Home</a>
-                        <a href="#">Time Line</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#" >Past Result</a>
+                          <NavLink className="nav-link" exact to="/">Home</NavLink>
+                          <a className="nav-link" href="#">Time Line</a>
+                          <a className="nav-link" href="#">Contact Us</a>
+                          <NavLink className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                          <NavLink className="nav-link" exact to="/Register">Register</NavLink>
                       </div>
                     </div> 
                   </div>
