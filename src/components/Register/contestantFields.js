@@ -3,6 +3,14 @@ import { Select, MenuItem, Button, Paper, Typography, Checkbox, FormControlLabel
 
 
 class contestantFields extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            gender: null,
+            edu_level: null
+        }
+    }
+
     render() {
         return(
             <div>
@@ -26,9 +34,19 @@ class contestantFields extends React.Component {
 
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="gender">Gender</InputLabel>
-                        <Select className="text_box">
-                            <MenuItem value={10}>Male</MenuItem>
-                            <MenuItem value={20}>Female</MenuItem>
+                        <Select 
+                            className="text_box"
+                            // value={"ali"}
+                            // onChange={event => this.setState({ 
+                            //     [event.target.name]: event.target.value}) }
+                            // inputProps={{
+                            //     name: "gender",
+                            //     id: "age-simple"
+                            //     }}
+                        >
+                        {console.log(this.state.gender)}
+                            <MenuItem value={"Male"}>Male</MenuItem>
+                            <MenuItem value={"Female"}>Female</MenuItem>
                         </Select>
                     </FormControl>
                 </div>
@@ -45,8 +63,8 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
                         <Select className="text_box">
-                            <MenuItem value={10}>Undergraduate(BSc.)</MenuItem>
-                            <MenuItem value={20}>Graduate(MSc.)</MenuItem>
+                            <MenuItem value={"Undergraduate"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"Graduate"}>Graduate(MSc.)</MenuItem>
                         </Select>
                     </FormControl>
 
