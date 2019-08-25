@@ -6,7 +6,7 @@ var FlipDown = require("./countdown")
 class BodyP2 extends React.Component { 
     componentDidMount () {
         var stopTime = this.props.data.stopTime.toString()
-        var stopDate = new Date(stopTime).getTime()
+        var stopDate = new Date(stopTime).getTime() / 1000
         var flipdown = new FlipDown(stopDate).start()
     }
 
