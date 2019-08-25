@@ -9,6 +9,22 @@ import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import Register from "./components/Register/Register"
 
+import { Route } from 'react-router-dom'
+
+function home () { 
+    return(
+        <div>
+             <BodyP1/>
+             <SherBoxContainer/> 
+             <BodyP2View/>
+             <About/>
+             <TimeLineContainerView/>
+             <BodyP4/>
+        </div>
+       
+    )
+}
+
 
 class App extends React.Component { 
     constructor() {
@@ -28,13 +44,8 @@ class App extends React.Component {
         return(
             <div>
                 <Header changePage = {this.changePage}/>
-                <BodyP1/>
-                <SherBoxContainer/>
-                <BodyP2View/>
-                <About/>
-                <TimeLineContainerView/>
-                <Register />
-                <BodyP4/>
+                <Route exact path="/Register" component={Register} />
+                <Route exact path="/" component={home} />
                 <Footer/>
             </div>
         )
