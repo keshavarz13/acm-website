@@ -1,21 +1,21 @@
 import React from "react" 
+import BodyP4 from "./components/BodyP4"
 import Header from "./components/Header"
 import BodyP1 from "./components/BodyP1"
-import BodyP2 from "./components/BodyP2"
 import About from "./components/About"
 import Footer from "./components/Footer"
-import TimelineContainer from "./components/TimelineContainer"
+import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
-import BodyP4 from "./components/BodyP4"
+import TimeLineContainerView from "./components/TimelineContainerView"
 import Register from "./components/Register/Register"
 
+
 class App extends React.Component { 
-    constructor(){
+    constructor() {
         super() 
         this.state={
             p : 0 
         }
-        
         this.changePage = this.changePage.bind(this)
     }
 
@@ -24,18 +24,18 @@ class App extends React.Component {
         alert(this.state.p)
     }
 
-    render(){
+    render() {
         return(
             <div>
                 <Header changePage = {this.changePage}/>
                 <BodyP1/>
                 <SherBoxContainer/>
-                <BodyP2/>
+                <BodyP2View/>
                 <About/>
-                <TimelineContainer/>
+                <TimeLineContainerView/>
+                <Register />
                 <BodyP4/>
                 <Footer/>
-                 {/* <Register /> */}
             </div>
         )
     }
