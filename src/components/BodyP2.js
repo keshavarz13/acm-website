@@ -1,6 +1,7 @@
 import React from "react"
 import "./styles/body-style.css"
 import "./styles/countdown-style.css"
+import { NavLink } from 'react-router-dom'
 var FlipDown = require("./countdown")
 
 class BodyP2 extends React.Component { 
@@ -23,7 +24,7 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
-                    <p className = "timer-text2">REGISTER NOW!</p>
+                    <NavLink exact to="/Register"><p onClick={() => window.scrollTo(0, 0)}  className = "timer-text2">REGISTER NOW!</p></NavLink>
                     <div className ="timer">  
                         <div id="flipdown" className="flipdown"></div>  
                     </div>

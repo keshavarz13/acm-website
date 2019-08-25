@@ -11,11 +11,11 @@ class Header extends React.Component {
               <div className = "dobble-container">
 
                   <div className= "nav-link-container">
-                      <NavLink className="nav-link" exact to="/">Home</NavLink>
-                      <a className="nav-link" href="#">Time Line</a>
+                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/">Home</NavLink>
+                      <a  className="nav-link" href="#">Time Line</a>
                       <a className="nav-link" href="#">Contact Us</a>
-                      <NavLink className="nav-link" exact to="/PastResult">Past Result</NavLink>
-                      <NavLink className="nav-link" exact to="/Register">Register</NavLink>
+                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/Register">Register</NavLink>
                   </div>
 
                   <div className ="option">
@@ -24,11 +24,11 @@ class Header extends React.Component {
                         <i class="fa fa-caret-down"></i>
                       </button>
                       <div class="dropdown-content">
-                          <NavLink className="nav-link" exact to="/">Home</NavLink>
+                          <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/">Home</NavLink>
                           <a className="nav-link" href="#">Time Line</a>
                           <a className="nav-link" href="#">Contact Us</a>
-                          <NavLink className="nav-link" exact to="/PastResult">Past Result</NavLink>
-                          <NavLink className="nav-link" exact to="/Register">Register</NavLink>
+                          <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                          <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/Register">Register</NavLink>
                       </div>
                     </div> 
                   </div>
