@@ -8,6 +8,8 @@ import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import Register from "./components/Register/Register"
+import Poster from "./components/poster"
+import PosterList from "./components/PosterList"
 
 import { Route } from 'react-router-dom'
 
@@ -45,8 +47,10 @@ class App extends React.Component {
             <div>
                 <Header changePage = {this.changePage}/>
                 <Route exact path="/Register" component={Register} />
+                <Route exact path="/PastResult" component={PosterList} />
                 <Route exact path="/" component={home} />
                 <Footer/>
+        
             </div>
         )
     }
