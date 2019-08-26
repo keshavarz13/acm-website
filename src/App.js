@@ -23,6 +23,7 @@ class App extends React.Component {
     constructor(){
         super() 
         this.state={
+            validReq : false , 
             pastContestData : {
                 poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                 year : "2018",
@@ -64,16 +65,24 @@ class App extends React.Component {
 
     pastContestProvider(data){
         this.setState({
-            pastContestData : data
+            pastContestData : data,
+            validReq : true
         })
     }
 
     pastContestMaker(){
-        return(
-            <PastContest data={this.state.pastContestData}/>
-        )
+        if(this.state.validReq){
+            return(
+                <PastContest data={this.state.pastContestData}/>
+            )
+        }else{
+            return(<PosterList pastContestProvider = {this.pastContestProvider}/>)
+            
+        }
+       
     }
     pastContestList() { 
+        
         return(
             <PosterList pastContestProvider = {this.pastContestProvider}/>
         )

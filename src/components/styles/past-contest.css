@@ -1,0 +1,13 @@
+.photo-wall{
+
+    max-width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.past-contest-container{
+    margin-top: 100px;
+    display: grid ; 
+    grid-template-columns: auto;
+    margin-bottom: -100px;
+}

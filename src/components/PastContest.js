@@ -7,10 +7,15 @@ import "./styles/past-contest.css"
 class PastContest extends React.Component { 
     render(){
         return(
-            <div style = { {height : "800px",
-            marginTop : "90px"
-            }}>
-                <Gallery images={this.props.data.images}/>
+            <div className = "past-contest-container">
+                <div>
+                    slm
+                </div>
+                <div className="photo-wall">
+                    <Gallery images={this.props.data.images} />
+                </div>
+                <h1></h1>
+                
             </div>
         )
     }
