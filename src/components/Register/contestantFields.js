@@ -8,13 +8,12 @@ class contestantFields extends React.Component {
         this.state = {
             firstname: "",
             lastname: "",
-            gender: {
-                gender: ""
-            },         
+            gender: "",         
             firstname: "",   
-            edu_level: {
-                edu_level: ""
-            }
+            edu_level: "",
+            studentnumber: "",
+            email: "",
+            phone: "",
         }
     }
 
@@ -45,10 +44,9 @@ class contestantFields extends React.Component {
                         <InputLabel htmlFor="gender">Gender</InputLabel>
                         <Select 
                             className="text_box"
-                            value={this.state.gender.gender}
+                            value={this.state.gender}
                             onChange={event => this.setState({ 
-                                gender: {
-                                    gender: event.target.value}
+                                gender: event.target.value
                                 }) 
                             }
                             inputProps={{
@@ -66,19 +64,22 @@ class contestantFields extends React.Component {
                     <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
                     <Input
                         className="text_box"
+                        onChange={event => this.setState({
+                            studentnumber: event.target.value})
+                        }
                     />
                     </FormControl>
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
                         <Select 
                             className="text_box"
+                            value={this.state.edu_level}
                             onChange={event => this.setState({ 
-                                gender: {
-                                    gender: event.target.value}
+                                edu_level: event.target.value
                                 }) 
                             }
                             inputProps={{
-                                name: "gender",
+                                name: "edu_level",
                             }}
                         >
                             <MenuItem value={"Undergraduate"}>Undergraduate(BSc.)</MenuItem>
@@ -90,12 +91,18 @@ class contestantFields extends React.Component {
                     <InputLabel htmlFor="email">Email</InputLabel>
                     <Input
                         className="text_box"
+                        onChange={event => this.setState({
+                            email: event.target.value})
+                        }
                     />
                     </FormControl>
                     <FormControl margin="normal" required >
-                    <InputLabel htmlFor="phonenumber">Phone Number</InputLabel>
+                    <InputLabel htmlFor="phone">Phone Number</InputLabel>
                     <Input
                         className="text_box"
+                        onChange={event => this.setState({
+                            phone: event.target.value})
+                        }
                     />
                     </FormControl>
                 </div>
