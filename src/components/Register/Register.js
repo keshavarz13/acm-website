@@ -49,7 +49,7 @@ class Register extends React.Component {
             <div className="register_container">                
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
-                <div>
+                <div className="team_box">
                     <h2>Team Information</h2>
                     <FormControl required>
                         <InputLabel htmlFor="teamname">Team Name</InputLabel>
@@ -58,7 +58,7 @@ class Register extends React.Component {
                             name="teamname"
                             onChange={this.handleChange}
                         />
-                    </FormControl>
+                    </FormControl>                    
                     <FormControl required>
                         <InputLabel htmlFor="institution">Institution</InputLabel>
                         <Input
@@ -76,15 +76,17 @@ class Register extends React.Component {
                         />
                     </FormControl>
                 </div>
+                <hr/>
                 <ContestantFields
                     memberNumber="1"
                     contestant={this.contestantChange}
                 />
-                
+                <hr/>
                 <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
+                <hr/>
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}

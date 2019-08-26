@@ -31,8 +31,8 @@ class contestantFields extends React.Component {
 
     render() {
         return(
-            <div onChange={this.handleContestantChange}>
-                <h2>Contestant #{this.props.memberNumber}</h2>
+            <div onChange={this.handleContestantChange} className="contestant_box">
+                <h2 className="contestant_header">Contestant #{this.props.memberNumber}</h2>
                 <div>
                     <FormControl margin="normal" required >
                     <InputLabel htmlFor="firstname">First Name</InputLabel>
