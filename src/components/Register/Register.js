@@ -5,47 +5,89 @@ import "./../styles/register.css"
 
 
 class Register extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            teamname: "",
+            institution: "",
+            country: "",
+            contestant1: {
+
+            },
+            contestant2: {
+
+            },
+            contestant3: {
+
+            },
+        }
+        this.contestantChange = this.contestantChange.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+        {console.log(this.state)}
+    }
+
+    contestantChange(contestantNumber, contestant) {
+        if (contestantNumber === '1') {
+            this.state.contestant1 = contestant;
+        }
+        else if(contestantNumber === '2') {
+            this.state.contestant2 = contestant;
+        }
+        else if(contestantNumber === '3') {
+            this.state.contestant3 = contestant;
+        }
+    }
+
     render() {
         return(
-            <div className="register_container">
+            <div className="register_container">                
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div>
                     <h2>Team Information</h2>
                     <FormControl required>
-                        <InputLabel htmlFor="team">Team Name</InputLabel>
+                        <InputLabel htmlFor="teamname">Team Name</InputLabel>
                         <Input
-                            id="team"
                             className="text_box"
-                            // onChange={event => setTeamname(event.target.value)}
+                            name="teamname"
+                            onChange={this.handleChange}
                         />
                     </FormControl>
                     <FormControl required>
                         <InputLabel htmlFor="institution">Institution</InputLabel>
                         <Input
-                            id="institution"
                             className="text_box"
+                            name="institution"
+                            onChange={this.handleChange}
                         />
                     </FormControl>
                     <FormControl required>
                         <InputLabel htmlFor="country">Country</InputLabel>
                         <Input
-                            id="country"
                             className="text_box"
+                            name="country"
+                            onChange={this.handleChange}
                         />
                     </FormControl>
                 </div>
                 <ContestantFields
                     memberNumber="1"
-
+                    contestant={this.contestantChange}
                 />
+                
                 <ContestantFields
                     memberNumber="2"
-
+                    contestant={this.contestantChange}
                 />
                 <ContestantFields
                     memberNumber="3"
-
+                    contestant={this.contestantChange}
                 />
             </div>
 

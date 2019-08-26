@@ -16,6 +16,7 @@ class contestantFields extends React.Component {
             phone: "",
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleContestantChange = this.handleContestantChange.bind(this)
     }
 
     handleChange(event) {
@@ -24,9 +25,13 @@ class contestantFields extends React.Component {
         })
     }
 
+    handleContestantChange() {
+        this.props.contestant(this.props.memberNumber, this.state)
+    }
+
     render() {
         return(
-            <div>
+            <div onChange={this.handleContestantChange}>
                 <h2>Contestant #{this.props.memberNumber}</h2>
                 <div>
                     <FormControl margin="normal" required >
