@@ -13,30 +13,56 @@ import PosterList from "./components/PosterList"
 
 import { Route } from 'react-router-dom'
 
-function home () { 
-    return(
-        <div>
-             <BodyP1/>
-             <SherBoxContainer/> 
-             <BodyP2View/>
-             <About/>
-             <TimeLineContainerView/>
-             <BodyP4/>
-        </div>
-       
-    )
-}
+
+
+
 
 
 class App extends React.Component {
+    constructor(){
+        super() 
+        this.state={
+
+        }
+        this.pastContestList = this.pastContestList.bind(this)
+        this.home = this.home.bind(this)
+        this.pastContestProvider = this.pastContestProvider.bind(this)
+    }
+
+
+    pastContestProvider(){
+
+    }
+    pastContestList() { 
+        return(
+            <PosterList pastContestProvider = {this.pastContestProvider}/>
+        )
+        
+    }
+
+    
+    home () { 
+        return(
+            <div>
+                <BodyP1/>
+                <SherBoxContainer/> 
+                <BodyP2View/>
+                <About/>
+                <TimeLineContainerView/>
+                <BodyP4/>
+            </div>
+        
+        )
+    }
+    
 
     render() {
         return(
             <div>
                 <Header changePage = {this.changePage}/>
                 <Route exact path="/Register" component={Register} />
-                <Route exact path="/PastResult" component={PosterList} />
-                <Route exact path="/" component={home} />
+                <Route exact path="/PastResult" component={this.pastContestList} />
+                <Route exact path="/" component={this.home} />
                 <Footer/>
         
             </div>
