@@ -9,18 +9,12 @@ class Poster extends React.Component {
     constructor(){
         super()
         this.state = { 
-
         }
         this.clickHandler = this.clickHandler.bind(this)
     }
 
     clickHandler ()  {
-        const a = {
-            scoreBoard :this.props.contest.scoreBoard , 
-            question : this.props.contest.question , 
-            images : this.props.contest.images
-        }
-        this.props.pastContestProvider(a)
+        this.props.pastContestProvider(this.props.contest)
 
     }
     

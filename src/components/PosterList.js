@@ -11,7 +11,7 @@ class PosterList extends React.Component {
                 {
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    scoreBoard :"an" , 
+                    scoreBoard :"1" , 
                     question : "" , 
                     images : 
                         [{
@@ -41,7 +41,7 @@ class PosterList extends React.Component {
                 },{
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    scoreBoard :"" , 
+                    scoreBoard :"2" , 
                     question : "" , 
                     images : 
                         [{
@@ -71,7 +71,7 @@ class PosterList extends React.Component {
                 },{
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    scoreBoard :"" , 
+                    scoreBoard :"3" , 
                     question : "" , 
                     images : 
                         [{
@@ -101,7 +101,7 @@ class PosterList extends React.Component {
                 },{
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    scoreBoard :"" , 
+                    scoreBoard :"4" , 
                     question : "" , 
                     images : 
                         [{
