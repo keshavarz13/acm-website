@@ -28,19 +28,7 @@ function home () {
 }
 
 
-class App extends React.Component { 
-    constructor() {
-        super() 
-        this.state={
-            p : 0 
-        }
-        this.changePage = this.changePage.bind(this)
-    }
-
-    changePage(number) {
-        this.setState({p:number})
-        alert(this.state.p)
-    }
+class App extends React.Component {
 
     render() {
         return(
