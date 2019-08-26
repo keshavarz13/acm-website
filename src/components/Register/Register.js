@@ -91,6 +91,9 @@ class Register extends React.Component {
                     memberNumber="3"
                     contestant={this.contestantChange}
                 />
+                <Button variant="contained" className="submit_button">
+                    submit
+                </Button>
             </div>
 
         )

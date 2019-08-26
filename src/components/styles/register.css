@@ -32,3 +32,10 @@
 .team_box {
     margin-bottom: 15px;
 }
+
+.submit_button {
+    
+    position: absolute;
+    left:50%;
+    transform: translate( -50% , 0);
+}
