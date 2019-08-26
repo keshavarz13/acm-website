@@ -4,10 +4,12 @@
 
 .register_page_header {
     font-size: 50px;
+    margin-bottom: -35px;
 }
 
 .register_page_second_header {
     font-size: 30px;
+    margin-bottom: 40px;
 }
 
 .text_box {
