@@ -76,17 +76,17 @@ class Register extends React.Component {
                         />
                     </FormControl>
                 </div>
-                <hr/>
+                <br/>
                 <ContestantFields
                     memberNumber="1"
                     contestant={this.contestantChange}
                 />
-                <hr/>
+                <br/>
                 <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
-                <hr/>
+                <br/>
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
