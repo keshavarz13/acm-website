@@ -10,8 +10,6 @@ class PastContest extends React.Component {
             <div style = { {height : "800px",
             marginTop : "90px"
             }}>
-
-                <h1>{this.props.data.scoreBoard}</h1>
                 <Gallery images={this.props.data.images}/>
             </div>
         )

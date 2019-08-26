@@ -66,9 +66,6 @@ class App extends React.Component {
         this.setState({
             pastContestData : data
         })
-
-        alert(data.scoreBoard)
-
     }
 
     pastContestMaker(){
