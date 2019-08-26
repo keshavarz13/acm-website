@@ -14,3 +14,15 @@
     width: 400px;
     margin-right: 20px;
 }
+
+.contestant_header {
+    margin-bottom: -25px; 
+}
+
+.contestant_box {
+    margin-bottom: 30px;
+}
+
+.team_box {
+    margin-bottom: 30px;
+}
