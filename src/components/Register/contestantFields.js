@@ -15,6 +15,13 @@ class contestantFields extends React.Component {
             email: "",
             phone: "",
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name] : event.target.value
+        })
     }
 
     render() {
@@ -26,18 +33,16 @@ class contestantFields extends React.Component {
                     <InputLabel htmlFor="firstname">First Name</InputLabel>
                     <Input
                         className="text_box"
-                        onChange={event => this.setState({
-                            firstname: event.target.value})
-                        }
+                        name="firstname"
+                        onChange={this.handleChange}
                     />
                     </FormControl>
                     <FormControl margin="normal" required >
                     <InputLabel htmlFor="lastname">Last Name</InputLabel>
                     <Input
                         className="text_box"
-                        onChange={event => this.setState({
-                            lastname: event.target.value})
-                        }
+                        name="lastname"
+                        onChange={this.handleChange}
                     />
                     </FormControl>
                     <FormControl margin="normal" required>
@@ -45,13 +50,8 @@ class contestantFields extends React.Component {
                         <Select 
                             className="text_box"
                             value={this.state.gender}
-                            onChange={event => this.setState({ 
-                                gender: event.target.value
-                                }) 
-                            }
-                            inputProps={{
-                                name: "gender",
-                            }}
+                            onChange={this.handleChange}
+                            name="gender"
                         >
                             <MenuItem value={"Male"}>Male</MenuItem>
                             <MenuItem value={"Female"}>Female</MenuItem>
@@ -64,9 +64,8 @@ class contestantFields extends React.Component {
                     <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
                     <Input
                         className="text_box"
-                        onChange={event => this.setState({
-                            studentnumber: event.target.value})
-                        }
+                        name="studentnumber"
+                        onChange={this.handleChange}
                     />
                     </FormControl>
                     <FormControl margin="normal" required>
@@ -74,13 +73,8 @@ class contestantFields extends React.Component {
                         <Select 
                             className="text_box"
                             value={this.state.edu_level}
-                            onChange={event => this.setState({ 
-                                edu_level: event.target.value
-                                }) 
-                            }
-                            inputProps={{
-                                name: "edu_level",
-                            }}
+                            onChange={this.handleChange}
+                            name="edu_level"
                         >
                             <MenuItem value={"Undergraduate"}>Undergraduate(BSc.)</MenuItem>
                             <MenuItem value={"Graduate"}>Graduate(MSc.)</MenuItem>
@@ -91,18 +85,16 @@ class contestantFields extends React.Component {
                     <InputLabel htmlFor="email">Email</InputLabel>
                     <Input
                         className="text_box"
-                        onChange={event => this.setState({
-                            email: event.target.value})
-                        }
+                        name="email"
+                        onChange={this.handleChange}
                     />
                     </FormControl>
                     <FormControl margin="normal" required >
                     <InputLabel htmlFor="phone">Phone Number</InputLabel>
                     <Input
                         className="text_box"
-                        onChange={event => this.setState({
-                            phone: event.target.value})
-                        }
+                        name="phone"
+                        onChange={this.handleChange}
                     />
                     </FormControl>
                 </div>
