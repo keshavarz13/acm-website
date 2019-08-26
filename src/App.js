@@ -8,6 +8,7 @@ import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import Register from "./components/Register/Register"
+import Poster from "./components/poster"
 
 import { Route } from 'react-router-dom'
 
@@ -47,6 +48,7 @@ class App extends React.Component {
                 <Route exact path="/Register" component={Register} />
                 <Route exact path="/" component={home} />
                 <Footer/>
+                <Poster year = "2018" src = "http://icpc.sharif.edu/2018/images/poster.png"/>
             </div>
         )
     }
