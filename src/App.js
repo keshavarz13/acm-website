@@ -10,6 +10,7 @@ import TimeLineContainerView from "./components/TimelineContainerView"
 import Register from "./components/Register/Register"
 import Poster from "./components/poster"
 import PosterList from "./components/PosterList"
+import PastContest from "./components/PastContest"
 
 import { Route } from 'react-router-dom'
 
@@ -22,16 +23,26 @@ class App extends React.Component {
     constructor(){
         super() 
         this.state={
-
+            pastContestData : {}
         }
         this.pastContestList = this.pastContestList.bind(this)
         this.home = this.home.bind(this)
         this.pastContestProvider = this.pastContestProvider.bind(this)
+        this.pastContestMaker = this.pastContestMaker.bind(this)
     }
 
 
-    pastContestProvider(){
+    pastContestProvider(data){
+        this.setState(
+            this.pastContest = data
+        )
+        console.log(this.state)
+    }
 
+    pastContestMaker(){
+        return(
+            <PastContest data = {this.state.pastContestData}/>
+        )
     }
     pastContestList() { 
         return(
@@ -63,6 +74,7 @@ class App extends React.Component {
                 <Route exact path="/Register" component={Register} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
+                <Route exact path="/PastContest" component={this.pastContestMaker}/>
                 <Footer/>
         
             </div>

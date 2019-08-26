@@ -33,3 +33,5 @@ class PastContest extends React.Component {
         )
     }
 }
+
+export default PastContest
