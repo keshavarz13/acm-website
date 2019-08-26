@@ -25,6 +25,19 @@
     border-bottom-right-radius: 10px;
     
 }
+.posters-container{
+    margin-top: 30px;
+    align-items: center;
+    width: 100%;
+    margin-left : 50% ; 
+    transform: translate( -50% , 0%);
+
+}
+
+
+.poster-year :hover { 
+    display: inline
+}
 
 .poster-year { 
     position: absolute;
@@ -39,11 +52,49 @@
    
 
 }
+.sher-box-container{
+    position: relative;
+      margin-top: 300px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+  }
+  
+  /* Float four columns side by side */
+.column {
+    float: left;
+     
 
-
-
-
-.poster-year :hover { 
-    display: inline
 }
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin-top: 100px;
+    
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    /* For desktop: */
+    .sher-box-container {
+    display: flex;
+    float: center;
+    align-items: center;
+
+    }
+    .column{
+    align-items: center ; 
+    justify-content: center;
+    margin-left: 50% ; 
+    transform: translate(-50% , 0 )
+    }
+}
+
 
