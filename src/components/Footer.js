@@ -19,12 +19,18 @@ class About extends React.Component {
     render(){
         return (
             <div className = "footer-container">
-                <div className = "grid-container">
-                    <img src = {require("./../img/ssc-logo.png")}/>
-                    <div className="map-container">
-                        <MapBox />
+                <div className = "row">
+                    <div className = "column1"><img src = {require("./../img/ssc-logo.png")} width="300" height="100"/></div>
+                    <div className = "column2">
+                        <div className="map-container">
+                            <MapBox />
+                        </div>
                     </div>
                 </div>
+                
+                    
+                   
+                
             </div>
         )
     }
