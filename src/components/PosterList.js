@@ -11,7 +11,7 @@ class PosterList extends React.Component {
                 {
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    scoreBoard :"1" , 
+                    scoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
                     question : "" , 
                     images : 
                         [{
