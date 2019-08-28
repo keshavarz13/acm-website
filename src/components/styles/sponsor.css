@@ -1,4 +1,7 @@
 .part4-container { 
+    position: absolute ; 
+    left : 50% ; 
+    transform: translate(-50% , 0);
     width: 100% ; 
     max-width: 297px;
     height: 170px ;
