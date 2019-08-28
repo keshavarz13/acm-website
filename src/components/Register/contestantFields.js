@@ -8,7 +8,8 @@ class contestantFields extends React.Component {
         this.state = {
             firstname: "",
             lastname: "",
-            gender: "",         
+            gender: "",    
+            shirt: "",     
             firstname: "",   
             edu_level: "",
             studentnumber: "",
@@ -63,6 +64,22 @@ class contestantFields extends React.Component {
                         >
                             <MenuItem value={"Male"}>Male</MenuItem>
                             <MenuItem value={"Female"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="shirt">Shirt</InputLabel>
+                        <Select 
+                            className="text_box"
+                            value={this.state.shirt}
+                            onChange={this.handleChange}
+                            name="shirt"
+                        >
+                            <MenuItem value={"3X-Large"}>3X-Large</MenuItem>
+                            <MenuItem value={"2X-Large"}>2X-Large</MenuItem>
+                            <MenuItem value={"X-Large"}>X-Large</MenuItem>
+                            <MenuItem value={"Large"}>Large</MenuItem>
+                            <MenuItem value={"Medium"}>Medium</MenuItem>
+                            <MenuItem value={"Small"}>Small</MenuItem>
                         </Select>
                     </FormControl>
                 </div>
