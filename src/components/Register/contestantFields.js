@@ -1,6 +1,6 @@
 import React from "react"
 import { Select, MenuItem, Button, Paper, Typography, Checkbox, FormControlLabel, FormControl, Input, InputLabel } from '@material-ui/core';
-
+import PersonIcon from '@material-ui/icons/Person';
 
 class contestantFields extends React.Component {
     constructor(props) {
@@ -32,7 +32,10 @@ class contestantFields extends React.Component {
     render() {
         return(
             <div onChange={this.handleContestantChange} className="contestant_box">
-                <h2 className="contestant_header">Contestant #{this.props.memberNumber}</h2>
+                <div className="team_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #{this.props.memberNumber}</h2>
+                </div>
                 <div>
                     <FormControl margin="normal" required >
                     <InputLabel htmlFor="firstname">First Name</InputLabel>
