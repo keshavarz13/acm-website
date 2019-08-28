@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8b9d2bcf56a2c361cd49f04eb428af7",
+    "revision": "5d0c5561e38f784e2c855a7b235de5b6",
     "url": "/acm-website/index.html"
   },
   {
-    "revision": "1774223c65547bb1e629",
-    "url": "/acm-website/static/css/2.400ebc83.chunk.css"
+    "revision": "7ab9d7d4d26709445832",
+    "url": "/acm-website/static/css/2.0eaf8e31.chunk.css"
   },
   {
-    "revision": "494f04c711dacf49db3b",
-    "url": "/acm-website/static/css/main.1dc14da0.chunk.css"
+    "revision": "4c2b37278fab96c1cffb",
+    "url": "/acm-website/static/css/main.e26aa517.chunk.css"
   },
   {
-    "revision": "1774223c65547bb1e629",
-    "url": "/acm-website/static/js/2.18896050.chunk.js"
+    "revision": "7ab9d7d4d26709445832",
+    "url": "/acm-website/static/js/2.6294e7ac.chunk.js"
   },
   {
-    "revision": "494f04c711dacf49db3b",
-    "url": "/acm-website/static/js/main.541129d2.chunk.js"
+    "revision": "4c2b37278fab96c1cffb",
+    "url": "/acm-website/static/js/main.1a87a1df.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
@@ -66,6 +66,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e2b5f4bfc508c5922ace4a56d2002873",
     "url": "/acm-website/static/media/patern.e2b5f4bf.jpg"
+  },
+  {
+    "revision": "739cdfaef4c2230cb36bcf17baae7a05",
+    "url": "/acm-website/static/media/question.739cdfae.svg"
+  },
+  {
+    "revision": "11bed28a2c4909751068bd5ef49e0cf3",
+    "url": "/acm-website/static/media/scoreboard.11bed28a.svg"
   },
   {
     "revision": "21aa1417a31627658f45dde5293732de",
