@@ -3,14 +3,19 @@ import "./styles/body-style.css"
 import { height } from "@material-ui/system";
 
 class BodyP1 extends React.Component { 
+  
     render() {
+        let height = 800 ; 
+        if(window.innerHeight > 800){
+            height = window.innerHeight - 60 ;
+        }
         return (
             <div>
                 <div className= "container2">
                     <img 
                         className="blur-image" 
                         src ={ require("./../img/topImage.JPG") } 
-                        width="100%" height={window.innerHeight - 60}
+                        width="100%" height={height}
                     />
                     <div className= "dark-layer"></div>
                     <div className="banner-container">
