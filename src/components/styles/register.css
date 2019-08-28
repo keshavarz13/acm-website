@@ -27,6 +27,8 @@
 
 .team_header {
     margin-bottom: -10px;
+    margin-top: -10px;
+    margin-left: 10px;
 }
 
 .team_box {
@@ -38,4 +40,8 @@
     position: absolute;
     left:50%;
     transform: translate( -50% , 0);
+}
+
+.team_header_box {
+    display: flex;
 }

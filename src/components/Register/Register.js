@@ -51,8 +51,10 @@ class Register extends React.Component {
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="team_box">
-                    <h2 className="team_header">Team Information</h2>
-                    <PeopleIcon className="team_icon"/>
+                    <div className="team_header_box">
+                        <PeopleIcon />
+                        <h2 className="team_header">Team Information</h2>
+                    </div>
                     <FormControl required>
                         <InputLabel htmlFor="teamname">Team Name</InputLabel>
                         <Input
