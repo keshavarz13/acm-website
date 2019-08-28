@@ -9,6 +9,10 @@ class BodyP1 extends React.Component {
         if(window.innerHeight > 800){
             height = window.innerHeight - 60 ;
         }
+        if(window.innerWidth < 400 )
+        {
+            height = window.innerHeight;
+        }
         return (
             <div>
                 <div className= "container2">

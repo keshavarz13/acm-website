@@ -25,11 +25,10 @@
 
 .container a { 
     color: white;
-    float: right;
-    font-weight: bold; 
+    float: right;   
     text-decoration: none;
-    font-size: 13px ; 
-    margin-top: 25px ;
+    font-size: 20px ; 
+    margin-top: 18px ;
     margin-right: 10px ; 
     margin-left: 5px;
 
@@ -37,6 +36,7 @@
 
 .nav-link-container :hover{
     color: palevioletred;
+    font-weight: bold;
 }
 
 
@@ -51,6 +51,7 @@
 
 
 .dobble-container img {
+    margin-top: 4px;
     position: absolute;
     z-index: 105;
 }
