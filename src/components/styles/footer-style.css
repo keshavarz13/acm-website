@@ -18,7 +18,7 @@
     border-radius: 20px;
 }
 
-.row { 
+.row2 { 
     width: 700px; 
     left:50%;
     top: 45px;
@@ -40,7 +40,7 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .row { 
+    .row2 { 
         width: 300px; 
         top : 10px;
     }
