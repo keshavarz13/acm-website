@@ -1,5 +1,6 @@
 .part4-container { 
     width: 100% ; 
+    max-width: 297px;
     height: 170px ;
     position: relative;
 }
