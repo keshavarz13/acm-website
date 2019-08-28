@@ -11,3 +11,6 @@
     grid-template-columns: auto;
     margin-bottom: -100px;
 }
+[title="Select"]{
+    display: none;
+}
