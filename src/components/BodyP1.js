@@ -10,7 +10,7 @@ class BodyP1 extends React.Component {
                     <img 
                         className="blur-image" 
                         src ={ require("./../img/topImage.JPG") } 
-                        width="100%" height={window.innerHeight}
+                        width="100%" height={window.innerHeight - 60}
                     />
                     <div className= "dark-layer"></div>
                     <div className="banner-container">
