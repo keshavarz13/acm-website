@@ -33,7 +33,7 @@ class Header extends React.Component {
                     </div> 
                   </div>
 
-                  <img src= {require("./../img/header-logo.png")} height="55" width = "190"/>
+                  <img src= {require("./../img/header-logo.png")} height="55" width = "170"/>
               </div>
             </div>
         </div>
