@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Paper, Typography, Checkbox, FormControlLabel, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Button, Paper, Typography, Checkbox, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
 import ContestantFields from "./contestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import "./../styles/register.css"
@@ -69,6 +69,7 @@ class Register extends React.Component {
                             <Input
                                 className="text_box"
                                 name="institution"
+                                placeholder="Amirkabir University of Technology"
                                 onChange={this.handleChange}
                             />
                         </FormControl>
@@ -97,11 +98,11 @@ class Register extends React.Component {
                     memberNumber="3"
                     contestant={this.contestantChange}
                 />
-                <div>
+                <Grid align="center">
                     <Button style={{fontFamily: "inherit"}} variant="contained" className="submit_button">
                         submit
                     </Button>
-                </div>
+                </Grid>
             </div>
 
         )

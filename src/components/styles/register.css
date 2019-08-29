@@ -37,12 +37,6 @@
     margin-bottom: 15px;
 }
 
-.submit_button {
-    position: absolute;
-    left:50%;
-    transform: translate( -50% , 0);
-}
-
 .team_header_box {
     display: flex;
 }
