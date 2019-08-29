@@ -48,6 +48,19 @@
     display: flex;
 }
 
+.contestant_header_box {
+    display: flex;
+}
+
+.contestant_rule_box {
+    display: flex;
+    justify-content: center;
+}
+
+.contestant_rule_checkbox {
+    margin-top: 14px;
+}
+
 @media only screen and (max-width: 500px) {
     .register_container{
         margin-left: 40px;

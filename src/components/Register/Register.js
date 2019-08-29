@@ -55,30 +55,32 @@ class Register extends React.Component {
                         <PeopleIcon />
                         <h2 className="team_header">Team Information</h2>
                     </div>
-                    <FormControl required>
-                        <InputLabel htmlFor="teamname">Team Name</InputLabel>
-                        <Input
-                            className="text_box"
-                            name="teamname"
-                            onChange={this.handleChange}
-                        />
-                    </FormControl>                    
-                    <FormControl required>
-                        <InputLabel htmlFor="institution">Institution</InputLabel>
-                        <Input
-                            className="text_box"
-                            name="institution"
-                            onChange={this.handleChange}
-                        />
-                    </FormControl>
-                    <FormControl required>
-                        <InputLabel htmlFor="country">Country</InputLabel>
-                        <Input
-                            className="text_box"
-                            name="country"
-                            onChange={this.handleChange}
-                        />
-                    </FormControl>
+                    <div>
+                        <FormControl required>
+                            <InputLabel htmlFor="teamname">Team Name</InputLabel>
+                            <Input
+                                className="text_box"
+                                name="teamname"
+                                onChange={this.handleChange}
+                            />
+                        </FormControl>                    
+                        <FormControl required>
+                            <InputLabel htmlFor="institution">Institution</InputLabel>
+                            <Input
+                                className="text_box"
+                                name="institution"
+                                onChange={this.handleChange}
+                            />
+                        </FormControl>
+                        <FormControl required>
+                            <InputLabel htmlFor="country">Country</InputLabel>
+                            <Input
+                                className="text_box"
+                                name="country"
+                                onChange={this.handleChange}
+                            />
+                        </FormControl>
+                    </div>
                 </div>
                 <br/>
                 <ContestantFields

@@ -15,14 +15,21 @@ class contestantFields extends React.Component {
             studentnumber: "",
             email: "",
             phone: "",
+            rules: "false",
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.handleContestantChange = this.handleContestantChange.bind(this)
     }
 
     handleChange(event) {
         this.setState({
             [event.target.name] : event.target.value
+        })
+    }
+    handleCheckboxChange(event) {
+        this.setState({
+            rules: event.target.checked
         })
     }
 
@@ -33,7 +40,7 @@ class contestantFields extends React.Component {
     render() {
         return(
             <div onChange={this.handleContestantChange} className="contestant_box">
-                <div className="team_header_box">
+                <div className="contestant_header_box">
                     <PersonIcon />
                     <h2 className="contestant_header">Contestant #{this.props.memberNumber}</h2>
                 </div>
@@ -83,7 +90,6 @@ class contestantFields extends React.Component {
                         </Select>
                     </FormControl>
                 </div>
-
                 <div>
                     <FormControl margin="normal" required >
                     <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
@@ -122,6 +128,16 @@ class contestantFields extends React.Component {
                         onChange={this.handleChange}
                     />
                     </FormControl>
+                </div>
+                <div className="contestant_rule_box">
+                    <div className="contestant_rule_checkbox">
+                        <Checkbox
+                            name="rules"
+                            color="default"
+                            onChange={this.handleCheckboxChange}
+                        />     
+                    </div>       
+                    <h4>I have read and accept <a>Regional Rules</a> and <a>Local Rules</a>.</h4>
                 </div>
             </div>
 
