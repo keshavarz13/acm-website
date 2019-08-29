@@ -122,8 +122,6 @@ class contestantFields extends React.Component {
                             <MenuItem value={"Small"}>Small</MenuItem>
                         </Select>
                     </FormControl>
-                </div>
-                <div>
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
                         <Input

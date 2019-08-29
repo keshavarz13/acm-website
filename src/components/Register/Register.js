@@ -55,6 +55,23 @@ class Register extends React.Component {
             <form className="register_container" onSubmit={console.log("dd")}>                
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
+                <div className="register_page_p">
+                    <p>
+                        Please fill all of the following fields carefully and then press the&nbsp;
+                        <strong>Submit</strong> button to make your team registered.<br/>
+                        If you are willing to just register in online contest, follow this <a href="#">link</a>.<br/>
+                    </p>
+                    <p>
+                        Registration fee for Iranian teams are as follows:<br/>
+                        150,000 Tomans for non-AUT teams.<br/>
+                        100,000 Tomans for teams from Amirkabir University of Technology.
+                    </p>
+                    <p> 
+                        If your team name was not in registerd team list 24 hours after regitration, please inform us by:<br/>
+                        Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
+                        Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
+                    </p>
+                </div>
                 <div className="team_box">
                     <div className="team_header_box">
                         <PeopleIcon />
@@ -108,13 +125,14 @@ class Register extends React.Component {
                 />
                 <Grid align="center">
                     <ReCAPTCHA
+                        className="recaptcha"
                         sitekey="Your client site key"
                         onChange={this.onChange}
                     />
                 </Grid>
                 <Grid align="center">
                     <Button 
-                        style={{fontFamily: "inherit", marginTop: "20px", width: "300px"}} 
+                        style={{fontFamily: "inherit", marginTop: "20px"}} 
                         color="primary" 
                         variant="contained" 
                         className="submit_button"
