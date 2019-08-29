@@ -9,15 +9,14 @@ class contestantFields extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            firstname: "",
-            lastname: "",
+            first_name: "",
+            last_name: "",
             gender: "",    
-            shirt: "",     
-            firstname: "",   
+            shirt_size: "",     
             edu_level: "",
-            studentnumber: "",
+            student_number: "",
             email: "",
-            phone: "",
+            phone_number: "",
             rules: "false",
             local_rules: false,
             regional_rules: false,
@@ -77,19 +76,19 @@ class contestantFields extends React.Component {
                 </div>
                 <div>
                     <FormControl margin="normal" required>
-                        <InputLabel htmlFor="firstname">First Name</InputLabel>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
                         <Input
                             className="text_box"
-                            name="firstname"
+                            name="first_name"
                             type="text"
                             onChange={this.handleChange}
                         />
                     </FormControl>
                     <FormControl margin="normal" required >
-                        <InputLabel htmlFor="lastname">Last Name</InputLabel>
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
                         <Input
                             className="text_box"
-                            name="lastname"
+                            name="last_name"
                             type="text"
                             onChange={this.handleChange}
                         />
@@ -107,29 +106,29 @@ class contestantFields extends React.Component {
                         </Select>
                     </FormControl>
                     <FormControl margin="normal" required>
-                        <InputLabel htmlFor="shirt">Shirt</InputLabel>
+                        <InputLabel htmlFor="shirt_size">Shirt</InputLabel>
                         <Select 
                             className="text_box"
-                            value={this.state.shirt}
+                            value={this.state.shirt_size}
                             onChange={this.handleChange}
-                            name="shirt"
+                            name="shirt_size"
                         >
-                            <MenuItem value={"3X-Large"}>3X-Large</MenuItem>
-                            <MenuItem value={"2X-Large"}>2X-Large</MenuItem>
-                            <MenuItem value={"X-Large"}>X-Large</MenuItem>
-                            <MenuItem value={"Large"}>Large</MenuItem>
-                            <MenuItem value={"Medium"}>Medium</MenuItem>
-                            <MenuItem value={"Small"}>Small</MenuItem>
+                            <MenuItem value={"3XL"}>3X-Large</MenuItem>
+                            <MenuItem value={"2XL"}>2X-Large</MenuItem>
+                            <MenuItem value={"XL"}>X-Large</MenuItem>
+                            <MenuItem value={"L"}>Large</MenuItem>
+                            <MenuItem value={"M"}>Medium</MenuItem>
+                            <MenuItem value={"S"}>Small</MenuItem>
                         </Select>
                     </FormControl>
                 </div>
                 <div>
                     <FormControl margin="normal" required >
-                        <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
                         <Input
                             className="text_box"
                             type="number"
-                            name="studentnumber"
+                            name="student_number"
                             onChange={this.handleChange}
                         />
                     </FormControl>
@@ -141,8 +140,8 @@ class contestantFields extends React.Component {
                             onChange={this.handleChange}
                             name="edu_level"
                         >
-                            <MenuItem value={"Undergraduate"}>Undergraduate(BSc.)</MenuItem>
-                            <MenuItem value={"Graduate"}>Graduate(MSc.)</MenuItem>
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
                         </Select>
                     </FormControl>
 
@@ -156,10 +155,10 @@ class contestantFields extends React.Component {
                         />
                     </FormControl>
                     <FormControl margin="normal" required >
-                        <InputLabel htmlFor="phone">Phone Number</InputLabel>
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
                         <Input
                             className="text_box"
-                            name="phone"
+                            name="phone_number"
                             type="number"
                             placeholder="989121111111"
                             onChange={this.handleChange}
