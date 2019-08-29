@@ -2,7 +2,7 @@ import React from "react"
 import { Dialog, DialogTitle, DialogContentText, DialogContent, 
          DialogActions, Select, MenuItem, Button, Typography, 
          Checkbox, FormControl, 
-         Input, InputLabel } from '@material-ui/core';
+         Input, InputLabel, OutlinedInput } from '@material-ui/core';
 import PersonIcon from '@material-ui/icons/Person';
 
 class contestantFields extends React.Component {
@@ -76,11 +76,12 @@ class contestantFields extends React.Component {
                     <h2 className="contestant_header">Contestant #{this.props.memberNumber}</h2>
                 </div>
                 <div>
-                    <FormControl margin="normal" required >
+                    <FormControl margin="normal" required>
                         <InputLabel htmlFor="firstname">First Name</InputLabel>
                         <Input
                             className="text_box"
                             name="firstname"
+                            type="text"
                             onChange={this.handleChange}
                         />
                     </FormControl>
@@ -89,6 +90,7 @@ class contestantFields extends React.Component {
                         <Input
                             className="text_box"
                             name="lastname"
+                            type="text"
                             onChange={this.handleChange}
                         />
                     </FormControl>
@@ -126,6 +128,7 @@ class contestantFields extends React.Component {
                         <InputLabel htmlFor="studentnumber">Student Number</InputLabel>
                         <Input
                             className="text_box"
+                            type="number"
                             name="studentnumber"
                             onChange={this.handleChange}
                         />
@@ -149,6 +152,7 @@ class contestantFields extends React.Component {
                             className="text_box"
                             name="email"
                             onChange={this.handleChange}
+                            type="email"
                         />
                     </FormControl>
                     <FormControl margin="normal" required >
@@ -156,6 +160,8 @@ class contestantFields extends React.Component {
                         <Input
                             className="text_box"
                             name="phone"
+                            type="number"
+                            placeholder="989121111111"
                             onChange={this.handleChange}
                         />
                     </FormControl>
@@ -170,7 +176,8 @@ class contestantFields extends React.Component {
                     </div>       
                     <h4>
                         I have read and accept&nbsp;
-                        <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenRegionalRules}>Regional Rules</a> and&nbsp;
+                        <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenRegionalRules}>Regional Rules </a> 
+                        and&nbsp;
                         <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenLocalRules}>Local Rules</a>.
                     </h4>
                     <Dialog
@@ -183,38 +190,46 @@ class contestantFields extends React.Component {
                         <DialogContent>
                             <DialogContentText>
                                 <h3>Mission</h3>
-                                The ACM International Collegiate Programming Contest (ICPC) provides college 
-                                students with opportunities to interact with students from other universities 
-                                and to sharpen and demonstrate their problem-solving, programming, and teamwork skills. 
-                                The contest provides a platform for ACM, industry, and academia to encourage and 
-                                focus public attention on the next generation of computing professionals as they pursue excellence.
+                                <p>
+                                    The ACM International Collegiate Programming Contest (ICPC) provides college 
+                                    students with opportunities to interact with students from other universities 
+                                    and to sharpen and demonstrate their problem-solving, programming, and teamwork skills. 
+                                    The contest provides a platform for ACM, industry, and academia to encourage and 
+                                    focus public attention on the next generation of computing professionals as they pursue excellence.
+                                </p>
 
                                 <h3>Introduction</h3>
-                                The contest is a two-tiered competition among teams of students representing 
-                                institutions of higher education. Teams first compete in regional contests 
-                                held around the world from September to November each year. 
-                                The winning team from each regional contest qualifies to advance to 
-                                the ACM International Collegiate Programming Contest World Finals, 
-                                typically held the following March to mid-April. 
-                                Additional high-ranking teams may be invited to the World Finals as wild card teams.
+                                <p>
+                                    The contest is a two-tiered competition among teams of students representing 
+                                    institutions of higher education. Teams first compete in regional contests 
+                                    held around the world from September to November each year. 
+                                    The winning team from each regional contest qualifies to advance to 
+                                    the ACM International Collegiate Programming Contest World Finals, 
+                                    typically held the following March to mid-April. 
+                                    Additional high-ranking teams may be invited to the World Finals as wild card teams.
+                                </p>
 
                                 <h3>Organization</h3>
-                                The ICPC International Steering Committee is responsible 
-                                for establishing contest rules, policy and guidelines. 
-                                They oversee the conducting of regional contests, resolve regional appeals, 
-                                rule on international issues, recommend ways to make the contest 
-                                accessible and attractive to international participants and review 
-                                variances in regional rules. There are two standing subcommittees, 
-                                the Appeals Committee and the Eligibility Committee.<br/>
-                                The ICPC is organized according to the ICPC Policies and Procedures. 
-                                For each regional contest, the Regional Contest Director (RCD) 
-                                is charged with executing a regional contest in accordance with the 
-                                regional rules and ICPC policies, procedures, and guidelines. 
-                                Regional rules may vary to accommodate differences in educational 
-                                systems and host computing facilities. Additional rules, exceptions, 
-                                and other information pertaining to a specific regional contest can 
-                                be found at the Regionals Contest Website. 
-                                Those rules do not supersede these rules or the World Finals rules.
+                                <p>
+                                    The ICPC International Steering Committee is responsible 
+                                    for establishing contest rules, policy and guidelines. 
+                                    They oversee the conducting of regional contests, resolve regional appeals, 
+                                    rule on international issues, recommend ways to make the contest 
+                                    accessible and attractive to international participants and review 
+                                    variances in regional rules. There are two standing subcommittees, 
+                                    the Appeals Committee and the Eligibility Committee.
+                                </p>
+                                <p>
+                                    The ICPC is organized according to the <a href="http://icpc.baylor.edu/icpc/Info/ppgs.pdf">ICPC Policies and Procedures</a>. 
+                                    For each regional contest, the Regional Contest Director (RCD) 
+                                    is charged with executing a regional contest in accordance with the 
+                                    regional rules and ICPC policies, procedures, and guidelines. 
+                                    Regional rules may vary to accommodate differences in educational 
+                                    systems and host computing facilities. Additional rules, exceptions, 
+                                    and other information pertaining to a specific regional contest can 
+                                    be found at the <a href="http://cm2prod.baylor.edu/ICPCWiki/Wiki.jsp?page=Regionals">Regionals</a> Contest Website. 
+                                    Those rules do not supersede these rules or the World Finals rules.
+                                </p>
 
                                 <h3>Localization</h3>
                                 The language of the Contest is English. 
@@ -231,8 +246,8 @@ class contestantFields extends React.Component {
                                 The coach certifies the eligibility of contestants and serves as the 
                                 official point-of-contact with the team prior to and during 
                                 contest activities. A team may only have one coach.<br/>
-                                The coach must fully register teams in the ICPC Registration 
-                                System within the time set by the regional rules which, for all 
+                                The coach must fully register teams in the <a href="http://icpc.baylor.edu/">ICPC Registration 
+                                System</a> within the time set by the regional rules which, for all 
                                 Regional Contests, is no later than the earlier date of 7 days 
                                 before the contest and November 8. A team is not eligible to compete 
                                 in the regional contest until the regional contest director has accepted 
@@ -241,7 +256,8 @@ class contestantFields extends React.Component {
                                 reserves may be substituted for contestants. Such substitutions must be 
                                 entered in the ICPC Registration System by the regional contest director before the contest begins.<br/>
                                 Each team consists of three contestants who are eligible to 
-                                compete in the ICPC World Finals as described under Advancing to the World Finals. 
+                                compete in the ICPC World Finals as described under <a href="http://cm2prod.baylor.edu/ICPCWiki/Wiki.jsp?page=Regional%20Rules#section-Regional+Rules-AdvancingToTheWorldFinals">
+                                Advancing to the World Finals</a>. 
                                 The team's contestants must satisfy the following eligibility rules.
 
                                 <h3>Contestant Eligibility Rules</h3>
@@ -478,18 +494,19 @@ class contestantFields extends React.Component {
 
                                 <h3>Computing Environment</h3>
                                 <ul>
-                                    <ui><h4>Compilers:</h4>
-                                        Javac (JDK version 1.8)<br/>
-                                        g++ 5.4<br/>
-                                        gcc 5.4<br/>
-                                        python 2.7.12<br/>
-                                        python 3.5.2<br/>
-                                        Development Tools<br/>
-                                        CodeBlocks 16.01<br/>
-                                        Eclipse Oxygen 4.7.0<br/>
-                                        pycharm 2017.2<br/>
-                                        netbeans 8.1<br/>
-                                        intellij idea community 2017.3<br/>
+                                    <ui>
+                                        <h4>Compilers:</h4>
+                                            Javac (JDK version 1.8)<br/>
+                                            g++ 5.4<br/>
+                                            gcc 5.4<br/>
+                                            python 2.7.12<br/>
+                                            python 3.5.2<br/>
+                                            Development Tools<br/>
+                                            CodeBlocks 16.01<br/>
+                                            Eclipse Oxygen 4.7.0<br/>
+                                            pycharm 2017.2<br/>
+                                            netbeans 8.1<br/>
+                                            intellij idea community 2017.3<br/>
                                     </ui>
 
                                     <ui>
@@ -511,7 +528,7 @@ class contestantFields extends React.Component {
 
                                     <ui>
                                         <h4>Contest Environment:</h4>
-                                        DOMJudge 5.2(<a href="http://www.domjudge.org/docs/team-manual.pdf">DOMJudge Team Guide</a>)
+                                            DOMJudge 5.2(<a href="http://www.domjudge.org/docs/team-manual.pdf">DOMJudge Team Guide</a>)
                                     </ui>
                                 </ul>
 

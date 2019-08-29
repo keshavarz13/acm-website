@@ -52,7 +52,7 @@ class Register extends React.Component {
 
     render() {
         return(
-            <div className="register_container">                
+            <form className="register_container" onSubmit={console.log("dd")}>                
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="team_box">
@@ -66,6 +66,7 @@ class Register extends React.Component {
                             <Input
                                 className="text_box"
                                 name="teamname"
+                                type="text"
                                 onChange={this.handleChange}
                             />
                         </FormControl>                    
@@ -74,6 +75,7 @@ class Register extends React.Component {
                             <Input
                                 className="text_box"
                                 name="institution"
+                                type="text"
                                 placeholder="Amirkabir University of Technology"
                                 onChange={this.handleChange}
                             />
@@ -82,6 +84,7 @@ class Register extends React.Component {
                             <InputLabel htmlFor="country">Country</InputLabel>
                             <Input
                                 className="text_box"
+                                type="text"
                                 name="country"
                                 onChange={this.handleChange}
                             />
@@ -115,11 +118,12 @@ class Register extends React.Component {
                         color="primary" 
                         variant="contained" 
                         className="submit_button"
+                        type="submit"
                     >
                         submit
                     </Button>
                 </Grid>
-            </div>
+            </form>
 
         )
     }
