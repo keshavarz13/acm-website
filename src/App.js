@@ -1,4 +1,5 @@
 import React from "react" 
+import { Route } from 'react-router-dom'
 import BodyP4 from "./components/BodyP4"
 import Header from "./components/Header"
 import BodyP1 from "./components/BodyP1"
@@ -11,25 +12,20 @@ import Register from "./components/Register/Register"
 import Poster from "./components/poster"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
-
-import { Route } from 'react-router-dom'
-
-
-
-
-
+import LocalRules from "./components/LocalRules";
+import RegionalRules from "./components/RegionalRules";
 
 class App extends React.Component {
-    constructor(){
+    constructor() {
         super() 
         this.state={
-            validReq : false , 
-            pastContestData : {
-                poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
-                year : "2018",
-                scoreBoard :"1" , 
-                question : "" , 
-                images : 
+            validReq: false, 
+            pastContestData: {
+                poster: "http://icpc.sharif.edu/2018/images/poster.png" , 
+                year: "2018",
+                scoreBoard: "1", 
+                question: "", 
+                images: 
                     [{
                         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                         thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
@@ -62,34 +58,33 @@ class App extends React.Component {
         this.pastContestMaker = this.pastContestMaker.bind(this)
     }
 
-
-    pastContestProvider(data){
+    pastContestProvider(data) {
         this.setState({
-            pastContestData : data,
-            validReq : true
+            pastContestData: data,
+            validReq: true
         })
     }
 
-    pastContestMaker(){
-        if(this.state.validReq){
+    pastContestMaker() {
+        if(this.state.validReq) {
             return(
-                <PastContest data={this.state.pastContestData}/>
+                <PastContest data={this.state.pastContestData} />
             )
-        }else{
-            return(<PosterList pastContestProvider = {this.pastContestProvider}/>)
+        } else {
+            return(
+                <PosterList pastContestProvider = {this.pastContestProvider} />
+            )
             
         }
        
     }
-    pastContestList() { 
-        
+
+    pastContestList() {     
         return(
-            <PosterList pastContestProvider = {this.pastContestProvider}/>
+            <PosterList pastContestProvider = {this.pastContestProvider} />
         )
-        
     }
 
-    
     home () { 
         return(
             <div>
@@ -99,22 +94,21 @@ class App extends React.Component {
                 <About/>
                 <TimeLineContainerView/>
                 <BodyP4/>
-            </div>
-        
+                <LocalRules />
+                <RegionalRules />
+            </div>     
         )
     }
     
-
     render() {
         return(
             <div>
-                <Header changePage = {this.changePage}/>
+                <Header changePage = {this.changePage} />
                 <Route exact path="/Register" component={Register} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
-                <Route exact path="/PastContest" component={this.pastContestMaker}/>
-                <Footer/>
-        
+                <Route exact path="/PastContest" component={this.pastContestMaker} />
+                <Footer/>    
             </div>
         )
     }
