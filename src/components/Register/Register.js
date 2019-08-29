@@ -2,6 +2,7 @@ import React from "react"
 import { Button, Paper, Typography, Checkbox, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
 import ContestantFields from "./contestantFields"
 import PeopleIcon from '@material-ui/icons/People';
+import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 
 
@@ -24,6 +25,10 @@ class Register extends React.Component {
         }
         this.contestantChange = this.contestantChange.bind(this)
         this.handleChange = this.handleChange.bind(this)
+    }
+
+    onChange(value) {
+        console.log("Captcha value:", value);
     }
 
     handleChange(event) {
@@ -99,7 +104,13 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <Grid align="center">
-                    <Button style={{fontFamily: "inherit"}} variant="contained" className="submit_button">
+                    <ReCAPTCHA
+                        sitekey="Your client site key"
+                        onChange={this.onChange}
+                    />
+                </Grid>
+                <Grid align="center">
+                    <Button style={{fontFamily: "inherit", marginTop: "20px", width: "300px"}} color="primary" variant="contained" className="submit_button">
                         submit
                     </Button>
                 </Grid>
