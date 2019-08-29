@@ -110,7 +110,12 @@ class Register extends React.Component {
                     />
                 </Grid>
                 <Grid align="center">
-                    <Button style={{fontFamily: "inherit", marginTop: "20px", width: "300px"}} color="primary" variant="contained" className="submit_button">
+                    <Button 
+                        style={{fontFamily: "inherit", marginTop: "20px", width: "300px"}} 
+                        color="primary" 
+                        variant="contained" 
+                        className="submit_button"
+                    >
                         submit
                     </Button>
                 </Grid>

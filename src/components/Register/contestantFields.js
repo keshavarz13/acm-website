@@ -457,55 +457,69 @@ class contestantFields extends React.Component {
                         </DialogTitle>
                         <DialogContent>
                             <DialogContentText>
-                                Every team should consist of 3 members.
-                                Number of problems would be between 8 to 12.
-                                Problems are in English.
-                                Contest duration is 5 hours.
-                                Bringing every electronical device to the contest location is forbidden.
-                                Each team can bring as much papers and printed materials as it likes.
-                                Only one computer is given to each team.
-                                Ranking system: The team with more solved problems is ranked higher. Tied teams are ranked related to their times.(A team with less time is considered to be better) The time for each team is the sumation of the times of problems solved (time elapsed from the beginning of contest) plus 20 minutes penalty for each not accepted submission of solved problems.
-                                Participation of at least one of the members of each team in the coordinations session the day before the contest day is mandatory.
-                                At least 3 teams will be qualified for the Asia region - Tehran site. for more details please read Farsi rules.
-                                Further explanations in coordination session.
-                                
+                                <h3>Rules</h3>
+                                <ul>
+                                    <ui>1. Every team should consist of 3 members.<br/></ui>
+                                    <ui>2. Number of problems would be between 8 to 12.<br/></ui>
+                                    <ui>3. Problems are in English.<br/></ui>
+                                    <ui>4. Contest duration is 5 hours.<br/></ui>
+                                    <ui>5. Bringing every electronical device to the contest location is forbidden.<br/></ui>
+                                    <ui>6. Each team can bring as much papers and printed materials as it likes.<br/></ui>
+                                    <ui>7. Only one computer is given to each team.<br/></ui>
+                                    <ui>8. Ranking system: The team with more solved problems is ranked higher. 
+                                        Tied teams are ranked related to their times.(A team with less time is considered to be better) 
+                                        The time for each team is the sumation of the times of problems solved 
+                                        (time elapsed from the beginning of contest) plus 20 minutes penalty 
+                                        for each not accepted submission of solved problems.<br/></ui>
+                                    <ui>9. Participation of at least one of the members of each team in the coordinations session the day before the contest day is mandatory.<br/></ui>
+                                    <ui>10. At least 3 teams will be qualified for the Asia region - Tehran site. for more details please read Farsi rules.<br/></ui>
+                                    <ui>11. Further explanations in coordination session.<br/></ui>
+                                </ul>
 
-                                Computing Environment
-                                Compilers
-                                Javac (JDK version 1.8)
-                                g++ 5.4
-                                gcc 5.4
-                                python 2.7.12
-                                python 3.5.2
-                                Development Tools
-                                CodeBlocks 16.01
-                                Eclipse Oxygen 4.7.0
-                                pycharm 2017.2
-                                netbeans 8.1
-                                intellij idea community 2017.3
-                                Reference Materials:
-                                Editors
-                                vim 7.14.1689
-                                visual studio code 1.18.1
-                                sublime text build 3126
-                                kdevelop 4.7.3
-                                kate 15.12.3
-                                gvim 7.14.1689
-                                Geany 1.2.7
-                                gedit 3.18.3
-                                emacs 24.5.1
-                                Contest Environment
-                                DOMJudge 5.2*
-                                
+                                <h3>Computing Environment</h3>
+                                <ul>
+                                    <ui><h4>Compilers:</h4>
+                                        Javac (JDK version 1.8)<br/>
+                                        g++ 5.4<br/>
+                                        gcc 5.4<br/>
+                                        python 2.7.12<br/>
+                                        python 3.5.2<br/>
+                                        Development Tools<br/>
+                                        CodeBlocks 16.01<br/>
+                                        Eclipse Oxygen 4.7.0<br/>
+                                        pycharm 2017.2<br/>
+                                        netbeans 8.1<br/>
+                                        intellij idea community 2017.3<br/>
+                                    </ui>
 
-                                *DOMJudge Team Guide( English )
+                                    <ui>
+                                        <h4>Reference Materials:</h4>
+                                    </ui>
 
-                                
+                                    <ui>
+                                        <h4>Editors:</h4>
+                                            vim 7.14.1689<br/>
+                                            visual studio code 1.18.1<br/>
+                                            sublime text build 3126<br/>
+                                            kdevelop 4.7.3<br/>
+                                            kate 15.12.3<br/>
+                                            gvim 7.14.1689<br/>
+                                            Geany 1.2.7<br/>
+                                            gedit 3.18.3<br/>
+                                            emacs 24.5.1<br/>
+                                    </ui>
 
-                                Problem Selection
-                                The scientific committee is responsible for preparing the contest problems which are selected from those proposed by its members.
+                                    <ui>
+                                        <h4>Contest Environment:</h4>
+                                        DOMJudge 5.2(<a href="http://www.domjudge.org/docs/team-manual.pdf">DOMJudge Team Guide</a>)
+                                    </ui>
+                                </ul>
 
-                                So far as possible, the problems will avoid dependence on detailed knowledge of a particular application area or programming language.
+                                <h3>Problem Selection</h3>
+                                    The scientific committee is responsible for preparing 
+                                    the contest problems which are selected from those proposed by its members.<br/>
+                                    So far as possible, the problems will avoid dependence on 
+                                    detailed knowledge of a particular application area or programming language.
                             </DialogContentText>
                         </DialogContent>
                         <DialogActions>
