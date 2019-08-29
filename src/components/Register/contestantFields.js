@@ -169,8 +169,8 @@ class contestantFields extends React.Component {
                         />     
                     </div>       
                     <h4>I have read and accept 
-                        <Button onClick={this.OpenRegionalRules}>Regional Rules</Button> and 
-                        <Button onClick={this.OpenLocalRules}>Local Rules</Button>.</h4>
+                        <Button style={{fontFamily: "inherit"}} onClick={this.OpenRegionalRules}>Regional Rules</Button> and 
+                        <Button style={{fontFamily: "inherit"}} onClick={this.OpenLocalRules}>Local Rules</Button>.</h4>
                     <Dialog
                         open={this.state.regional_rules}
                         onClose={this.CloseRegionalRules}
@@ -440,7 +440,7 @@ class contestantFields extends React.Component {
                             </DialogContentText>
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={this.CloseRegionalRules} color="primary" autoFocus>
+                            <Button onClick={this.CloseRegionalRules} color="default" autoFocus>
                                 OK
                             </Button>
                         </DialogActions>
@@ -507,7 +507,7 @@ class contestantFields extends React.Component {
                             </DialogContentText>
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={this.CloseLocalRules} color="primary" autoFocus>
+                            <Button onClick={this.CloseLocalRules} color="default" autoFocus>
                                 OK
                             </Button>
                         </DialogActions>
