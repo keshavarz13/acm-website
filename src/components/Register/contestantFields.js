@@ -168,9 +168,11 @@ class contestantFields extends React.Component {
                             onChange={this.handleCheckboxChange}
                         />     
                     </div>       
-                    <h4>I have read and accept 
-                        <Button style={{fontFamily: "inherit"}} onClick={this.OpenRegionalRules}>Regional Rules</Button> and 
-                        <Button style={{fontFamily: "inherit"}} onClick={this.OpenLocalRules}>Local Rules</Button>.</h4>
+                    <h4>
+                        I have read and accept&nbsp;
+                        <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenRegionalRules}>Regional Rules</a> and&nbsp;
+                        <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenLocalRules}>Local Rules</a>.
+                    </h4>
                     <Dialog
                         open={this.state.regional_rules}
                         onClose={this.CloseRegionalRules}
