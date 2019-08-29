@@ -4,13 +4,14 @@ import ContestantFields from "./contestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
+import axios from 'axios'
 
 
 class Register extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            teamname: "",
+            team_name: "",
             institution: "",
             country: "",
             contestant1: {
@@ -35,24 +36,54 @@ class Register extends React.Component {
         this.setState({
             [event.target.name] : event.target.value
         })
-        {console.log(this.state)}
+        // console.log(this.state)
     }
 
     contestantChange(contestantNumber, contestant) {
         if (contestantNumber === '1') {
-            this.state.contestant1 = contestant;
+            this.setState({
+                contestant1: contestant
+            })
         }
         else if(contestantNumber === '2') {
-            this.state.contestant2 = contestant;
+            this.setState({
+                contestant2: contestant
+            })
         }
         else if(contestantNumber === '3') {
-            this.state.contestant3 = contestant;
+            this.setState({
+                contestant3: contestant
+            })
         }
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        const teamName = this.state.team_name;
+        const team_dict = {"team_name": teamName}
+        const country_dict = {"name": this.state.country}
+        console.log(this.state)
+        axios.post('http://localhost:8000/api/register/team/', {
+            team_name: teamName,
+            is_onsite: true,
+            institution: this.state.institution,
+            country: country_dict
+        })
+        this.state.contestant1['team'] = team_dict;
+        console.log(this.state.contestant1)
+        axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
+        // const contestants = [this.state.contestant1, this.state.contestant2, this.state.contestant3]
+        // for (var contestant in contestants ) {
+        //     contestant['team'] = team_dict
+        //     console.log(contestant)
+        //     // axios.post("http://localhost:8000/api/register/contestant/onsite", contestant)
+        // }
+
     }
 
     render() {
         return(
-            <form className="register_container" onSubmit={console.log("dd")}>                
+            <form className="register_container" onSubmit={this.onSubmit}>                
                 <h1 className="register_page_header">Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="register_page_p">
@@ -79,10 +110,10 @@ class Register extends React.Component {
                     </div>
                     <div>
                         <FormControl required>
-                            <InputLabel htmlFor="teamname">Team Name</InputLabel>
+                            <InputLabel htmlFor="team_name">Team Name</InputLabel>
                             <Input
                                 className="text_box"
-                                name="teamname"
+                                name="team_name"
                                 type="text"
                                 onChange={this.handleChange}
                             />
@@ -114,7 +145,7 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <br/>
-                <ContestantFields
+                {/* <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
@@ -122,7 +153,7 @@ class Register extends React.Component {
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
-                />
+                /> */}
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"
