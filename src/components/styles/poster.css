@@ -53,7 +53,7 @@
    
 
 }
-.sher-box-container{
+.sher-box-container2{
     position: relative;
       margin-top: 300px;
       max-width: 1500px;
@@ -61,22 +61,22 @@
       margin: 0 auto;
       justify-content: center;
 }
-  
+
   /* Float four columns side by side */
-.column {
+.columns {
     float: left;
      
 
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {
+.row2 {
     margin-top: 100px;
-    
+    width :1440px;  
 }
 
 /* Clear floats after the columns */
-.row:after {
+.row2:after {
     content: "";
     display: table;
     clear: both;
@@ -85,7 +85,7 @@
 
 @media only screen and (max-width: 1097px) {
     /* For desktop: */
-    .sher-box-container {
+    .sher-box-container2 {
         display: flex;
         float: center;
         align-items: center;
@@ -94,13 +94,12 @@
         
 
     }
-    .column{
+    .columns{
         align-items: center ; 
         justify-content: center;
         margin-left: 50% ; 
         transform: translate(-50% , 0 )
     }
 }
-
 
 
