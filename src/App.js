@@ -12,6 +12,7 @@ import RegisterView from "./components/Register/RegisterView"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
+import DeveloperPage from "./components/DeveloperPage"
 
 class App extends React.Component {
     constructor() {
@@ -75,6 +76,7 @@ class App extends React.Component {
                 <Route exact path="/status" component={ListOfTeamsStatus} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Footer/> 
+                <DeveloperPage src1 ="https://images-na.ssl-images-amazon.com/images/I/81olhQ%2B41BL._SX466_.jpg" src2="https://vignette.wikia.nocookie.net/despicableme/images/c/ca/Bob-from-the-minions-movie.jpg/revision/latest?cb=20151224154354" name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
             </div>
         )
     }

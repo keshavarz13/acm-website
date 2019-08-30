@@ -1,8 +1,9 @@
 .situation-card{
     width: 90% ;
+    height: 100%;
     border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     min-width: 300px; 
     padding-left: 7px;
@@ -43,7 +44,7 @@
 }
 
 .cards-container { 
-    float: left;
+
     width: 100%;
 
 }
