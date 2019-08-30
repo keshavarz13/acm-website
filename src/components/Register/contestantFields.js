@@ -101,8 +101,8 @@ class contestantFields extends React.Component {
                             onChange={this.handleChange}
                             name="gender"
                         >
-                            <MenuItem value={"Male"}>Male</MenuItem>
-                            <MenuItem value={"Female"}>Female</MenuItem>
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
                         </Select>
                     </FormControl>
                     <FormControl margin="normal" required>

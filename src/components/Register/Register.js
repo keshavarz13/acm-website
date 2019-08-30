@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Paper, Typography, Checkbox, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Button, MenuItem, Paper, Typography, Checkbox, Select, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
 import ContestantFields from "./contestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -13,7 +13,7 @@ class Register extends React.Component {
         this.state = {
             team_name: "",
             institution: "",
-            country: "",
+            country: 0,
             contestant1: {
 
             },
@@ -59,19 +59,27 @@ class Register extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
+        const headers = {
+            'Content-Type': 'application/json'
+        }
         const teamName = this.state.team_name;
-        const team_dict = {"team_name": teamName}
-        const country_dict = {"name": this.state.country}
-        console.log(this.state)
+        var createdTeamID = 0;
+        console.log(this.state.country)
         axios.post('http://localhost:8000/api/register/team/', {
-            team_name: teamName,
+            name: teamName,
             is_onsite: true,
             institution: this.state.institution,
-            country: country_dict
+            status: "PAID",
+            country_id: this.state.country.id
+        }, {
+            headers: headers
+        } ).then(res => {
+            createdTeamID = res.data.id;
         })
-        this.state.contestant1['team'] = team_dict;
+        this.state.contestant1['team'] = createdTeamID;
         console.log(this.state.contestant1)
         axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
+
         // const contestants = [this.state.contestant1, this.state.contestant2, this.state.contestant3]
         // for (var contestant in contestants ) {
         //     contestant['team'] = team_dict
@@ -90,7 +98,7 @@ class Register extends React.Component {
                     <p>
                         Please fill all of the following fields carefully and then press the&nbsp;
                         <strong>Submit</strong> button to make your team registered.<br/>
-                        If you are willing to just register in online contest, follow this <a href="#">link</a>.<br/>
+                        If you are willing to just register in the online contest, follow this <a href="#">link</a>.<br/>
                     </p>
                     <p>
                         Registration fee for Iranian teams are as follows:<br/>
@@ -98,7 +106,7 @@ class Register extends React.Component {
                         100,000 Tomans for teams from Amirkabir University of Technology.
                     </p>
                     <p> 
-                        If your team name was not in registerd team list 24 hours after regitration, please inform us by:<br/>
+                        If your team name was not in the registerd teams list 24 hours after regitration, please inform us by:<br/>
                         Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
                         Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
                     </p>
@@ -130,12 +138,19 @@ class Register extends React.Component {
                         </FormControl>
                         <FormControl required>
                             <InputLabel htmlFor="country">Country</InputLabel>
-                            <Input
+                            <Select
                                 className="text_box"
+                                value={this.state.country}
                                 type="text"
                                 name="country"
                                 onChange={this.handleChange}
-                            />
+                            >
+                                { this.props.data.map(item => (
+                                      <MenuItem value={item}>{item.name}</MenuItem>
+                                       ))
+                                 }
+                                {/* <MenuItem></MenuItem> */}
+                            </Select>
                         </FormControl>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
-import Register from "./components/Register/Register"
+import RegisterView from "./components/Register/RegisterView"
 import Poster from "./components/poster"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
@@ -104,7 +104,7 @@ class App extends React.Component {
         return(
             <div>
                 <Header changePage = {this.changePage} />
-                <Route exact path="/Register" component={Register} />
+                <Route exact path="/Register" component={RegisterView} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
