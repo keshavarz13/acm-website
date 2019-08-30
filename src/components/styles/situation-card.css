@@ -35,6 +35,9 @@
 }
 .status-cards-container { 
     margin-top: 100px;
+    width: 1600px;
+    margin-left: 50% ; 
+    transform: translate(-50% , 0);
     display: grid ; 
     grid-template-columns:auto auto ;
 }
