@@ -1,0 +1,25 @@
+.situation-card{
+    background-color: rgb(51, 14, 85) ; 
+    width: 40% ;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    min-width: 300px; 
+    padding-left: 7px;
+    box-sizing: border-box;
+
+}
+
+.situation-card p{
+    color: rgb(240, 218, 191);
+    margin-top: -20px;
+   
+}
+
+.situation-card p span {
+    font-weight: bold;
+}
+
+.situation-card h1 { 
+    color: bisque;
+    margin-bottom: 10px;
+}

@@ -9,7 +9,7 @@ import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import RegisterView from "./components/Register/RegisterView"
-import Poster from "./components/poster"
+import SituationCard from "./components/SituationCard"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import LocalRules from "./components/LocalRules";
@@ -20,37 +20,6 @@ class App extends React.Component {
         super() 
         this.state={
             validReq: false, 
-            pastContestData: {
-                poster: "http://icpc.sharif.edu/2018/images/poster.png" , 
-                year: "2018",
-                scoreBoard: "1", 
-                question: "", 
-                images: 
-                    [{
-                        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                        thumbnailWidth: 320,
-                        thumbnailHeight: 212,
-                        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                        caption: "Boats (Jeshu John - designerspics.com)"
-                    },
-                    {
-                        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                        thumbnailWidth: 320,
-                        thumbnailHeight: 212,
-                        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                        caption: "Boats (Jeshu John - designerspics.com)"
-                    },
-                    {
-                        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                        thumbnailWidth: 320,
-                        thumbnailHeight: 212,
-                        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                        caption: "Boats (Jeshu John - designerspics.com)"
-                    }]
-            }
         }
         this.pastContestList = this.pastContestList.bind(this)
         this.home = this.home.bind(this)
@@ -101,6 +70,13 @@ class App extends React.Component {
     }
     
     render() {
+        const data = {
+            title : "Pending", 
+            name : "sooode sahame banki!" , 
+            institution : "amir kabir university of technology" , 
+            location : "Iran" , 
+            color : "ani"
+        }
         return(
             <div>
                 <Header changePage = {this.changePage} />
@@ -108,7 +84,8 @@ class App extends React.Component {
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
-                <Footer/>    
+                <SituationCard data ={data}/> 
+                <Footer/> 
             </div>
         )
     }

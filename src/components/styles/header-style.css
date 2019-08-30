@@ -27,7 +27,7 @@
     color: white;
     float: right;   
     text-decoration: none;
-    font-size: 20px ; 
+    font-size: 18px ; 
     margin-top: 18px ;
     margin-right: 10px ; 
     margin-left: 5px;
@@ -65,6 +65,7 @@
 }
 
 .dropdown .dropbtn {
+    cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
@@ -98,6 +99,7 @@
     display: block;
     text-align: left;
     box-sizing: border-box;
+    font-size: 15px;
   }
   
   .dropdown-content a:hover {
