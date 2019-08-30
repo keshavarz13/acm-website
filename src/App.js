@@ -75,10 +75,10 @@ class App extends React.Component {
                 <Header changePage = {this.changePage} />
                 <Route exact path="/Register" component={RegisterView} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
-                <Route exact path="/" component={this.home} />
+                <Route exact path="/" component={BodyP1} />
+                <Route exact path="/status" component={ListOfTeamsStatus} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Footer/> 
-                <ListOfTeamsStatus/>
             </div>
         )
     }

@@ -59,12 +59,17 @@ class ListOfTeamsStatus extends React.Component {
     render() {
         const cards = this.state.data.map((cardData) => <SituationCard data = {cardData}/>)
         return (
-            <div className = "super-status-cards-container">  
-                <div className = "status-cards-container">
-                    {cards}
+            <div style = {{position : "inline"}}>
+                <div className = "super-status-cards-container" >  
+                    <div className = "status-cards-container">
+                        {cards}
+                    </div>
+              
+                    
                 </div>
-                
+                      <h1>slm</h1>
             </div>
+           
           
         )
     }

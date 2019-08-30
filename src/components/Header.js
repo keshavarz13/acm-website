@@ -42,11 +42,11 @@ class Header extends React.Component {
               <div className = "dobble-container">
 
                   <div className= "nav-link-container">
-                      <a  className="nav-link" href="#">Time Line</a>
-                      <a className="nav-link" href="#">Contact Us</a>
+                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">Registration Status</NavLink>
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Result</NavLink>
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/Register">Register</NavLink>
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/">Home</NavLink>
+                      
                   </div>
 
                   <div className ="option">
@@ -56,10 +56,10 @@ class Header extends React.Component {
                       </button>
                       <div class="dropdown-content" style ={this.state.style}>
                           <NavLink onClick={() => window.scrollTo(0, 0)}onClick = {this.clickHandler} className="nav-link" exact to="/">Home</NavLink>
-                          <a className="nav-link" onClick = {this.clickHandler} href="#">Time Line</a>
-                          <a className="nav-link" onClick = {this.clickHandler} href="#">Contact Us</a>
-                          <NavLink onClick={() => window.scrollTo(0, 0)} onClick = {this.clickHandler} className="nav-link" exact to="/PastResult">Past Result</NavLink>
                           <NavLink onClick={() => window.scrollTo(0, 0)} onClick = {this.clickHandler} className="nav-link" exact to="/Register">Register</NavLink>
+                          <NavLink onClick={() => window.scrollTo(0, 0)} onClick = {this.clickHandler} className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                          <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">Registration Status</NavLink>
+                          
                       </div>
                     </div> 
                   </div>

@@ -1,7 +1,8 @@
 .situation-card{
     width: 90% ;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     min-width: 300px; 
     padding-left: 7px;
@@ -27,11 +28,13 @@
     margin-bottom: 10px;
 }
 .super-status-cards-container { 
+    margin-top: 100px;
     position: relative;
     width: 100% ;
+    height: 100%;
 }
 .status-cards-container { 
-    width : 1900px;
+    width : 1600px;
     position: absolute;
     left : 50%;
     transform: translate(-50% , 0);
@@ -39,7 +42,7 @@
     grid-template-columns:auto auto;
 }
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 1600px) {
     .status-cards-container { 
         width : 100%;
 
