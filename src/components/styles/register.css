@@ -1,24 +1,32 @@
 .register_container { 
-    margin: 80px;
+    margin-top: 80px;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 .register_page_header {
-    font-size: 50px;
-    margin-bottom: -35px;
+    font-size: 3em;
+    margin-bottom: -25px;
 }
 
 .register_page_second_header {
-    font-size: 30px;
-    margin-bottom: 40px;
+    font-size: 1.6em;
+    margin-bottom: -10px;
+}
+
+.register_page_p {
+    font-size: 1.2em;
 }
 
 .text_box {
-    width: 400px;
-    margin-right: 20px;
+    width: 22vw;
+    margin-right: 1vw;
 }
 
 .contestant_header {
     margin-bottom: -25px; 
+    margin-top: -9px;
+    margin-left: 7px;
 }
 
 .contestant_box {
@@ -27,15 +35,72 @@
 
 .team_header {
     margin-bottom: -10px;
+    margin-top: -9px;
+    margin-left: 7px;
 }
 
 .team_box {
     margin-bottom: 15px;
 }
 
-.submit_button {
-    
-    position: absolute;
-    left:50%;
-    transform: translate( -50% , 0);
+.team_header_box {
+    display: flex;
+    margin-bottom: 15px;
 }
+
+.contestant_header_box {
+    display: flex;
+}
+
+.contestant_rule_box {
+    display: flex;
+    justify-content: center;
+}
+
+.contestant_rule_checkbox {
+    margin-top: 14px;
+}
+
+.submit_button {
+    width: 300px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .text_box {
+        width: 43vw; 
+        margin-right: 3vw;
+    }
+    .register_container {
+        margin-left: 4vw;
+        margin-right: 4vw;
+    } 
+}
+ 
+@media only screen and (max-width: 550px) {
+    .text_box{
+        width: 80vw; 
+    }
+    .register_container {
+        margin-left: 8vw;
+        margin-right: 8vw;
+    } 
+    .register_page_header {
+        font-size: 2em;
+    }
+    .register_page_second_header {
+        font-size: 1.2em;
+    }
+    .register_page_p {
+        font-size: 1.1em;
+    }
+    .submit_button {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .recaptcha {
+        transform:scale(0.80);
+        margin-right: 125px;
+    }
+} 
