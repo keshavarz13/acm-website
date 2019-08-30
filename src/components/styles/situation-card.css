@@ -34,12 +34,15 @@
     height: 100%;
 }
 .status-cards-container { 
-    width : 1600px;
-    position: absolute;
-    left : 50%;
-    transform: translate(-50% , 0);
-    display: grid;
-    grid-template-columns:auto auto;
+    margin-top: 100px;
+    display: grid ; 
+    grid-template-columns:auto auto ;
+}
+
+.cards-container { 
+    float: left;
+    width: 100%;
+
 }
 
 @media only screen and (max-width: 1600px) {
