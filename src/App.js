@@ -11,8 +11,6 @@ import TimeLineContainerView from "./components/TimelineContainerView"
 import RegisterView from "./components/Register/RegisterView"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
-import LocalRules from "./components/LocalRules";
-import RegionalRules from "./components/RegionalRules";
 import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
 
 class App extends React.Component {
@@ -63,8 +61,6 @@ class App extends React.Component {
                 <About/>
                 <TimeLineContainerView/>
                 <BodyP4/>
-                <LocalRules />
-                <RegionalRules />
             </div>     
         )
     }
