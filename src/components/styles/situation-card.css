@@ -1,11 +1,11 @@
 .situation-card{
-    background-color: rgb(51, 14, 85) ; 
     width: 40% ;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     min-width: 300px; 
     padding-left: 7px;
     box-sizing: border-box;
+    background-color: rgb(43, 46, 1);
 
 }
 
@@ -23,3 +23,4 @@
     color: bisque;
     margin-bottom: 10px;
 }
+

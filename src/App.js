@@ -71,11 +71,10 @@ class App extends React.Component {
     
     render() {
         const data = {
-            title : "Pending", 
+            title : "Reserved", 
             name : "sooode sahame banki!" , 
             institution : "amir kabir university of technology" , 
             location : "Iran" , 
-            color : "ani"
         }
         return(
             <div>
