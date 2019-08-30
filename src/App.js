@@ -9,11 +9,11 @@ import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import RegisterView from "./components/Register/RegisterView"
-import SituationCard from "./components/SituationCard"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import LocalRules from "./components/LocalRules";
 import RegionalRules from "./components/RegionalRules";
+import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
 
 class App extends React.Component {
     constructor() {
@@ -70,12 +70,6 @@ class App extends React.Component {
     }
     
     render() {
-        const data = {
-            title : "Reserved", 
-            name : "sooode sahame banki!" , 
-            institution : "amir kabir university of technology" , 
-            location : "Iran" , 
-        }
         return(
             <div>
                 <Header changePage = {this.changePage} />
@@ -83,8 +77,8 @@ class App extends React.Component {
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
-                <SituationCard data ={data}/> 
                 <Footer/> 
+                <ListOfTeamsStatus/>
             </div>
         )
     }

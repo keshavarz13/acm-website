@@ -20,7 +20,7 @@ class SituationCard extends React.Component {
         else if (this.props.data.title === "Approved")
                  color = "rgb(0, 44, 0)"
         else if (this.props.data.title === "Pending")
-                 color = "rgb(0, 0, 44)"
+                 color = "rgb(31, 31, 30)"
         else if (this.props.data.title === "Paid")
                  color = "rgb(0, 0, 44)"
         else if (this.props.data.title === "Reserved")

@@ -1,16 +1,19 @@
 .situation-card{
-    width: 40% ;
+    width: 90% ;
     border-radius: 5px;
+    margin-top: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     min-width: 300px; 
     padding-left: 7px;
     box-sizing: border-box;
     background-color: rgb(43, 46, 1);
+    margin-left: 5% ; 
+    margin-right: 5% ; 
 
 }
 
 .situation-card p{
-    color: rgb(240, 218, 191);
+    color: rgb(240, 209, 191);
     margin-top: -20px;
    
 }
@@ -23,4 +26,40 @@
     color: bisque;
     margin-bottom: 10px;
 }
+.super-status-cards-container { 
+    position: relative;
+    width: 100% ;
+}
+.status-cards-container { 
+    width : 1900px;
+    position: absolute;
+    left : 50%;
+    transform: translate(-50% , 0);
+    display: grid;
+    grid-template-columns:auto auto;
+}
 
+@media only screen and (max-width: 1900px) {
+    .status-cards-container { 
+        width : 100%;
+
+    }
+}
+@media only screen and (max-width: 790px) {
+    .status-cards-container { 
+        width : 100%;
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .status-cards-container { 
+        width : 300px;
+        grid-template-columns: auto;
+    }
+    .situation-card{
+        width: 90% ;
+        margin-left: 0px;
+    
+    }
+}
