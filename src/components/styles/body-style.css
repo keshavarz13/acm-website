@@ -173,8 +173,12 @@ body {
 @media only screen and (max-width:450px) { 
     .timer-text2{ 
        
-        font-size: 18px; 
+        font-size: 16px; 
         top: 58%;
       
+    }
+    .timer-text {
+        top: 35%;
+        font-size: 24px;
     }
 }

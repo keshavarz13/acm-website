@@ -5,10 +5,31 @@ import { NavLink } from 'react-router-dom'
 var FlipDown = require("./countdown")
 
 class BodyP2 extends React.Component { 
+    constructor() { 
+        super() 
+        this.data ={
+            backgroundColor :"rgb(165 , 42 ,42)"
+        }
+        this.mouseExitHandler = this.mouseExitHandler.bind(this)
+        this.mouseEnterHndler = this.mouseEnterHndler.bind(this)
+    }
     componentDidMount () {
         var stopTime = this.props.data.stopTime.toString()
         var stopDate = new Date(stopTime).getTime() / 1000
         var flipdown = new FlipDown(stopDate).start()
+    }
+    mouseEnterHndler(){
+        this.setState({
+            backgroundColor : "rgb(191, 32, 32)",
+
+        })
+
+    }
+    mouseExitHandler(){
+        this.setState({
+            backgroundColor : "rgb(165 , 42 ,42)",
+   
+        })
     }
 
     render() {
@@ -24,7 +45,18 @@ class BodyP2 extends React.Component {
                     <div className = "dark-layer"></div>                
 
                     <p className = "timer-text">Contest starts in</p>
-                    <NavLink exact to="/Register"><p onClick={() => window.scrollTo(0, 0)}  className = "timer-text2">REGISTER NOW!</p></NavLink>
+
+                    <NavLink exact to="/Register">
+                        <p onClick={() => window.scrollTo(0, 0)}  
+                        className = "timer-text2" 
+                        onMouseEnter={this.mouseEnterHndler} 
+                        onMouseLeave ={this.mouseExitHandler}
+                        style = {this.state}
+                        >      
+                          REGISTER NOW!
+                        </p>
+                    </NavLink>
+
                     <div className ="timer">  
                         <div id="flipdown" className="flipdown"></div>  
                     </div>
