@@ -29,7 +29,7 @@ class About extends React.Component {
                     </div>
                 </div>
                 <div className = "deep-footer">
-                    <p>© 2019 Student Scientific Chapter of <span>Computer Engineering and IT Department</span> at <span>Amirkabir University of Technology</span></p>
+                    <p>© 2019 <span><a href = "ceit-ssc.ir">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span href = "/Rengo"><a>Rengo</a></span></p>
                 </div>
             </div>
        

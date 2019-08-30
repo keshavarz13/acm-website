@@ -47,9 +47,10 @@
     background: #212427;
 }
 
-.deep-footer span{
+.deep-footer span a{
     color: palevioletred;
     cursor: pointer;
+    text-decoration: none;
 
 }
 
@@ -78,7 +79,7 @@
 }
 
 
-@media only screen and (max-width: 741px) {
+@media only screen and (max-width: 405px) {
     .deep-footer{
         height: 60px;
       

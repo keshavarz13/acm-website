@@ -70,13 +70,13 @@
 }
 
 /* Remove extra left and right margins, due to padding */
-.row2 {
+.row3 {
     margin-top: 100px;
     width :1440px;  
 }
 
 /* Clear floats after the columns */
-.row2:after {
+.row3:after {
     content: "";
     display: table;
     clear: both;
