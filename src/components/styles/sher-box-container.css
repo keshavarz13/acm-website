@@ -9,7 +9,8 @@
 /* Float four columns side by side */
 .column {
     float: left;
-
+    width: 300px;
+    margin-left: 20px;
   }
   
   /* Remove extra left and right margins, due to padding */
