@@ -14,6 +14,7 @@ import PastContest from "./components/PastContest"
 import LocalRules from "./components/LocalRules";
 import RegionalRules from "./components/RegionalRules";
 import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
+import DeveloperPage from "./components/DeveloperPage"
 
 class App extends React.Component {
     constructor() {
@@ -79,6 +80,7 @@ class App extends React.Component {
                 <Route exact path="/status" component={ListOfTeamsStatus} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Footer/> 
+                <DeveloperPage/>
             </div>
         )
     }
