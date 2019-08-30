@@ -38,6 +38,20 @@
     right: 0;
 
 }
+.deep-footer{
+    color: white;
+    text-align: center;
+    height: 30px;
+    margin-top: -19px;
+    margin-bottom: -19px;
+    background: #212427;
+}
+
+.deep-footer span{
+    color: palevioletred;
+    cursor: pointer;
+
+}
 
 @media only screen and (max-width: 720px) {
     .row2 { 
@@ -63,7 +77,13 @@
     }
 }
 
-  
+
+@media only screen and (max-width: 741px) {
+    .deep-footer{
+        height: 60px;
+      
+    }
+}
 
  
   
