@@ -1,6 +1,5 @@
 import React from "react"
 import "./styles/body-style.css"
-import { height } from "@material-ui/system";
 
 class BodyP1 extends React.Component { 
   
@@ -36,5 +35,6 @@ class BodyP1 extends React.Component {
         )
     }
 }
+
 
 export default BodyP1 
