@@ -8,16 +8,16 @@ export default class PosterList extends React.Component {
             <div className = "sher-box-container2"> 
                 <div className="row3">
                     <div className = "columns">
-                        <DeveloperCard src1 ="https://images-na.ssl-images-amazon.com/images/I/81olhQ%2B41BL._SX466_.jpg" src2="https://vignette.wikia.nocookie.net/despicableme/images/c/ca/Bob-from-the-minions-movie.jpg/revision/latest?cb=20151224154354" name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
+                        <DeveloperCard src1 ={require("./../img/mmd1.jpg")} src2={require("./../img/mmd2.jpg")} name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
                     </div>
                     <div className = "columns">
-                        <DeveloperCard src1 ="https://images-na.ssl-images-amazon.com/images/I/81olhQ%2B41BL._SX466_.jpg" src2="https://vignette.wikia.nocookie.net/despicableme/images/c/ca/Bob-from-the-minions-movie.jpg/revision/latest?cb=20151224154354" name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
+                        <DeveloperCard src1 ={require("./../img/ali1.jpg")} src2={require("./../img/ali2.jpg")} name ="Ali Nazari" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
                     </div>
                     <div className = "columns">
-                        <DeveloperCard src1 ="https://images-na.ssl-images-amazon.com/images/I/81olhQ%2B41BL._SX466_.jpg" src2="https://vignette.wikia.nocookie.net/despicableme/images/c/ca/Bob-from-the-minions-movie.jpg/revision/latest?cb=20151224154354" name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
+                        <DeveloperCard src1 ={require("./../img/erfan1.jpg")} src2={require("./../img/erfan2.jpg")} name ="Erfan Abedi" rule ="Back-end developer" email="keshavarz.ma13@gmail.com" />
                     </div>
                     <div className = "columns">
-                        <DeveloperCard src1 ="https://images-na.ssl-images-amazon.com/images/I/81olhQ%2B41BL._SX466_.jpg" src2="https://vignette.wikia.nocookie.net/despicableme/images/c/ca/Bob-from-the-minions-movie.jpg/revision/latest?cb=20151224154354" name ="MohammadAli Keshavarz" rule ="Front-end developer" email="keshavarz.ma13@gmail.com" />
+                        <DeveloperCard src1 ={require("./../img/javad1.jpg")} src2={require("./../img/javad2.jpg")} name ="MohmmadJavad Ardestani" rule ="Back-end developer" email="keshavarz.ma13@gmail.com" />
                     </div>
                 </div>  
                 
