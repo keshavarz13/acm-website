@@ -15,7 +15,7 @@ class SituationCard extends React.Component {
 
     render() {
         let color = ""
-        if(this.props.data.title === "Regected")
+        if(this.props.data.title === "Rejected")
                  color = "#e23838"
         else if (this.props.data.title === "Approved")
                  color = "#3c9440"
