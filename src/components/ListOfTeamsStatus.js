@@ -8,11 +8,6 @@ class ListOfTeamsStatus extends React.Component {
         this.state ={
             data : [
                 {
-                    title : "Reserved", 
-                    name : "sooode sahame banki!" , 
-                    institution : "amir kabir university of technology" , 
-                    location : "Iran" , 
-                }, {
                     title : "Approved", 
                     name : "sooode sahame banki!" , 
                     institution : "amir kabir university of technology" , 
@@ -24,21 +19,11 @@ class ListOfTeamsStatus extends React.Component {
                     location : "Iran" , 
                 }, {
                     title : "Approved", 
-                    name : "sooode sahame banki!" , 
-                    institution : "amir kabir university of technology" , 
-                    location : "Iran" , 
-                }, {
-                    title : "Paid", 
                     name : "sooode sahame banki!" , 
                     institution : "amir kabir university of technology" , 
                     location : "Iran" , 
                 }, {
                     title : "Pending", 
-                    name : "sooode sahame banki!" , 
-                    institution : "amir kabir university of technology" , 
-                    location : "Iran" , 
-                }, {
-                    title : "Reserved", 
                     name : "sooode sahame banki!" , 
                     institution : "amir kabir university of technology" , 
                     location : "Iran" , 
@@ -60,6 +45,15 @@ class ListOfTeamsStatus extends React.Component {
         const cards = this.state.data.map((cardData) => <div className = "cards-container"><SituationCard data = {cardData}/></div>)
         return (     
             <div className = "super-status-cards-container" >  
+                <div>
+                    <h1>Registered Teams</h1>
+                    <p>
+                        Here is the list of registered teams ordered by their registration time.<br/>
+                        if your team name was not in registerd team list 24 hours after regitration, please inform us by:<br/> 
+                        Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
+                        Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
+                    </p>
+                </div>
                 <div className = "status-cards-container">
                     {cards}
                 </div>
