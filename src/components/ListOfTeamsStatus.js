@@ -43,7 +43,7 @@ class ListOfTeamsStatus extends React.Component {
                     institution : "amir kabir university of technology" , 
                     location : "Iran" , 
                 }, {
-                    title : "Regected", 
+                    title : "Rejected", 
                     name : "sooode sahame banki!" , 
                     institution : "amir kabir university of technology" , 
                     location : "Iran" , 

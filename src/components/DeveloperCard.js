@@ -1,11 +1,7 @@
 import React from "react"
 import "./styles/developer-page.css"
 import transitions from "@material-ui/core/styles/transitions";
-import {
-    BrowserView,
-    MobileView,
-
-  } from "react-device-detect";
+import { BrowserView, MobileView,} from "react-device-detect";
 
 export default class DeveloperCard extends React.Component { 
     constructor (){
