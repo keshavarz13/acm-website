@@ -1,5 +1,4 @@
 import React from "react"  
-import poster from "./poster"
 import Poster from "./poster";
 import "./styles/poster.css"
 
