@@ -15,6 +15,7 @@
     "google-maps-react": "^2.0.2",
     "html-to-react": "^1.4.1",
     "react": "^16.9.0",
+    "react-device-detect": "^1.7.5",
     "react-dom": "^16.9.0",
     "react-google-recaptcha": "^2.0.0-rc.1",
     "react-grid-gallery": "^0.5.5",

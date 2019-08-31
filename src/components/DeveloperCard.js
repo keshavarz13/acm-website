@@ -1,6 +1,11 @@
 import React from "react"
 import "./styles/developer-page.css"
 import transitions from "@material-ui/core/styles/transitions";
+import {
+    BrowserView,
+    MobileView,
+
+  } from "react-device-detect";
 
 export default class DeveloperCard extends React.Component { 
     constructor (){
@@ -40,7 +45,12 @@ export default class DeveloperCard extends React.Component {
     render() {
         return (
             <div className="developer-card">
-                <img src={this.state.src} style={this.state.styles} onMouseEnter ={this.hoverHandler} onMouseLeave={this.unHoverHandler}/>
+                <BrowserView>
+                     <img src={this.state.src} style={this.state.styles} onMouseEnter ={this.hoverHandler} onMouseLeave={this.unHoverHandler}/>
+                </BrowserView>
+                <MobileView>
+                     <img src={this.state.src} style={this.state.styles} onTouchStart ={this.hoverHandler} onTouchEnd={this.unHoverHandler} />
+                </MobileView>
                 <h5>{this.props.name}</h5>
                 <h6>{this.props.rule}</h6>
                 <h4>Email : <span>{this.props.email}</span></h4>
