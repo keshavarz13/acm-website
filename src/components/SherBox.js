@@ -8,8 +8,14 @@ class SherBox extends React.Component {
         this.state ={
             style : {
                 boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-                transform : "scale(1.0)"
+                transform : "scale(1.0)",
+                marginTop : "50px",
+                marginLeft : "0px"
        
+            }
+            ,
+            mainStyle : {
+                marginTop : "-40px"
             }
         }
         this.hoverHandler = this.hoverHandler.bind(this)
@@ -22,7 +28,9 @@ class SherBox extends React.Component {
                 // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.8)",
                 transform : "scale(1.1)",
                 transitionProperty :"transform" , 
-                transitionDuration: "200ms"
+                transitionDuration: "200ms",
+                marginTop : "50px",
+                marginLeft : "0px"
             }
         })
     }
@@ -33,14 +41,16 @@ class SherBox extends React.Component {
                 // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
                 transform : "scale(1.0)",
                 transitionProperty :"transform" , 
-                transitionDuration: "200ms"
+                transitionDuration: "200ms",
+                marginTop : "50px",
+                marginLeft : "0px"
             }
         })
     }
 
     render() { 
         return(
-            <div className="hover-contaner" >
+            <div className="hover-contaner" style = {this.state.mainStyle} >
                 <BrowserView>
                     <div className = "sher-container" style = {this.state.style} onMouseEnter = {this.hoverHandler} onMouseLeave = {this.unHoverHandler} >
                         <img src={this.props.url} width ="160" height="160" />
