@@ -2,7 +2,7 @@ import React from "react"
 import "./styles/developer-page.css"
 import transitions from "@material-ui/core/styles/transitions";
 
-export default class DeveloperPage extends React.Component { 
+export default class DeveloperCard extends React.Component { 
     constructor (){
         super() 
         this.state ={

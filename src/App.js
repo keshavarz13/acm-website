@@ -12,7 +12,7 @@ import RegisterView from "./components/Register/RegisterView"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
-import DeveloperPage from "./components/DeveloperPage"
+import DeveloperCard from "./components/DeveloperCard"
 
 class App extends React.Component {
     constructor() {
