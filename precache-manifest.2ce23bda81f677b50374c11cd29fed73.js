@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46773f0831fdba713f69c47502ed79a4",
+    "revision": "d35a640b2e7c98980355329098df0ac8",
     "url": "/acm-website/index.html"
   },
   {
-    "revision": "e5c8364461e2fb8af96d",
-    "url": "/acm-website/static/css/2.0eaf8e31.chunk.css"
+    "revision": "ad021cce188d57181bdf",
+    "url": "/acm-website/static/css/2.400ebc83.chunk.css"
   },
   {
-    "revision": "62f71f26cdc18c37fc44",
-    "url": "/acm-website/static/css/main.f63c5d24.chunk.css"
+    "revision": "1177508805ca33ba00e7",
+    "url": "/acm-website/static/css/main.4c88f57e.chunk.css"
   },
   {
-    "revision": "e5c8364461e2fb8af96d",
-    "url": "/acm-website/static/js/2.9f4a2467.chunk.js"
+    "revision": "ad021cce188d57181bdf",
+    "url": "/acm-website/static/js/2.e70a0c59.chunk.js"
   },
   {
-    "revision": "62f71f26cdc18c37fc44",
-    "url": "/acm-website/static/js/main.42b57eeb.chunk.js"
+    "revision": "1177508805ca33ba00e7",
+    "url": "/acm-website/static/js/main.7e08b746.chunk.js"
   },
   {
     "revision": "c1427d4c31547c8627bc",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8863582d824d649d0d462cfb94a3b4f4",
     "url": "/acm-website/static/media/Bahij_Palatino_Sans_Arabic-Regular.8863582d.ttf"
+  },
+  {
+    "revision": "4036f474596bd883c5fa83475f4a176a",
+    "url": "/acm-website/static/media/ali1.4036f474.jpg"
+  },
+  {
+    "revision": "441b2c966ae83c72ad3590811aa1cd34",
+    "url": "/acm-website/static/media/ali2.441b2c96.jpg"
   },
   {
     "revision": "de732a074e7bdd9ccccaa84640d77774",
@@ -40,12 +48,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/bottomImage.77c70836.JPG"
   },
   {
-    "revision": "2354dadab55f66e19bfda2022fe7e2c8",
-    "url": "/acm-website/static/media/domain.2354dada.svg"
+    "revision": "eb46f7ad4db37ddf555e5f58ccfc3092",
+    "url": "/acm-website/static/media/domain.eb46f7ad.svg"
   },
   {
     "revision": "2bf6b68d533b310dd2408f7142abb296",
     "url": "/acm-website/static/media/dropDown.2bf6b68d.svg"
+  },
+  {
+    "revision": "1776a6a152c408f472f8ac956384d4f0",
+    "url": "/acm-website/static/media/erfan1.1776a6a1.jpg"
+  },
+  {
+    "revision": "ccd4e9e7496d486b9fb9011f6a269b31",
+    "url": "/acm-website/static/media/erfan2.ccd4e9e7.jpg"
   },
   {
     "revision": "970700edfcd739aff3d146b210325d0c",
@@ -60,8 +76,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/header-logo.d075027b.png"
   },
   {
-    "revision": "549663b467f9986e71b7fba664db81f6",
-    "url": "/acm-website/static/media/instagram.549663b4.svg"
+    "revision": "98e0d1ce09b7370b4eb7ca658d03cbdf",
+    "url": "/acm-website/static/media/instagram.98e0d1ce.svg"
+  },
+  {
+    "revision": "ebeb2ab1eb4320df0c5bae53cb6ee2a8",
+    "url": "/acm-website/static/media/javad1.ebeb2ab1.jpg"
+  },
+  {
+    "revision": "95615f36e02cca3839ec82ca42056598",
+    "url": "/acm-website/static/media/javad2.95615f36.jpg"
+  },
+  {
+    "revision": "23efadf33cd242017cd2b2455d2d2a4e",
+    "url": "/acm-website/static/media/mmd1.23efadf3.jpg"
+  },
+  {
+    "revision": "d9f7d720b61289c28b80db312dff4474",
+    "url": "/acm-website/static/media/mmd2.d9f7d720.jpg"
   },
   {
     "revision": "e2b5f4bfc508c5922ace4a56d2002873",
@@ -84,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acm-website/static/media/ssc-logo.ffc2a85c.png"
   },
   {
-    "revision": "a57dda48369ed3ae0572492041bac990",
-    "url": "/acm-website/static/media/telegram.a57dda48.svg"
+    "revision": "853d7122cdc46f3c26683c0358f4ee16",
+    "url": "/acm-website/static/media/telegram.853d7122.svg"
   },
   {
     "revision": "5c5b9f1a56b71c95f89d03b019958d49",
