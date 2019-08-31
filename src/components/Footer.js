@@ -57,7 +57,7 @@ class About extends React.Component {
                    
                 </div>
                 <div className = "deep-footer">
-                    <p>© 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span><NavLink onClick = {() => window.scrollTo(0, 0)} exact to="/Rengo">Rengo</NavLink></span> </p>
+                    <p>Copyright © 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a>.</span> Developed by <span><NavLink onClick = {() => window.scrollTo(0, 0)} exact to="/Rengo">Rengo</NavLink></span> </p>
                 </div>
             </div>
        
