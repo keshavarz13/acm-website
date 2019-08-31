@@ -16,15 +16,15 @@ class SituationCard extends React.Component {
     render() {
         let color = ""
         if(this.props.data.title === "Regected")
-                 color = "rgb(44, 0, 0)"
+                 color = "#e23838"
         else if (this.props.data.title === "Approved")
-                 color = "rgb(0, 44, 0)"
+                 color = "#3c9440"
         else if (this.props.data.title === "Pending")
-                 color = "rgb(31, 31, 30)"
+                 color = "#6b6b6b"
         else if (this.props.data.title === "Paid")
-                 color = "rgb(0, 0, 44)"
+                 color = "#3065a3"
         else if (this.props.data.title === "Reserved")
-                 color = "rgb(43, 46, 1)"
+                 color = "#aa740b"
             
         return (
             <div className ="situation-card" style = {{
