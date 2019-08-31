@@ -23,25 +23,25 @@ class About extends React.Component {
                 <div className = "footer-container">
                     <div className = "row2">
                         <div className = "column1">
-                            <img src = {require("./../img/ssc-logo.png")} width="300" height="85"/>
+                             <a href = "https://ceit-ssc.ir"><img src = {require("./../img/ssc-logo.png")} width="300" height="85"/></a>
                             <div className="icons">
                                 <div className="social_icon_div">
-                                    <a href="mailto:ceit.ssc94@gmail.com">
+                                    <a href="mailto:ceit.ssc94@gmail.com" target="_blank">
                                         <FontAwesomeIcon icon={faGoogle} size="2x" className="social_icon"/>
                                     </a>
                                 </div>
                                 <div className="social_icon_div">
-                                    <a href="https://t.me/ceit_ssc">
+                                    <a href="https://t.me/ceit_ssc" target="_blank">
                                         <FontAwesomeIcon icon={faTelegram} size="2x" className="social_icon"/>
                                     </a>
                                 </div>
                                 <div className="social_icon_div">
-                                    <a href="https://twitter.com/ceit_ssc">
+                                    <a href="https://twitter.com/ceit_ssc" target="_blank">
                                         <FontAwesomeIcon icon={faTwitter} size="2x" className="social_icon"/>
                                     </a>
                                 </div>
                                 <div className="social_icon_div">
-                                    <a href="https://instagram.com/ceit_ssc">
+                                    <a href="https://instagram.com/ceit_ssc" target="_blank">
                                         <FontAwesomeIcon icon={faInstagram} size="2x" className="social_icon"/>
                                     </a>
                                 </div>
@@ -53,10 +53,10 @@ class About extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className ="h-line"></div>
+                   
                 </div>
                 <div className = "deep-footer">
-                    <p>© 2019 <span><a href = "ceit-ssc.ir">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span href = "/Rengo"><a>Rengo</a></span></p>
+                    <p>© 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span href = "/Rengo"><a>Rengo</a></span></p>
                 </div>
             </div>
        
