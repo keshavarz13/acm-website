@@ -11,7 +11,7 @@ import TimeLineContainerView from "./components/TimelineContainerView"
 import RegisterView from "./components/Register/RegisterView"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
-import ListOfTeamsStatus from "./components/ListOfTeamsStatus"
+import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
 
 class App extends React.Component {
@@ -73,7 +73,7 @@ class App extends React.Component {
                 <Route exact path="/Register" component={RegisterView} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
-                <Route exact path="/status" component={ListOfTeamsStatus} />
+                <Route exact path="/status" component={ListOfTeamsStatusView} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Route exact path="/Rengo" component={DeveloperPage}/>
                 <Footer/> 

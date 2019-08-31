@@ -8,7 +8,7 @@ class SituationCard extends React.Component {
             title : "", 
             name : "" , 
             institution : "" , 
-            location : "" , 
+            country : "" , 
             color : ""
         }
     }
@@ -33,7 +33,7 @@ class SituationCard extends React.Component {
                 <h1>{this.props.data.name}</h1>
                 <p className = "state">State : <span>{this.props.data.title}</span></p>
                 <p>Institution : <span>{this.props.data.institution}</span></p>
-                <p>Team Location : <span>{this.props.data.location}</span></p>
+                <p>Team Country : <span>{this.props.data.country}</span></p>
             </div>
         )
     }

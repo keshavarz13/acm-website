@@ -63,22 +63,30 @@ class Register extends React.Component {
             'Content-Type': 'application/json'
         }
         const teamName = this.state.team_name;
-        var createdTeamID = 0;
+        var createdTeamName = 0;
         console.log(this.state.country)
         axios.post('http://localhost:8000/api/register/team/', {
             name: teamName,
             is_onsite: true,
             institution: this.state.institution,
-            status: "PAID",
-            country_id: this.state.country.id
+            status: "PENDING",
+            country: this.state.country.id
         }, {
             headers: headers
         } ).then(res => {
-            createdTeamID = res.data.id;
+            if (res.status >= 400 && res.status < 500) {
+                console.log("mamad ridi");
+            }
+            else if (res.status >= 200 && res.status < 300)
+             {
+                // console.log("successful");
+                createdTeamName = res.data.name;
+                // console.log(res)
+                this.state.contestant1['team'] = createdTeamName;
+                console.log(this.state.contestant1);
+                axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
+             }
         })
-        this.state.contestant1['team'] = createdTeamID;
-        console.log(this.state.contestant1)
-        axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
 
         // const contestants = [this.state.contestant1, this.state.contestant2, this.state.contestant3]
         // for (var contestant in contestants ) {
