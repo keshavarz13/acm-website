@@ -2,6 +2,7 @@ import React from "react"
 import MapBox from "./MapBox"
 import "./styles/footer-style.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink } from 'react-router-dom'
 import { faTwitter, faTelegram, faGoogle, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function social ()  { 
@@ -56,7 +57,7 @@ class About extends React.Component {
                    
                 </div>
                 <div className = "deep-footer">
-                    <p>© 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span href = "/Rengo"><a>Rengo</a></span></p>
+                    <p>© 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a></span> All Rights Reserved. Developed by <span><NavLink onClick = {() => window.scrollTo(0, 0)} exact to="/Rengo">Rengo</NavLink></span> </p>
                 </div>
             </div>
        

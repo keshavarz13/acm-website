@@ -75,8 +75,9 @@ class App extends React.Component {
                 <Route exact path="/" component={this.home} />
                 <Route exact path="/status" component={ListOfTeamsStatus} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
+                <Route exact path="/Rengo" component={DeveloperPage}/>
                 <Footer/> 
-                <DeveloperPage/>
+        
             </div>
         )
     }
