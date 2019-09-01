@@ -48,6 +48,25 @@
     width: 100%;
 
 }
+.color-circle {
+    border: 1px solid black ; 
+    height: 30px;
+    width: 30px;
+    margin-left: 2px;
+    border-radius: 50% ; 
+
+}
+.help {
+    display: flex;
+}
+.help p {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.help-container { 
+    
+}
 
 @media only screen and (max-width: 1600px) {
     .status-cards-container { 

@@ -4,7 +4,39 @@ import ListOfTeamsStatus from "./ListOfTeamsStatus"
 
 class TimeLineContainerView extends React.Component {
     state = {
-        teams: []
+        teams:  [
+            {
+                status : "REJECTED", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            }, {
+                status : "APPROVED", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            }, {
+                status : "APPROVED", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            }, {
+                status : "PENDING", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            }, {
+                status : "PAID", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            }, {
+                status : "PENDING", 
+                name : "sooode sahame banki!" , 
+                institution : "amir kabir university of technology" , 
+                location : "Iran" , 
+            },
+        ]
     }
 
     fetchTimeLineItems = () => {
