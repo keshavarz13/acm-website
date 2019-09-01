@@ -43,13 +43,14 @@
     grid-template-columns:auto auto ;
 }
 
+
+
 .cards-container { 
 
     width: 100%;
 
 }
 .color-circle {
-    border: 1px solid black ; 
     height: 30px;
     width: 30px;
     margin-left: 2px;
@@ -64,8 +65,15 @@
     margin-left: 5px;
 }
 
+.help-container p { 
+    font-weight: bold;
+}
 .help-container { 
-    
+    margin-top: 100px;
+    width: 1600px;
+    margin-left: 50% ; 
+    transform: translate(-50% , 0);
+    padding-left: 5%;
 }
 
 @media only screen and (max-width: 1600px) {
