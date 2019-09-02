@@ -3,12 +3,16 @@ import SituationCard from "./SituationCard"
 import "./styles/situation-card.css"
 
 class ListOfTeamsStatus extends React.Component { 
-
-
+    constructor() { 
+        super() 
+        this.state = {
+            boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.7)",
+        }
+    }
    
 
     render() {
-        const cards = this.props.data.map((cardData) => <div className = "cards-container"><SituationCard data = {cardData}/></div>)
+        const cards = this.props.data.map((cardData) => <div className = "cards-container" ><SituationCard data = {cardData}/></div>)
         return (     
             <div className = "super-status-cards-container" >  
                 
