@@ -168,7 +168,7 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <br/>
-                {/* <ContestantFields
+                <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
@@ -176,11 +176,11 @@ class Register extends React.Component {
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
-                /> */}
+                />
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"
-                        sitekey="Your client site key"
+                        sitekey="telegram group :)"
                         onChange={this.onChange}
                     />
                 </Grid>
