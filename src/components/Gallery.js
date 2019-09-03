@@ -8,32 +8,135 @@ class Gallery extends React.Component {
     constructor(){
         super()
         this.state = {
+            images : 
+            [{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },{
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },
+            {
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            },
+            {
+                src: "https://codecup.ir/static/codecup4/images/photos/768/3-8.2b4e4609debd.jpg",
+                thumbnail: "https://codecup.ir/static/codecup4/images/photos/768/3-8.2b4e4609debd.jpg",
+                thumbnailWidth: 400,
+                thumbnailHeight: 300,
+                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+                caption: "Boats (Jeshu John - designerspics.com)"
+            }],
+            slideStyles :{
+                display : "none",
+            } , 
+            photoStyle : {
+                filter: "brightness(.3)"
+            },
+            Pindex : 0 ,
+
+        }
+        this.hide = this.hide.bind(this)
+        this.next = this.next.bind(this)
+        this.prev = this.prev.bind(this)
+    }
+
+    hide() { 
+        this.setState({
             slideStyles :{
                 display : "none",
             }
-
-        }
+        })
     }
 
+    next() { 
+        if(this.state.Pindex != this.state.images.length -1 )
+            this.setState(
+                {
+                    Pindex : this.state.Pindex + 1
+                }
+            )
+    }
+
+    prev() { 
+        if(this.state.Pindex != 0)
+        this.setState(
+            {
+                Pindex : this.state.Pindex - 1
+            }
+        )
+    }
+
+// onMouseEnter = {} onMouseLeave = {}
     render() {
+        const photosList = this.state.images.map((photo , index) =>  <img className = "photos" src = {photo.thumbnail} onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })} />)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >
-                    <img className = "slid-image" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg" />
+                    <img className = "slid-image" src = {this.state.images[this.state.Pindex].src} />
                     <p>caption</p>
-                    <ArrowBackIosIcon className = "left"/>
-                    <ArrowForwardIosIcon className = "right" />
-                    <CloseIcon className = "close"/>
+                    <ArrowBackIosIcon className = "left" onClick = {this.prev}/>
+                    <ArrowForwardIosIcon className = "right" onClick = {this.next}/>
+                    <CloseIcon className = "close" onClick = {this.hide}/>
                 </div>
 
                 <div className="gallery-container">
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg" onClick = {() => this.setState({ slideStyles :{display : "block",}})}/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
-                     <img className = "photos" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg"/>
+                    {photosList}
                 </div>
             </div>
         )
