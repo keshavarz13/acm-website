@@ -86,7 +86,7 @@ class Gallery extends React.Component {
                 display : "none",
             } , 
             photoStyle : {
-                filter: "brightness(.3)"
+                filter: "brightness(1)"
             },
             Pindex : 0 ,
 
@@ -94,6 +94,10 @@ class Gallery extends React.Component {
         this.hide = this.hide.bind(this)
         this.next = this.next.bind(this)
         this.prev = this.prev.bind(this)
+    }
+
+    componentDidMount() { 
+        this.setState({images : this.props.images})
     }
 
     hide() { 
@@ -122,9 +126,8 @@ class Gallery extends React.Component {
         )
     }
 
-// onMouseEnter = {} onMouseLeave = {}
     render() {
-        const photosList = this.state.images.map((photo , index) =>  <img className = "photos" src = {photo.thumbnail} onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })} />)
+        const photosList = this.state.images.map((photo , index) =>  <img className = "photos" style={this.state.photoStyle} src = {photo.thumbnail} onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })} />)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >

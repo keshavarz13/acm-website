@@ -79,7 +79,6 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 10px;
-    filter: brightness(.3);
     align-items: center;
 }
 

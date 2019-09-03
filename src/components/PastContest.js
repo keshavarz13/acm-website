@@ -1,5 +1,5 @@
 import React from "react"
-import Gallery from 'react-grid-gallery';
+import Gallery from "./Gallery";
 import PastContestLinkCard from './PastContestLinkCard'
 import "./styles/past-contest.css"
 
@@ -17,7 +17,7 @@ class PastContest extends React.Component {
                  </div>
 
                 <div className="photo-wall">
-                    <Gallery images={this.props.data.images} />
+                    <Gallery images = {this.props.data.images} />
                 </div>
                 <h1></h1>
                 
