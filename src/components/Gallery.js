@@ -1,5 +1,9 @@
 import React from "react"
 import "./styles/gallery.css"
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import CloseIcon from '@material-ui/icons/Close';
+
 class Gallery extends React.Component { 
     constructor(){
         super()
@@ -10,14 +14,16 @@ class Gallery extends React.Component {
 
         }
     }
+
     render() {
         return (
             <div>
-                <div className = "slide-show" style = {this.state.slideStyles}>
+                <div className = "slide-show" style = {this.state.slideStyles}  >
                     <img className = "slid-image" src = "https://www.crockerriverside.org/sites/main/files/main-images/camera_lense_0.jpeg" />
                     <p>caption</p>
-                    <img className = "left" height = "50" width = "50" src = { require("./../img/left.svg") }  />
-                    <img className = "right"  height = "50" width = "50"  src = { require("./../img/right.svg") } />
+                    <ArrowBackIosIcon className = "left"/>
+                    <ArrowForwardIosIcon className = "right" />
+                    <CloseIcon className = "close"/>
                 </div>
 
                 <div className="gallery-container">
