@@ -131,8 +131,9 @@ class Gallery extends React.Component {
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >
+                    <div className="caounter">{this.state.Pindex +1}/{this.state.images.length}</div>
                     <img className = "slid-image" src = {this.state.images[this.state.Pindex].src} />
-                    <p>caption</p>
+                    <p>{this.state.images[this.state.Pindex].caption}</p>
                     <ArrowBackIosIcon className = "left" onClick = {this.prev}/>
                     <ArrowForwardIosIcon className = "right" onClick = {this.next}/>
                     <CloseIcon className = "close" onClick = {this.hide}/>
