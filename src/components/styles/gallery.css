@@ -47,7 +47,8 @@
     z-index: 100;
     cursor: pointer;
     width: 100px; 
-    height: 100px;   
+    height: 100px;  
+    padding-left: 2px; 
 }
 
 .right { 
