@@ -1,5 +1,5 @@
 .slide-show { 
-    background-color: rgba(0, 0, 0, 0.8) ; 
+    background-color: rgba(0, 0, 0, .95) ; 
     position: fixed;
     top : 0 ; 
     left: 0;
@@ -22,13 +22,14 @@
     z-index: 100;
 }
 .slide-show p{ 
+    text-align: center;
     color: aliceblue;
     font-weight: bold;
     padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    background-color: black;
+    background-color: rgba(12, 6, 46, 0.5);
     position: fixed;
     top : calc(50% + 364px); 
     left: 50%;
@@ -120,6 +121,88 @@
     .gallery-container{
         width: 300px;
         grid-template-columns:  auto   ;
+    }
+    
+}
+
+@media only screen and (max-height: 810px) {
+    .slid-image{ 
+        width: 800px;
+        height: 600px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 290px); 
+    }
+    
+}
+
+@media only screen and (max-height: 660px) {
+    .slid-image{ 
+        width: 400px;
+        height: 300px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 140px); 
+    }
+    
+}
+
+@media only screen and (max-height: 395px) {
+    .slid-image{ 
+        width: 300px;
+        height: 225px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 100px); 
+        font-weight: normal; 
+
+    }
+    
+}
+
+@media only screen and (max-width: 1100px) {
+    .slid-image{ 
+        width: 800px;
+        height: 600px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 290px); 
+    }
+    
+}
+
+@media only screen and (max-width: 910px) {
+    .slid-image{ 
+        width: 400px;
+        height: 300px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 140px); 
+    }
+    
+}
+
+@media only screen and (max-width: 525px) {
+    .slid-image{ 
+        width: 300px;
+        height: 225px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 100px); 
+        font-weight: normal; 
+        
+    }
+    
+}
+@media only screen and (max-height: 395px ) {
+    .slid-image{ 
+        width: 300px;
+        height: 225px;
+    }
+    .slide-show p{ 
+        top : calc(50% + 100px); 
+        font-weight: normal; 
+
     }
     
 }
