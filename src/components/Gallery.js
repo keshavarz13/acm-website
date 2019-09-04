@@ -11,77 +11,12 @@ class Gallery extends React.Component {
         this.state = {
             images : 
             [{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                src: "",
+                thumbnail: "",
                 thumbnailWidth: 400,
                 thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "http://icpc.sharif.edu/2018/images/poster.png",
-                thumbnail: "http://icpc.sharif.edu/2018/images/poster.png",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "slm"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },
-            {
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
-            },
-            {
-                src: "https://codecup.ir/static/codecup4/images/photos/768/3-8.2b4e4609debd.jpg",
-                thumbnail: "https://codecup.ir/static/codecup4/images/photos/768/3-8.2b4e4609debd.jpg",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "khodafeziii"
+                tags: [],
+                caption: ""
             }],
             slideStyles :{
                 display : "none",
