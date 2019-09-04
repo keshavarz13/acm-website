@@ -3,6 +3,7 @@ import "./styles/gallery.css"
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import CloseIcon from '@material-ui/icons/Close';
+import Photo from "./Photo"
 
 class Gallery extends React.Component { 
     constructor(){
@@ -17,12 +18,12 @@ class Gallery extends React.Component {
                 tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
                 caption: "Boats (Jeshu John - designerspics.com)"
             },{
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                src: "http://icpc.sharif.edu/2018/images/poster.png",
+                thumbnail: "http://icpc.sharif.edu/2018/images/poster.png",
                 thumbnailWidth: 400,
                 thumbnailHeight: 300,
                 tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
+                caption: "slm"
             },{
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
@@ -80,7 +81,7 @@ class Gallery extends React.Component {
                 thumbnailWidth: 400,
                 thumbnailHeight: 300,
                 tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-                caption: "Boats (Jeshu John - designerspics.com)"
+                caption: "khodafeziii"
             }],
             slideStyles :{
                 display : "none",
@@ -127,7 +128,7 @@ class Gallery extends React.Component {
     }
 
     render() {
-        const photosList = this.state.images.map((photo , index) =>  <img className = "photos" style={this.state.photoStyle} src = {photo.thumbnail} onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })} />)
+        const photosList = this.state.images.map((photo , index) =>  <div   onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail}/></div>)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >

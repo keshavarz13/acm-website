@@ -81,6 +81,7 @@
     cursor: pointer;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 5px 5px 9px rgba(0,0,0,0.4);
 }
 
 .caounter { 
@@ -100,7 +101,7 @@
     grid-template-columns:auto auto auto auto  ;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1460px) {
     .gallery-container{
         width: 1000px;
         grid-template-columns: auto auto auto  ;
@@ -108,14 +109,14 @@
     
 }
 
-@media only screen and (max-width: 1012px) {
+@media only screen and (max-width: 1130px) {
     .gallery-container{
         width: 680px;
         grid-template-columns: auto auto   ;
     }
     
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 770px) {
     .gallery-container{
         width: 300px;
         grid-template-columns:  auto   ;
