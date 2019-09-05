@@ -13,6 +13,7 @@ import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
+import Gallery from './components/Gallery'
 
 class App extends React.Component {
     constructor() {
@@ -77,6 +78,7 @@ class App extends React.Component {
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Route exact path="/Rengo" component={DeveloperPage}/>
                 <Footer/> 
+                {/* <Gallery/> */}
         
             </div>
         )

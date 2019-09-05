@@ -13,7 +13,7 @@ class Register extends React.Component {
         this.state = {
             team_name: "",
             institution: "",
-            country: 0,
+            // country: 0,
             contestant1: {
 
             },
@@ -36,7 +36,6 @@ class Register extends React.Component {
         this.setState({
             [event.target.name] : event.target.value
         })
-        // console.log(this.state)
     }
 
     contestantChange(contestantNumber, contestant) {
@@ -59,42 +58,26 @@ class Register extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        const headers = {
-            'Content-Type': 'application/json'
-        }
         const teamName = this.state.team_name;
-        var createdTeamName = 0;
+        const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
         console.log(this.state.country)
-        axios.post('http://localhost:8000/api/register/team/', {
+        const reqBody = {
             name: teamName,
-            is_onsite: true,
             institution: this.state.institution,
-            status: "PENDING",
-            country: this.state.country.id
-        }, {
-            headers: headers
-        } ).then(res => {
+            contestants : [
+                cont1
+            ]
+        }
+        console.log(reqBody)
+        axios.post('http://localhost:8000/api/register/team/onsite', reqBody).then(res => {
             if (res.status >= 400 && res.status < 500) {
                 console.log("mamad ridi");
             }
             else if (res.status >= 200 && res.status < 300)
              {
-                // console.log("successful");
-                createdTeamName = res.data.name;
-                // console.log(res)
-                this.state.contestant1['team'] = createdTeamName;
-                console.log(this.state.contestant1);
-                axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
+                console.log("successful");
              }
         })
-
-        // const contestants = [this.state.contestant1, this.state.contestant2, this.state.contestant3]
-        // for (var contestant in contestants ) {
-        //     contestant['team'] = team_dict
-        //     console.log(contestant)
-        //     // axios.post("http://localhost:8000/api/register/contestant/onsite", contestant)
-        // }
-
     }
 
     render() {
@@ -144,7 +127,7 @@ class Register extends React.Component {
                                 onChange={this.handleChange}
                             />
                         </FormControl>
-                        <FormControl required>
+                        {/* <FormControl required>
                             <InputLabel htmlFor="country">Country</InputLabel>
                             <Select
                                 className="text_box"
@@ -157,9 +140,8 @@ class Register extends React.Component {
                                       <MenuItem value={item}>{item.name}</MenuItem>
                                        ))
                                  }
-                                {/* <MenuItem></MenuItem> */}
                             </Select>
-                        </FormControl>
+                        </FormControl> */}
                     </div>
                 </div>
                 <br/>
@@ -168,7 +150,7 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <br/>
-                <ContestantFields
+                {/* <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
@@ -176,7 +158,7 @@ class Register extends React.Component {
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
-                />
+                /> */}
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"

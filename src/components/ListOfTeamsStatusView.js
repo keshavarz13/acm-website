@@ -9,32 +9,32 @@ class TimeLineContainerView extends React.Component {
                 status : "REJECTED", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             }, {
                 status : "APPROVED", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             }, {
                 status : "APPROVED", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             }, {
                 status : "PENDING", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             }, {
                 status : "PAID", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             }, {
                 status : "PENDING", 
                 name : "sooode sahame banki!" , 
                 institution : "amir kabir university of technology" , 
-                location : "Iran" , 
+                country : "Iran" , 
             },
         ]
     }
