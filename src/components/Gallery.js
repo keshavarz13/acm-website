@@ -9,6 +9,9 @@ class Gallery extends React.Component {
     constructor(){
         super()
         this.state = {
+            allImage : [],
+            teamsImage : [],
+            staffsImage : [],
             images : 
             [{
                 src: "",
@@ -25,6 +28,7 @@ class Gallery extends React.Component {
                 filter: "brightness(1)"
             },
             Pindex : 0 ,
+            tab : 0 , 
 
         }
         this.hide = this.hide.bind(this)
@@ -33,7 +37,17 @@ class Gallery extends React.Component {
     }
 
     componentDidMount() { 
-        this.setState({images : this.props.images})
+        this.setState({allImage : this.props.images})
+        var staffs = [] 
+        var teams = [] 
+        for(i = 0 ; i <this.props.images.length ; i++){
+            if(this.props.images[i].category === "staff" )
+                staffs.concat(this.props.images[i])
+            else if(this.props.images[i].category === "team" )
+                teams.concat(this.props.images[i])
+        }
+        this.setState({staffsImage : staffs})
+        this.setState({teamsImage : teams})
     }
 
     hide() { 
@@ -63,6 +77,9 @@ class Gallery extends React.Component {
     }
 
     render() {
+        if(this.state.tab == 0){
+            this.setState({images : this.state.allImage})
+        }
         const photosList = this.state.images.map((photo , index) =>  <div   onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail}/></div>)
         return (
             <div>
