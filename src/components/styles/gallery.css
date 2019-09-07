@@ -83,9 +83,9 @@
     border-radius: 10px;
 }
 .photos{
+    margin-left: 0px;
     width: 300px; 
     height: 210px;
-    margin: 10px;
     cursor: pointer;
     border-radius: 10px;
     align-items: center;
@@ -131,6 +131,10 @@
     cursor: pointer;
 
 }
+.photo-container { 
+    margin-left: 50% ; 
+    transform: translate(-50% , 0);
+}
 
 
 @media only screen and (max-width: 1460px) {
@@ -159,8 +163,12 @@
         width: 300px;
     }
     .gallery-container{
-        width: 300px;
+        width:300px;
         grid-template-columns:  auto   ;
+        box-sizing: border-box;
+    }
+    .photo-container { 
+       max-width: 300px;
     }
     
 }
@@ -172,6 +180,12 @@
         margin-top: -10px;
     }
     
+}
+@media only screen and (max-width: 400px) {
+
+    .tabs p{
+        min-width: 300px ; 
+    }
 }
 
 @media only screen and (max-height: 810px) {

@@ -36,9 +36,9 @@ class Photo extends React.Component {
     }
     render() {
         return (
-            <div>
+           
                 <img style={this.state.style} className = "photos"  src = {this.props.thumbnail}  onMouseEnter = {this.active} onMouseLeave = {this.disable} />
-            </div>
+           
         )
     }
 }
