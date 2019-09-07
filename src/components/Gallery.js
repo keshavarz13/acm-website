@@ -37,10 +37,11 @@ class Gallery extends React.Component {
     }
 
     componentDidMount() { 
+        // this.setState({imga : this.props.images})
         this.setState({allImage : this.props.images})
         var staffs = [] 
         var teams = [] 
-        for(i = 0 ; i <this.props.images.length ; i++){
+        for(let i = 0 ; i <this.props.images.length ; i++){
             if(this.props.images[i].category === "staff" )
                 staffs.concat(this.props.images[i])
             else if(this.props.images[i].category === "team" )
@@ -48,6 +49,7 @@ class Gallery extends React.Component {
         }
         this.setState({staffsImage : staffs})
         this.setState({teamsImage : teams})
+        this.setState({images : this.props.images})
     }
 
     hide() { 
@@ -77,9 +79,6 @@ class Gallery extends React.Component {
     }
 
     render() {
-        if(this.state.tab == 0){
-            this.setState({images : this.state.allImage})
-        }
         const photosList = this.state.images.map((photo , index) =>  <div   onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail}/></div>)
         return (
             <div>
@@ -90,6 +89,12 @@ class Gallery extends React.Component {
                     <ArrowBackIosIcon className = "left" onClick = {this.prev}/>
                     <ArrowForwardIosIcon className = "right" onClick = {this.next}/>
                     <CloseIcon className = "close" onClick = {this.hide}/>
+                </div>
+
+                <div className = "tabs">
+                        <p>ALL</p>
+                        <p>STAFFS</p>
+                        <p>TEAMS</p>
                 </div>
 
                 <div className="gallery-container">
