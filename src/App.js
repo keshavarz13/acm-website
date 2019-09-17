@@ -13,7 +13,6 @@ import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
-import Gallery from './components/Gallery'
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegister from './components/Register/OnlineRegister'
 
