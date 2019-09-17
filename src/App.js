@@ -14,6 +14,8 @@ import PastContest from "./components/PastContest"
 import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
 import Gallery from './components/Gallery'
+import RegisterMenu from './components/Register/RegisterMenu'
+import OnlineRegister from './components/Register/OnlineRegister'
 
 class App extends React.Component {
     constructor() {
@@ -71,7 +73,9 @@ class App extends React.Component {
         return(
             <div>
                 <Header changePage = {this.changePage} />
-                <Route exact path="/Register" component={RegisterView} />
+                <Route exact path="/onsiteRegister" component={RegisterView} />
+                <Route exact path="/onlineRegister" component={OnlineRegister} />
+                <Route exact path="/Register" component={RegisterMenu} />
                 <Route exact path="/PastResult" component={this.pastContestList} />
                 <Route exact path="/" component={this.home} />
                 <Route exact path="/status" component={ListOfTeamsStatusView} />
