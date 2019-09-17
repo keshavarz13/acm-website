@@ -16,6 +16,8 @@
 }
 
 .register-card { 
+    margin-top: 15px;
+    margin-bottom: 15px;
     position: relative ; 
     margin-left: auto ; 
     margin-right: auto ; 
@@ -34,7 +36,6 @@
 }
 
 .card-text { 
-
     position: absolute ; 
     left: 50% ; 
     transform: translate(-50% , 0 );
@@ -44,4 +45,12 @@
     background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #32ce92 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 725px) {
+    .card-container { 
+        grid-template-columns:  auto;
+    }
+    .menu-container {
+        height: 650px;
+    }
 }
