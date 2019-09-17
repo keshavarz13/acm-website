@@ -127,7 +127,7 @@ class Register extends React.Component {
                                 onChange={this.handleChange}
                             />
                         </FormControl>
-                        {/* <FormControl required>
+                        <FormControl required>
                             <InputLabel htmlFor="country">Country</InputLabel>
                             <Select
                                 className="text_box"
@@ -141,7 +141,7 @@ class Register extends React.Component {
                                        ))
                                  }
                             </Select>
-                        </FormControl> */}
+                        </FormControl>
                     </div>
                 </div>
                 <br/>
@@ -150,7 +150,7 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <br/>
-                {/* <ContestantFields
+                <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
@@ -158,7 +158,7 @@ class Register extends React.Component {
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
-                /> */}
+                />
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"
