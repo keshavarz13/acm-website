@@ -79,7 +79,7 @@ class Gallery extends React.Component {
     }
 
     render() {
-        const photosList = this.state.images.map((photo , index) =>  <div   onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail}/></div>)
+        const photosList = this.state.images.map((photo , index) =>  <div className="single-photo-container"  onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail}/></div>)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >
