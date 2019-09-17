@@ -25,7 +25,6 @@ class SherBox extends React.Component {
     hoverHandler(){
         this.setState({
             style : {
-                // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.8)",
                 transform : "scale(1.1)",
                 transitionProperty :"transform" , 
                 transitionDuration: "200ms",
@@ -38,7 +37,6 @@ class SherBox extends React.Component {
     unHoverHandler(){
         this.setState({
             style : {
-                // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
                 transform : "scale(1.0)",
                 transitionProperty :"transform" , 
                 transitionDuration: "200ms",
