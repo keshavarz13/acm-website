@@ -86,8 +86,13 @@ class Gallery extends React.Component {
                     <div className="caounter">{this.state.Pindex +1}/{this.state.images.length}</div>
                     <img className = "slid-image" src = {this.state.images[this.state.Pindex].src} />
                     <p>{this.state.images[this.state.Pindex].caption}</p>
-                    <ArrowBackIosIcon className = "left" onClick = {this.prev}/>
-                    <ArrowForwardIosIcon className = "right" onClick = {this.next}/>
+                    <div className = "left">
+                         <ArrowBackIosIcon  onClick = {this.prev}/>
+                    </div>
+                    <div className = "right">
+                         <ArrowForwardIosIcon  onClick = {this.next}/>
+                    </div>
+                   
                     <CloseIcon className = "close" onClick = {this.hide}/>
                 </div>
 
@@ -95,6 +100,7 @@ class Gallery extends React.Component {
                         <p>ALL</p>
                         <p>STAFFS</p>
                         <p>TEAMS</p>
+                        <p>OTHER</p>
                 </div>
 
                 <div className="gallery-container">

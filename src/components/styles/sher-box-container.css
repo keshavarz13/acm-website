@@ -15,11 +15,20 @@
   }
   
   /* Remove extra left and right margins, due to padding */
+  .contest-row { 
+    margin-top: 100px;
+    margin-left: -55px;
+  }
   .row {
     margin-top: 100px;
   }
   
   /* Clear floats after the columns */
+  .contest-row :after{
+    content: "";
+    display: table;
+    clear: both;
+  }
   .row:after {
     content: "";
     display: table;
@@ -28,6 +37,9 @@
 
   
   @media only screen and (max-width: 1050px) {
+    .contest-row { 
+      margin-left: 0px;
+    }
     /* For desktop: */
     .sher-box-container {
       display: flex;
