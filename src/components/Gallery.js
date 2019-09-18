@@ -87,10 +87,10 @@ class Gallery extends React.Component {
                 </div>
 
                 <div className = "tabs">
-                        <p>ALL</p>
-                        <p>STAFFS</p>
-                        <p>TEAMS</p>
-                        <p>OTHER</p>
+                        <p onClick = {()=>{this.setState({images : [].concat(this.props.staffs).concat(this.props.other).concat(this.props.teams)})}}>ALL</p>
+                        <p onClick = {()=>{this.setState({images : [].concat(this.props.staffs)})}}>STAFFS</p>
+                        <p onClick = {()=>{this.setState({images : [].concat(this.props.teams)})}}>TEAMS</p>
+                        <p onClick = {()=>{this.setState({images : [].concat(this.props.other)})}}>OTHER</p>
                 </div>
 
                 <div className="gallery-container">
