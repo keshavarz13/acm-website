@@ -7,7 +7,7 @@ class SherBox extends React.Component {
         super()
         this.state ={
             style : {
-                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.4)",
                 transform : "scale(1.0)",
                 marginTop : "50px",
                 marginLeft : "0px"
@@ -57,7 +57,7 @@ class SherBox extends React.Component {
                     </div>
                 </BrowserView>
                 <MobileView>
-                    <div className = "sher-container"  >
+                    <div style ={{marginTop :"30px" , marginBottom :"30px"}}className = "sher-container"  >
                         <img src={this.props.url} width ="160" height="160" />
                         <h1>{this.props.title}</h1>
                         <p>{this.props.text}</p>
