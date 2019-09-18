@@ -9,9 +9,6 @@ class Gallery extends React.Component {
     constructor(){
         super()
         this.state = {
-            allImage : [],
-            teamsImage : [],
-            staffsImage : [],
             images : 
             [{
                 src: "",
@@ -39,17 +36,10 @@ class Gallery extends React.Component {
     componentDidMount() { 
         // this.setState({imga : this.props.images})
         this.setState({allImage : this.props.images})
-        var staffs = [] 
-        var teams = [] 
-        for(let i = 0 ; i <this.props.images.length ; i++){
-            if(this.props.images[i].category === "staff" )
-                staffs.concat(this.props.images[i])
-            else if(this.props.images[i].category === "team" )
-                teams.concat(this.props.images[i])
-        }
-        this.setState({staffsImage : staffs})
-        this.setState({teamsImage : teams})
-        this.setState({images : this.props.images})
+        var images = []
+        images = images.concat(this.props.staffs).concat(this.props.other).concat(this.props.teams)
+        this.setState({images : images})
+      
     }
 
     hide() { 
