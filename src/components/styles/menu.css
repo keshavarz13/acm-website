@@ -48,6 +48,7 @@
 }
 @media only screen and (max-width: 725px) {
     .card-container { 
+        width :300px;
         grid-template-columns:  auto;
     }
     .menu-container {
