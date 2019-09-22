@@ -11,37 +11,16 @@ class PosterList extends React.Component {
                 {
                     poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
                     year : "2018",
-                    onlineScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    onsiteScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    question : "" , 
+                    final_ranking_online :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
+                    final_ranking_onsite :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
+                    problems : "" , 
                    
-                },{
-                    poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
-                    year : "2017",
-                    onlineScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    onsiteScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    question : "" , 
-                   
-                },{
-                    poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
-                    year : "2016",
-                    onlineScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    onsiteScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    question : "" , 
-                   
-                },{
-                    poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
-                    year : "2015",
-                    onlineScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    onsiteScoreBoard :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    question : "" , 
-                  
                 },
             ] 
                
             
         }
-        
+
         this.fetchContests = this.fetchContests.bind(this)
     }
 
