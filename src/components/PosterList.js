@@ -1,5 +1,6 @@
 import React from "react"  
 import Poster from "./poster";
+import axios from 'axios'
 import "./styles/poster.css"
 
 class PosterList extends React.Component { 
@@ -40,6 +41,20 @@ class PosterList extends React.Component {
                
             
         }
+        
+        this.fetchContests = this.fetchContests.bind(this)
+    }
+
+    fetchContests = () => {
+        axios.get("http://localhost:8000/api/contests").then(res => {
+            this.setState({
+                data: res.data
+            });
+        });
+    };
+
+    componentDidMount() { 
+        this.fetchContests()
     }
 
     render () { 
