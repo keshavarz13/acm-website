@@ -1,11 +1,10 @@
 .situation-card{
     width: 90% ;
-    height: 100%;
     border-radius: 5px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: -10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
-    min-width: 300px; 
+    min-width: 300px;
     padding-left: 7px;
     box-sizing: border-box;
     background-color: rgb(43, 46, 1);
@@ -22,6 +21,9 @@
 
 .situation-card p span {
     font-weight: bold;
+    -moz-font-weight: bold;
+    -webkit-font-weight: bold;
+    -o-font-weight: bold;
 }
 
 .situation-card h1 { 
@@ -39,6 +41,9 @@
     width: 1600px;
     margin-left: 50% ; 
     transform: translate(-50% , 0);
+    -moz-transform: translate(-50% , 0);
+    -o-transform: translate(-50% , 0);
+    -webkit-transform: translate(-50% , 0);
     display: grid ; 
     grid-template-columns:auto auto ;
 }
@@ -69,7 +74,12 @@
 
 .help-container p { 
     font-weight: bold;
+    -o-font-weight: bold;
+    -webkit-font-weight: bold;
+    -moz-font-weight:normal ; 
+    font-size: 15px;
 }
+
 .help-container { 
   text-align: center;
   width: 100%;
