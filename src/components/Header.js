@@ -1,6 +1,7 @@
 import React from "react" 
 import "./styles/header-style.css"
 import { NavLink } from 'react-router-dom'
+import DropDown from "./DropDown"
 
 
 class Header extends React.Component { 
@@ -50,18 +51,7 @@ class Header extends React.Component {
                   </div>
 
                   <div className ="option">
-                    <div class="dropdown">
-                      <button class="dropbtn"><img src = {require("./../img/dropDown.svg")} width ="32" height ="32" onClick = {this.clickHandler}  />
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content" style ={this.state.style}>
-                          <NavLink onClick={() => window.scrollTo(0, 0)}onClick = {this.clickHandler} className="nav-link" exact to="/">Home</NavLink>
-                          <NavLink onClick={() => window.scrollTo(0, 0)} onClick = {this.clickHandler} className="nav-link" exact to="/Register">Register</NavLink>
-                          <NavLink onClick={() => window.scrollTo(0, 0)} onClick = {this.clickHandler} className="nav-link" exact to="/PastResult">Past Result</NavLink>
-                          <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">Registration Status</NavLink>
-                          
-                      </div>
-                    </div> 
+                      <DropDown/>
                   </div>
 
                   <img src= {require("./../img/header-logo.png")} height="55" width = "170"/>
