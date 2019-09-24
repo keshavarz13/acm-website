@@ -31,9 +31,6 @@
 .link-card-container h1 { 
     text-align: center ;
     font-size: 17px;
-    background: -webkit-linear-gradient(0deg, #200957 0%, #434892 55%, #32ce92 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 
 }
 
