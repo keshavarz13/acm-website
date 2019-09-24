@@ -8,7 +8,9 @@ class TimeLineContainerView extends React.Component {
     }
 
     fetchTimeLineItems = () => {
-        axios.get("http://localhost:8000/api/timelineitems").then(res => {
+        let apiUrl = process.env.REACT_APP_URL
+        apiUrl = apiUrl +"api/timelineitems"
+        axios.get(apiUrl).then(res => {
             this.setState({
                 timeLineItems: res.data
             });

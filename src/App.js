@@ -16,6 +16,7 @@ import DeveloperPage from "./components/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegister from './components/Register/OnlineRegister'
 
+
 class App extends React.Component {
     constructor() {
         super() 
@@ -67,6 +68,7 @@ class App extends React.Component {
             </div>     
         )
     }
+   
     
     render() {
         return(
@@ -81,7 +83,6 @@ class App extends React.Component {
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Route exact path="/Rengo" component={DeveloperPage}/>
                 <Footer/> 
-                {/* <Gallery/> */}
         
             </div>
         )
