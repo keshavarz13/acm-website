@@ -64,7 +64,7 @@ class OnlineRegister extends React.Component {
         const teamName = this.state.team_name;
         var createdTeamName = 0;
         console.log(this.state.country)
-        axios.post('http://localhost:8000/api/register/team/', {
+        axios.post( process.env.REACT_APP_URL+'api/register/team/', {
             name: teamName,
             is_onsite: true,
             institution: this.state.institution,
@@ -83,7 +83,7 @@ class OnlineRegister extends React.Component {
                 // console.log(res)
                 this.state.contestant1['team'] = createdTeamName;
                 console.log(this.state.contestant1);
-                axios.post("http://localhost:8000/api/register/contestant/onsite", this.state.contestant1);
+                axios.post(process.env.REACT_APP_URL+"api/register/contestant/onsite", this.state.contestant1);
              }
         })
 
