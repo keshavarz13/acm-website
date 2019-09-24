@@ -11,3 +11,5 @@ build:
     - master
   script:
     - npm install
+    - npm run build
+    - mv build/* /var/www/html
