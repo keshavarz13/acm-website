@@ -1,0 +1,18 @@
+stages:
+  - build
+
+build:
+  stage: build
+  variables:
+    GIT_STRATEGY: fetch
+  tags:
+    - build
+  only:
+    - master
+  script:
+    - rm -rf node_modules/ || true
+    - npm install
+    - rm -rf build || true
+    - npm run build
+    - rm -rf /var/www/html/* || true
+    - mv build/* /var/www/html
