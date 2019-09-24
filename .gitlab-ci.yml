@@ -1,0 +1,13 @@
+stages:
+  - build
+
+build:
+  stage: build
+  variables:
+    GIT_STRATEGY: fetch
+  tags:
+    - build
+  only:
+    - staging
+  script:
+    - npm install
