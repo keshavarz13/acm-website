@@ -58,10 +58,11 @@
     margin-top: 4px;
     position: absolute;
     z-index: 105;
+    cursor: pointer;
 }
 
 .option{
-    margin-top: 20px;
+    margin-top: 15px;
     position: absolute;
     right: 20% ; 
     top: 0px ; 

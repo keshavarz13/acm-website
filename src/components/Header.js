@@ -14,6 +14,7 @@ class Header extends React.Component {
           }
       }
       this.clickHandler = this.clickHandler.bind(this)
+      this.logoClickHandler = this.logoClickHandler.bind(this)
     }
 
     clickHandler () { 
@@ -36,6 +37,10 @@ class Header extends React.Component {
         }
     }
     
+    logoClickHandler() { 
+      window.location.replace("/")
+    }
+
     render() {
       return(
         <div>
@@ -54,7 +59,7 @@ class Header extends React.Component {
                       <DropDown/>
                   </div>
 
-                  <img src= {require("./../img/header-logo.png")} height="55" width = "170"/>
+                  <img src= {require("./../img/header-logo.png")} height="55" width = "170" onClick={this.logoClickHandler}/>
               </div>
             </div>
         </div>
