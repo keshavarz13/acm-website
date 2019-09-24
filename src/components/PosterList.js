@@ -25,7 +25,7 @@ class PosterList extends React.Component {
     }
 
     fetchContests = () => {
-        axios.get("http://localhost:8000/api/contests").then(res => {
+        axios.get(process.env.REACT_APP_URL+"api/contests").then(res => {
             this.setState({
                 data: res.data
             });
