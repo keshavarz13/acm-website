@@ -8,6 +8,6 @@ build:
   tags:
     - build
   only:
-    - staging
+    - master
   script:
     - npm install
