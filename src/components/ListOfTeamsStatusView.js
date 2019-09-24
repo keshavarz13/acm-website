@@ -40,7 +40,7 @@ class TimeLineContainerView extends React.Component {
     }
 
     fetchTimeLineItems = () => {
-        axios.get("http://localhost:8000/api/teams").then(res => {
+        axios.get(process.env.REACT_APP_URL+"/api/teams").then(res => {
             this.setState({
                 teams: res.data
             });
