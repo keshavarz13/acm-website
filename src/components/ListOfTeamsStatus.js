@@ -25,11 +25,11 @@ class ListOfTeamsStatus extends React.Component {
                                 Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
                             </p>
                             <div className = "help-box">
-                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#6b6b6b"}}></div> <p> : Pending Payment</p></div>
-                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#3c9440"}}></div> <p> : Approved for participation</p></div>
-                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#aa740b"}}></div> <p> : Reserved registration beforehand</p></div>
-                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#e23838"}}></div> <p> : Denied Participation</p></div>
-                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#3065a3"}}></div> <p> : Paid</p></div>
+                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#6b6b6b"}}></div> <p>  Pending Payment</p></div>
+                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#3c9440"}}></div> <p>  Approved for participation</p></div>
+                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#aa740b"}}></div> <p>  Reserved registration beforehand</p></div>
+                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#e23838"}}></div> <p>  Denied Participation</p></div>
+                                <div className = "help"> <div className = "color-circle" style = {{backgroundColor : "#3065a3"}}></div> <p>  Paid</p></div>
                             </div>
                     </div>
               
