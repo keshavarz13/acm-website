@@ -106,6 +106,23 @@ class PastContest extends React.Component {
                 });
             });
         };
+        for(let i = 0 ; i<this.state.allImages.length ; i++ ) {
+            if(this.state.allImages[i].title === "Staffs"){
+                this.setState({
+                    staffs : this.state.allImages[i].photos
+                })
+            }
+            else if(this.state.allImages[i].title === "Teams"){
+                this.setState({
+                    teams : this.state.allImages[i].photos
+                })
+            }
+            else(this.state.allImages[i].title === "Other"){
+                this.setState({
+                    other : this.state.allImages[i].photos
+                })
+            }
+        }
         
     }
 
