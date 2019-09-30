@@ -13,88 +13,27 @@ class PastContest extends React.Component {
             allImages : [],
             staffs : [
                 {
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                }
+                    src: "",
+                    thumbnail_url: "",
+                    caption: "",
+               
+                },
             ],
             teams : [
                 {
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                }
+                    src: "",
+                    thumbnail_url: "",
+                    caption: "",
+               
+                },
             ],
             
             other : [
                 {
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
-                },{
-                    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                    thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                    caption: "S Boats (Jeshu John - designerspics.com)",
+                    src: "",
+                    thumbnail_url: "",
+                    caption: "",
+               
                 },
             ],
         }
