@@ -6,8 +6,9 @@ import "./styles/past-contest.css"
 
 class PastContest extends React.Component { 
     constructor(){
-        this.fetchContests = this.fetchContests.bind(this)
+       
         super()
+        this.fetchContests = this.fetchContests.bind(this)
         this.state = { 
             allImages : [],
             staffs : [
