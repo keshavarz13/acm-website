@@ -8,7 +8,11 @@ class PastContest extends React.Component {
     constructor(){
        
         super()
-        this.state = { 
+        this.fetchContests = this.fetchContests.bind(this)
+        this.function = this.function.bind(this)
+        this.state = {
+            isFetched : false ,  
+            isManaged : false , 
             allImages : [],
             staffs : [
                 {
@@ -38,30 +42,52 @@ class PastContest extends React.Component {
         }
     }
 
- 
+    fetchContests = () => {
+        axios.get(process.env.REACT_APP_URL+"api/contests/"+this.props.data.year ).then(res => {
+            this.setState({
+                allImages: res.data.galleries , 
+                isFetched : true
+            });
+        });
+    };
 
-    componentDidMount(){
-        for(let i = 0 ; i<this.props.allImages.length ; i++ ) {
-            if(this.props.allImages[i].title === "Staffs"){
-                this.setState({
-                    staffs : this.props.allImages[i].photos
-                })
-            }
-            else if(this.props.allImages[i].title === "Teams"){
-                this.setState({
-                    teams : this.props.allImages[i].photos
-                })
-            }
-            else if(this.props.allImages[i].title === "Other"){
-                this.setState({
-                    other : this.props.allImages[i].photos
-                })
-            }
-        }
+    async componentDidMount(){
+         this.fetchContests() 
+
         
     }
 
+    function() { 
+        console.log(this.state.allImages)
+
+        for(let i = 0 ; i<this.state.allImages.length ; i++ ) {
+            if(this.state.allImages[i].title === "Staffs"){
+                this.setState({
+                    staffs : this.state.allImages[i].photos
+                })
+            }
+            else if(this.state.allImages[i].title === "Teams"){
+                this.setState({
+                    teams : this.state.allImages[i].photos
+                })
+            }
+            else if(this.state.allImages[i].title === "Other"){
+                this.setState({
+                    other : this.state.allImages[i].photos
+                })
+            }
+        }
+    }
+
+
     render(){
+        if(this.state.isFetched && !this.state.isManaged){
+            this.function()
+            this.setState({
+                isManaged : true
+            })
+        }
+        console.log(this.state)   
         return(
             <div className = "past-contest-container">
                 <div className = "sher-box-container">

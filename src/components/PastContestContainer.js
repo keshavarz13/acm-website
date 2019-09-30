@@ -25,7 +25,7 @@ export default class PastContestContainer extends React.Component {
 
     render () { 
         return(
-            <PastContest data = {this.props.data} allImages = {this.state.allImages} />
+            <PastContest data = {this.props.data}  />
         )
     }
 }
