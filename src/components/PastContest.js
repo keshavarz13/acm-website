@@ -1,5 +1,6 @@
 import React from "react"
 import Gallery from "./Gallery";
+import axios from "axios"
 import PastContestLinkCard from './PastContestLinkCard'
 import "./styles/past-contest.css"
 
@@ -7,6 +8,7 @@ class PastContest extends React.Component {
     constructor(){
         super()
         this.state = { 
+            allImages : [],
             staffs : [
                 {
                     src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -95,6 +97,18 @@ class PastContest extends React.Component {
             ],
         }
     }
+
+    componentDidMount(){
+        fetchContests = () => {
+            axios.get(process.env.REACT_APP_URL+"api/contests/"+this.props.data.year ).then(res => {
+                this.setState({
+                    allImages: res.data
+                });
+            });
+        };
+        
+    }
+
     render(){
         return(
             <div className = "past-contest-container">
