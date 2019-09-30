@@ -8,7 +8,6 @@ class PastContest extends React.Component {
     constructor(){
        
         super()
-        this.fetchContests = this.fetchContests.bind(this)
         this.state = { 
             allImages : [],
             staffs : [
@@ -39,31 +38,23 @@ class PastContest extends React.Component {
         }
     }
 
-    fetchContests = () => {
-        axios.get(process.env.REACT_APP_URL+"api/contests/"+this.props.data.year ).then(res => {
-            this.setState({
-                allImages: res.data
-            });
-        });
-    };
+ 
 
     componentDidMount(){
-        this.fetchContests() 
-      
-        for(let i = 0 ; i<this.state.allImages.length ; i++ ) {
-            if(this.state.allImages[i].title === "Staffs"){
+        for(let i = 0 ; i<this.props.allImages.length ; i++ ) {
+            if(this.props.allImages[i].title === "Staffs"){
                 this.setState({
-                    staffs : this.state.allImages[i].photos
+                    staffs : this.props.allImages[i].photos
                 })
             }
-            else if(this.state.allImages[i].title === "Teams"){
+            else if(this.props.allImages[i].title === "Teams"){
                 this.setState({
-                    teams : this.state.allImages[i].photos
+                    teams : this.props.allImages[i].photos
                 })
             }
-            else if(this.state.allImages[i].title === "Other"){
+            else if(this.props.allImages[i].title === "Other"){
                 this.setState({
-                    other : this.state.allImages[i].photos
+                    other : this.props.allImages[i].photos
                 })
             }
         }

@@ -15,6 +15,7 @@ import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegister from './components/Register/OnlineRegister'
+import PastContestContainer from './components/PastContestContainer'
 
 
 class App extends React.Component {
@@ -39,7 +40,7 @@ class App extends React.Component {
     pastContestMaker() {
         if(this.state.validReq) {
             return(
-                <PastContest data={this.state.pastContestData} />
+                <PastContestContainer data={this.state.pastContestData} />
             )
         } else {
             return(
