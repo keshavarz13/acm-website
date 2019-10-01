@@ -61,17 +61,22 @@ class PastContest extends React.Component {
         console.log(this.state.allImages)
 
         for(let i = 0 ; i<this.state.allImages.length ; i++ ) {
-            if(this.state.allImages[i].title === "Staffs"){
+            let s = this.state.allImages[i].title ; 
+            var set = s.split("-") ; 
+            s = set[0] 
+            var newSet = s.split(" ")
+            s = newSet[0]
+            if(s === "Staffs"){
                 this.setState({
                     staffs : this.state.allImages[i].photos
                 })
             }
-            else if(this.state.allImages[i].title === "Teams"){
+            else if(s === "Teams"){
                 this.setState({
                     teams : this.state.allImages[i].photos
                 })
             }
-            else if(this.state.allImages[i].title === "Other"){
+            else if(s === "Other"){
                 this.setState({
                     other : this.state.allImages[i].photos
                 })
