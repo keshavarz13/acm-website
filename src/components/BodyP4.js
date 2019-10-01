@@ -1,9 +1,30 @@
 import React from 'react';
+import axios from 'axios';
 import "./styles/sponsor.css"
 
 
 
 class BodyP4 extends React.Component { 
+
+    state = {
+        poster: null,
+        sponsor: null
+    }
+
+    fetchCurrentContest = () => {
+        let apiUrl = process.env.REACT_APP_URL;
+        apiUrl += "/api/current";
+        axios.get(apiUrl).then(res => {
+            this.setState({
+                poster: res.poster,
+                sponsor: res.sponsor
+            });
+        });
+    };
+
+    componentDidMount() { 
+        this.fetchCurrentContest()
+    }
     
     render() {
 
