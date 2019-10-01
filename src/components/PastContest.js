@@ -53,12 +53,10 @@ class PastContest extends React.Component {
 
     async componentDidMount(){
          this.fetchContests() 
-
         
     }
 
     function() { 
-        console.log(this.state.allImages)
 
         for(let i = 0 ; i<this.state.allImages.length ; i++ ) {
             let s = this.state.allImages[i].title ; 
@@ -66,6 +64,7 @@ class PastContest extends React.Component {
             s = set[0] 
             var newSet = s.split(" ")
             s = newSet[0]
+            
             if(s === "Staffs"){
                 this.setState({
                     staffs : this.state.allImages[i].photos

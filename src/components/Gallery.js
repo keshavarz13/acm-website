@@ -6,8 +6,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import Photo from "./Photo"
 
 class Gallery extends React.Component { 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             style1 : {
                 backgroundColor : "#2f5725",
@@ -22,15 +22,7 @@ class Gallery extends React.Component {
                 backgroundColor : "#222a20",
             },
            
-            images : 
-            [{
-                src: "",
-                thumbnail: "",
-                thumbnailWidth: 400,
-                thumbnailHeight: 300,
-                tags: [],
-                caption: ""
-            }],
+            images : props.images,
             slideStyles :{
                 display : "none",
             } , 
@@ -49,10 +41,13 @@ class Gallery extends React.Component {
     componentDidMount() { 
         // this.setState({imga : this.props.images})
         this.setState({allImage : this.props.images})
-        var imagesList = []
-        imagesList = imagesList.concat(this.props.staffs).concat(this.props.other).concat(this.props.teams)
-        this.setState({images : imagesList})
+        this.setState({images : this.props.images})
+       
       
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.setState({images : nextProps.images})
     }
 
     hide() { 
@@ -82,8 +77,8 @@ class Gallery extends React.Component {
     }
 
     render() {
-      console.log(this.props.images)
-        const photosList = this.props.images.map((photo , index) =>  <div className="single-photo-container"  onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail_url}/></div>)
+        console.log(this.state.images)
+        const photosList = this.state.images.map((photo , index) =>  <div className="single-photo-container"  onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail_url}/></div>)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >
