@@ -43,7 +43,7 @@ class PastContest extends React.Component {
     }
 
     fetchContests = () => {
-        axios.get(process.env.REACT_APP_URL+"api/contests/"+this.props.data.year ).then(res => {
+        axios.get(process.env.REACT_APP_URL+"/api/contests/"+this.props.data.year ).then(res => {
             this.setState({
                 allImages: res.data.galleries , 
                 isFetched : true

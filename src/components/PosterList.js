@@ -25,7 +25,7 @@ class PosterList extends React.Component {
     }
 
     fetchContests = () => {
-        axios.get(process.env.REACT_APP_URL+"api/contests").then(res => {
+        axios.get(process.env.REACT_APP_URL+"/api/contests").then(res => {
             this.setState({
                 data: res.data
             });
@@ -38,6 +38,7 @@ class PosterList extends React.Component {
 
     render () { 
         const posters = this.state.data.map((contest) => <div className = "columns"><Poster contest={contest} pastContestProvider = {this.props.pastContestProvider}/></div>)
+        console.log(this.state.data[0].poster)
         return(
             <div className = "sher-box-container2"> 
                 <div className="row3">

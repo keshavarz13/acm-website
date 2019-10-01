@@ -15,9 +15,11 @@ class BodyP4 extends React.Component {
         let apiUrl = process.env.REACT_APP_URL;
         apiUrl += "/api/current";
         axios.get(apiUrl).then(res => {
+            console.log(apiUrl)
+            console.log(res.data[0].poster)
             this.setState({
-                poster: res.poster,
-                sponsor: res.sponsor
+                poster: res.data[0].poster,
+                sponsor: res.data[0].sponsor
             });
         });
     };
@@ -28,17 +30,17 @@ class BodyP4 extends React.Component {
     
     render() {
 
-
+         console.log(process.env.REACT_APP_URL+this.state.sponsor)
         return (
             <div className = "part4-container">
                  <div className = "new-poster" >
-                        <img src="http://icpc.sharif.edu/2018/images/poster.png" width="300" height="400"/>
+                        <img src = {process.env.REACT_APP_URL+this.state.poster} width="300" height="400"/>
                 </div>
                 <div className= "part4-inner-container">
                     <div className = "sponsor-box">
                         <h1>Event Sponsor</h1>
                         <div className="line"></div>
-                        <div className="sponsor-image"> <img src={require ("./../img/sponsor.png") } width ="250" height="250" /></div>
+                        <div className="sponsor-image"><img src = {process.env.REACT_APP_URL+this.state.sponsor}width ="250" height="250" /></div>
                     </div>
                 </div>
             </div>
