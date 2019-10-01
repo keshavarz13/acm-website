@@ -37,7 +37,7 @@ class Photo extends React.Component {
     render() {
         return (
            
-                <img style={this.state.style} className = "photos"  src = {this.props.thumbnail}  onMouseEnter = {this.active} onMouseLeave = {this.disable} />
+                <img style={this.state.style} className = "photos"  src = {process.env.REACT_APP_URL+ this.props.thumbnail}  onMouseEnter = {this.active} onMouseLeave = {this.disable} />
            
         )
     }

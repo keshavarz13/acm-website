@@ -49,9 +49,9 @@ class Gallery extends React.Component {
     componentDidMount() { 
         // this.setState({imga : this.props.images})
         this.setState({allImage : this.props.images})
-        var images = []
-        images = images.concat(this.props.staffs).concat(this.props.other).concat(this.props.teams)
-        this.setState({images : images})
+        var imagesList = []
+        imagesList = imagesList.concat(this.props.staffs).concat(this.props.other).concat(this.props.teams)
+        this.setState({images : imagesList})
       
     }
 
@@ -82,12 +82,13 @@ class Gallery extends React.Component {
     }
 
     render() {
-        const photosList = this.state.images.map((photo , index) =>  <div className="single-photo-container"  onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail_url}/></div>)
+      console.log(this.props.images)
+        const photosList = this.props.images.map((photo , index) =>  <div className="single-photo-container"  onClick = {() => this.setState({ slideStyles :{display : "block"}, Pindex :index })}><Photo thumbnail = {photo.thumbnail_url}/></div>)
         return (
             <div>
                 <div className = "slide-show" style = {this.state.slideStyles}  >
                     <div className="caounter">{this.state.Pindex +1}/{this.state.images.length}</div>
-                    <img className = "slid-image" src = {this.state.images[this.state.Pindex].src} />
+                    <img className = "slid-image" src = {process.env.REACT_APP_URL+this.state.images[this.state.Pindex].src} />
                     <p>{this.state.images[this.state.Pindex].caption}</p>
                     <div className = "left">
                          <ArrowBackIosIcon  onClick = {this.prev}/>

@@ -86,8 +86,10 @@ class PastContest extends React.Component {
             this.setState({
                 isManaged : true
             })
+
+           
         }
-        console.log(this.state)   
+
         return(
             <div className = "past-contest-container">
                 <div className = "sher-box-container">
@@ -99,12 +101,13 @@ class PastContest extends React.Component {
                 </div>
 
                 <div className="photo-wall">
-                    <Gallery images = {this.state.images} staffs = {this.state.staffs} other = {this.state.other} teams = {this.state.teams}/>
+                    <Gallery images = {[].concat(this.state.staffs).concat(this.state.other).concat(this.state.teams)} staffs = {this.state.staffs} other = {this.state.other} teams = {this.state.teams}/>
                 </div>
                 <h1></h1>
                 
             </div>
         )
+        
     }
 }
 
