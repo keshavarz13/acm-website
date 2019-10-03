@@ -173,6 +173,7 @@ class Register extends React.Component {
                         variant="contained" 
                         className="submit_button"
                         type="submit"
+                        onClick={this.onSubmit}
                     >
                         submit
                     </Button>
