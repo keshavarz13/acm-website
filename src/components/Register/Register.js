@@ -6,14 +6,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 import axios from 'axios'
 
-
 class Register extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             team_name: "",
             institution: "",
-            // country: 0,
+            country: "",
             contestant1: {
 
             },
@@ -29,7 +28,7 @@ class Register extends React.Component {
     }
 
     onChange(value) {
-        console.log("Captcha value:", value);
+        console.log("Captcha value:", value)
     }
 
     handleChange(event) {
@@ -132,14 +131,15 @@ class Register extends React.Component {
                             <Select
                                 className="text_box"
                                 value={this.state.country}
-                                type="text"
                                 name="country"
                                 onChange={this.handleChange}
                             >
-                                { this.props.data.map(item => (
-                                      <MenuItem value={item}>{item.name}</MenuItem>
-                                       ))
-                                 }
+                                {this.props.data.map(item => (
+                                        <MenuItem value={item}>
+                                            {item.name}
+                                        </MenuItem>
+                                    ))
+                                }
                             </Select>
                         </FormControl>
                     </div>

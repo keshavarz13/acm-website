@@ -13,7 +13,7 @@ class OnlineRegister extends React.Component {
         this.state = {
             team_name: "",
             institution: "",
-            country: 0,
+            country: "",
             contestant1: {
 
             },
@@ -138,11 +138,15 @@ class OnlineRegister extends React.Component {
                             <Select
                                 className="text_box"
                                 value={this.state.country}
-                                type="text"
                                 name="country"
                                 onChange={this.handleChange}
                             >
-                              
+                                {/* {this.props.data.map(item => (
+                                        <MenuItem value={item.name}>
+                                            {item.name}
+                                        </MenuItem>
+                                    ))
+                                } */}
                             </Select>
                         </FormControl>
                     </div>

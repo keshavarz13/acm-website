@@ -8,7 +8,7 @@ class RegisterView extends React.Component {
     }
 
     fetchCountries = () => {
-        axios.get(process.env.REACT_APP_URL+"api/countries").then (res => {
+        axios.get(process.env.REACT_APP_URL+"/api/countries").then (res => {
             this.setState({
                 countries: res.data
             });
