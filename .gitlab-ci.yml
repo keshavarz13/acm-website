@@ -13,7 +13,7 @@ build:
   script:
     - node --version
     - npm install
-    - npm run build
+    - export REACT_APP_URL=http://172.23.132.103:8080 && npm run build
   artifacts:
     name: artifact1
     paths:
