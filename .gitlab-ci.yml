@@ -12,4 +12,11 @@ build:
     - master
   script:
     - node --version
-    - ls
+    - npm install
+    - npm run build
+  artifacts:
+    name: artifact1
+    paths:
+      - build/
+    expire_in: 1 day
+
