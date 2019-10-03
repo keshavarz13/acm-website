@@ -49,7 +49,7 @@ class Header extends React.Component {
 
                   <div className= "nav-link-container">
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">Registration Status</NavLink>
-                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Result</NavLink>
+                      <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Results</NavLink>
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/Register">Register</NavLink>
                       <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/">Home</NavLink>
                       

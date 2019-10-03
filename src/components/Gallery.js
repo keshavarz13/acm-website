@@ -54,6 +54,7 @@ class Gallery extends React.Component {
         this.setState({
             slideStyles :{
                 display : "none",
+                Pindex : 0  
             }
         })
     }
@@ -96,7 +97,7 @@ class Gallery extends React.Component {
                 </div>
 
                 <div className = "tabs">
-                        <p style ={this.state.style1} onClick = {()=>{this.setState({images : [].concat(this.props.staffs).concat(this.props.other).concat(this.props.teams),
+                        <p style ={this.state.style1} onClick = {()=>{this.setState({images : [].concat(this.props.staffs).concat(this.props.other).concat(this.props.teams),Pindex : 0 ,
                         style1 : {
                             backgroundColor : "#2f5725"
                         },
@@ -110,7 +111,7 @@ class Gallery extends React.Component {
                             backgroundColor : "#222a20",
                         },
                         })}}>ALL</p>
-                        <p style ={this.state.style2} onClick = {()=>{this.setState({images : [].concat(this.props.staffs),
+                        <p style ={this.state.style2} onClick = {()=>{this.setState({images : [].concat(this.props.staffs),Pindex : 0 ,
                         style1 : {
                             backgroundColor : "#222a20"
                         },
@@ -123,7 +124,7 @@ class Gallery extends React.Component {
                         style4 : {
                             backgroundColor : "#222a20",
                         },})}}>STAFFS</p>
-                        <p style ={this.state.style3} onClick = {()=>{this.setState({images : [].concat(this.props.teams),
+                        <p style ={this.state.style3} onClick = {()=>{this.setState({images : [].concat(this.props.teams),Pindex : 0 ,
                         style1 : {
                             backgroundColor : "#222a20"
                         },
@@ -136,7 +137,7 @@ class Gallery extends React.Component {
                         style4 : {
                             backgroundColor : "#222a20",
                         },})}}>TEAMS</p>
-                        <p style ={this.state.style4} onClick = {()=>{this.setState({images : [].concat(this.props.other),
+                        <p style ={this.state.style4} onClick = {()=>{this.setState({images : [].concat(this.props.other),Pindex : 0 ,
                         style1 : {
                             backgroundColor : "#222a20"
                         },
