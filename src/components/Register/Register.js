@@ -68,7 +68,7 @@ class Register extends React.Component {
             ]
         }
         console.log(reqBody)
-        axios.post(process.env.REACT_APP_URL+'api/register/team/onsite', reqBody).then(res => {
+        axios.post(process.env.REACT_APP_URL+'/api/register/team/onsite', reqBody).then(res => {
             if (res.status >= 400 && res.status < 500) {
                 console.log("mamad ridi");
             }
