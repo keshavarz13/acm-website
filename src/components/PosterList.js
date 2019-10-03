@@ -9,10 +9,31 @@ class PosterList extends React.Component {
         this.state = {
             data :[
                 {
-                    poster : "http://icpc.sharif.edu/2018/images/poster.png" , 
-                    year : "2018",
-                    final_ranking_online :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
-                    final_ranking_onsite :"http://irsv.upmusics.com/Downloads/Musics/Reza%20Sadeghi%20-%20Shahr%20Ashoob%20(128).mp3" , 
+                    poster : "" , 
+                    year : "",
+                    final_ranking_online :"" , 
+                    final_ranking_onsite :"" , 
+                    problems : "" , 
+                   
+                },{
+                    poster : "" , 
+                    year : "",
+                    final_ranking_online :"" , 
+                    final_ranking_onsite :"" , 
+                    problems : "" , 
+                   
+                },{
+                    poster : "" , 
+                    year : "",
+                    final_ranking_online :"" , 
+                    final_ranking_onsite :"" , 
+                    problems : "" , 
+                   
+                },{
+                    poster : "" , 
+                    year : "",
+                    final_ranking_online :"" , 
+                    final_ranking_onsite :"" , 
                     problems : "" , 
                    
                 },
