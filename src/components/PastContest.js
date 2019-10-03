@@ -99,9 +99,9 @@ class PastContest extends React.Component {
             <div className = "past-contest-container">
                 <div className = "sher-box-container">
                     <div className="contest-row">
-                        <div className = "column" onClick={()=>{if(this.props.data.final_ranking_online=="#"){alert("The online scoreboard is not avilable")}}}><PastContestLinkCard  title ="Online ScoreBoard" url={require("./../img/scoreboard.svg")} link= {this.props.data.final_ranking_online} /></div>
+                        <div className = "column" onClick={()=>{if(this.props.data.final_ranking_online=="#"){alert("The onLine scoreboard is not available")}}}><PastContestLinkCard  title ="Online ScoreBoard" url={require("./../img/scoreboard.svg")} link= {this.props.data.final_ranking_online} /></div>
                         <div className = "column"><PastContestLinkCard  title ="Problems" url={require("./../img/question.svg")} link= {this.props.data.problems} /></div>
-                        <div className = "column" onClick={()=>{if(this.props.data.final_ranking_onsite === "#"){alert("The online scoreboard is not avilable")}}}><PastContestLinkCard  title ="Onsite ScoreBoard" url={require("./../img/scoreboard.svg")} link= {this.props.data.final_ranking_onsite} /></div>
+                        <div className = "column" onClick={()=>{if(this.props.data.final_ranking_onsite === "#"){alert("The onSite scoreboard is not available")}}}><PastContestLinkCard  title ="Onsite ScoreBoard" url={require("./../img/scoreboard.svg")} link= {this.props.data.final_ranking_onsite} /></div>
                     </div>
                 </div>
 
