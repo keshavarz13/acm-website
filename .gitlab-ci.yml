@@ -2,7 +2,7 @@ stages:
   - build
 
 build:
-  image: node:10.16.3
+  image: acm-registry:5000/node:10.16.3
   stage: build
   variables:
     GIT_STRATEGY: fetch
