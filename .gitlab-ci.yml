@@ -2,21 +2,17 @@ stages:
   - build
 
 build:
-  image: acm-registry:5000/node:10.16.3
   stage: build
   variables:
     GIT_STRATEGY: fetch
   tags:
-    - build_front
+    - build_front_shell
   only:
     - master
   script:
-    - node --version
+    - rm -rf node_modules/ || true
     - npm install
-    - export REACT_APP_URL=http://172.23.132.103:8080 && npm run build
-  artifacts:
-    name: artifact1
-    paths:
-      - build/
-    expire_in: 1 day
-
+    - rm -rf build || true
+    - npm run build
+    - rm -rf /var/www/html/* || true
+    - mv build/* /var/www/html
