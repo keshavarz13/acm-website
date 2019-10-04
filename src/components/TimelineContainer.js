@@ -18,8 +18,8 @@ class TimelineContainer extends React.Component{
                             <TimelineItem
                                 key = {index.toString()}
                                 dateText = {item.dateText}
-                                style = {JSON.parse(item.style)}
-                                dateInnerStyle= {JSON.parse(item.dateInnerStyle)}
+                                style = {{color: JSON.parse(item.style)}}
+                                dateInnerStyle= {{background: JSON.parse(item.dateInnerStyle)}}
                             >
                                 <h3 style ={{ color:"#ffffff" }}>
                                     {item.title}
