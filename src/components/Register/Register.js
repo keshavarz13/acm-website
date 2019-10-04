@@ -57,26 +57,41 @@ class Register extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        const teamName = this.state.team_name;
-        const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
-        console.log(this.state.country)
-        const reqBody = {
-            name: teamName,
-            institution: this.state.institution,
-            contestants : [
-                cont1
-            ]
+        if (typeof this.state.contestant1.rules === 'undefined') {
+            alert("Please check Rules!")
         }
-        console.log(reqBody)
-        axios.post(process.env.REACT_APP_URL+'/api/register/team/onsite', reqBody).then(res => {
-            if (res.status >= 400 && res.status < 500) {
-                console.log("mamad ridi");
+        else if (typeof this.state.contestant2.rules === 'undefined') {
+            alert("Please check Rules!")
+        }
+        else if (typeof this.state.contestant3.rules === 'undefined') {
+            alert("Please check Rules!")
+        }
+        else if (!this.state.contestant1.rules === true &&  !this.state.contestant2.rules === true && !this.state.contestant3.rules === true) {
+            const teamName = this.state.team_name;
+            const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
+            console.log(this.state.country)
+            const reqBody = {
+                name: teamName,
+                institution: this.state.institution,
+                contestants : [
+                    cont1, cont2, cont3
+                ]
             }
-            else if (res.status >= 200 && res.status < 300)
-             {
-                console.log("successful");
-             }
-        })
+            console.log(reqBody)
+            axios.post(process.env.REACT_APP_URL+'/api/register/team/onsite', reqBody).then(res => {
+                if (res.status >= 400 && res.status < 500) {
+                    console.log("Haji :_");
+                }
+                else if (res.status >= 200 && res.status < 300)
+                {
+                    console.log("successful");
+                }
+            })
+        }
+        else {
+            alert("New Error!")
+        }
+        
     }
 
     render() {
@@ -161,7 +176,7 @@ class Register extends React.Component {
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"
-                        sitekey="6LfEJgkUAAAAAOVMfzDA_6E2Mw4jMtjYadVy5upA"
+                        sitekey="telegram gp :)"
                         onChange={this.onChange}
                     />
                 </Grid>

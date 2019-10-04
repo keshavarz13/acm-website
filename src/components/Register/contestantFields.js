@@ -19,7 +19,7 @@ class contestantFields extends React.Component {
             student_number: "",
             email: "",
             phone_number: "",
-            rules: "",
+            rules: false,
             local_rules: false,
             regional_rules: false,
         }
@@ -170,6 +170,7 @@ class contestantFields extends React.Component {
                         <Checkbox
                             name="rules"
                             color="default"
+                            checked={this.state.rules}
                             onChange={this.handleCheckboxChange}
                         />     
                     </div>       
