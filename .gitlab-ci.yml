@@ -6,7 +6,7 @@ build:
   variables:
     GIT_STRATEGY: fetch
   tags:
-    - build
+    - build_front_shell
   only:
     - master
   script:
