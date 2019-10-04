@@ -17,10 +17,10 @@ class ListOfTeamsStatus extends React.Component {
             <div className = "super-status-cards-container" >  
                 
                     <div  className = "help-container">
-                            <h1>Registered Teams</h1>
+                            <h1>OnSite Registered Teams</h1>
                             <p>
-                                Here is the list of registered teams ordered by their registration time.<br/>
-                                if your team name was not in registerd team list 24 hours after regitration, please inform us by:<br/> 
+                                Here is the list of OnSite registered teams ordered by their registration time.<br/>
+                                If your team name was not in registerd team list 24 hours after regitration, please inform us by:<br/> 
                                 Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
                                 Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
                             </p>

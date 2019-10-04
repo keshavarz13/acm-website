@@ -4,43 +4,11 @@ import ListOfTeamsStatus from "./ListOfTeamsStatus"
 
 class TimeLineContainerView extends React.Component {
     state = {
-        teams:  [
-            {
-                status : "REJECTED", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            }, {
-                status : "APPROVED", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            }, {
-                status : "APPROVED", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            }, {
-                status : "PENDING", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            }, {
-                status : "PAID", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            }, {
-                status : "PENDING", 
-                name : "sooode sahame banki!" , 
-                institution : "amir kabir university of technology" , 
-                country : "Iran" , 
-            },
-        ]
+        teams:  []
     }
 
     fetchTimeLineItems = () => {
-        axios.get(process.env.REACT_APP_URL+"/api/teams").then(res => {
+        axios.get(process.env.REACT_APP_URL+"/api/teams/onsite").then(res => {
             this.setState({
                 teams: res.data
             });
