@@ -58,42 +58,38 @@ class OnlineRegister extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        const headers = {
-            'Content-Type': 'application/json'
+        if (typeof this.state.contestant1.rules === 'undefined') {
+            alert("Please check Rules!")
         }
-        const teamName = this.state.team_name;
-        var createdTeamName = 0;
-        console.log(this.state.country)
-        axios.post( process.env.REACT_APP_URL+'api/register/team/', {
-            name: teamName,
-            is_onsite: true,
-            institution: this.state.institution,
-            status: "PENDING",
-            country: this.state.country.id
-        }, {
-            headers: headers
-        } ).then(res => {
-            if (res.status >= 400 && res.status < 500) {
-                console.log("mamad ridi");
+        else if (typeof this.state.contestant2.rules === 'undefined') {
+            alert("Please check Rules!")
+        }
+        else if (typeof this.state.contestant3.rules === 'undefined') {
+            alert("Please check Rules!")
+        }
+        else if (!this.state.contestant1.rules === true &&  !this.state.contestant2.rules === true && !this.state.contestant3.rules === true) {
+            const teamName = this.state.team_name;
+            const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
+            const reqBody = {
+                name: teamName,
+                institution: this.state.institution,
+                contestants : [
+                    cont1, cont2, cont3
+                ]
             }
-            else if (res.status >= 200 && res.status < 300)
-             {
-                // console.log("successful");
-                createdTeamName = res.data.name;
-                // console.log(res)
-                this.state.contestant1['team'] = createdTeamName;
-                console.log(this.state.contestant1);
-                axios.post(process.env.REACT_APP_URL+"api/register/contestant/onsite", this.state.contestant1);
-             }
-        })
-
-        // const contestants = [this.state.contestant1, this.state.contestant2, this.state.contestant3]
-        // for (var contestant in contestants ) {
-        //     contestant['team'] = team_dict
-        //     console.log(contestant)
-        //     // axios.post("http://localhost:8000/api/register/contestant/onsite", contestant)
-        // }
-
+            axios.post(process.env.REACT_APP_URL+'/api/register/team/online', reqBody).then(res => {
+                if (res.status >= 400 && res.status < 500) {
+                    console.log("Haji :_");
+                }
+                else if (res.status >= 200 && res.status < 300)
+                {
+                    console.log("successful");
+                }
+            })
+        }
+        else {
+            alert("New Error!")
+        }
     }
 
     render() {
@@ -141,12 +137,12 @@ class OnlineRegister extends React.Component {
                                 name="country"
                                 onChange={this.handleChange}
                             >
-                                {/* {this.props.data.map(item => (
-                                        <MenuItem value={item.name}>
+                                {this.props.data.map(item => (
+                                        <MenuItem value={item}>
                                             {item.name}
                                         </MenuItem>
                                     ))
-                                } */}
+                                }
                             </Select>
                         </FormControl>
                     </div>
@@ -180,6 +176,7 @@ class OnlineRegister extends React.Component {
                         variant="contained" 
                         className="submit_button"
                         type="submit"
+                        onClick={this.onSubmit}
                     >
                         submit
                     </Button>
