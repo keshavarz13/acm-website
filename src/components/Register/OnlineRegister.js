@@ -1,11 +1,10 @@
 import React from "react"
-import { Button, MenuItem, Paper, Typography, Checkbox, Select, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Button, Select, Grid, FormControl, Input, InputLabel, MenuItem } from '@material-ui/core';
 import OnlinecontestantFields from "./OnlinecontestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 import axios from 'axios'
-
 
 class OnlineRegister extends React.Component {
     constructor(props) {
@@ -93,6 +92,7 @@ class OnlineRegister extends React.Component {
     }
 
     render() {
+        console.log(this.props.data)
         return(
             <form className="register_container" onSubmit={this.onSubmit}>                
                 <h1 className="register_page_header">OnLine Contest Registration</h1>
@@ -137,12 +137,12 @@ class OnlineRegister extends React.Component {
                                 name="country"
                                 onChange={this.handleChange}
                             >
-                                {this.props.data.map(item => (
+                                {/* {this.props.data.map(item => (
                                         <MenuItem value={item}>
                                             {item.name}
                                         </MenuItem>
                                     ))
-                                }
+                                } */}
                             </Select>
                         </FormControl>
                     </div>
@@ -182,7 +182,6 @@ class OnlineRegister extends React.Component {
                     </Button>
                 </Grid>
             </form>
-
         )
     }
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, MenuItem, Paper, Typography, Checkbox, Select, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Button, MenuItem, Select, Grid, FormControl, Input, InputLabel } from '@material-ui/core';
 import ContestantFields from "./contestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -90,8 +90,7 @@ class Register extends React.Component {
         }
         else {
             alert("New Error!")
-        }
-        
+        } 
     }
 
     render() {
@@ -193,7 +192,6 @@ class Register extends React.Component {
                     </Button>
                 </Grid>
             </form>
-
         )
     }
 }
