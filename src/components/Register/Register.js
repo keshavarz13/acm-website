@@ -82,18 +82,17 @@ class Register extends React.Component {
     render() {
         return(
             <form className="register_container" onSubmit={this.onSubmit}>                
-                <h1 className="register_page_header">Contest Registration</h1>
+                <h1 className="register_page_header">OnSite Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="register_page_p">
                     <p>
                         Please fill all of the following fields carefully and then press the&nbsp;
                         <strong>Submit</strong> button to make your team registered.<br/>
-                        If you are willing to just register in the online contest, follow this <a href="#">link</a>.<br/>
                     </p>
                     <p>
                         Registration fee for Iranian teams are as follows:<br/>
-                        150,000 Tomans for non-AUT teams.<br/>
-                        100,000 Tomans for teams from Amirkabir University of Technology.
+                        180,000 Tomans for non-AUT teams.<br/>
+                        150,000 Tomans for teams from Amirkabir University of Technology.
                     </p>
                     <p> 
                         If your team name was not in the registerd teams list 24 hours after regitration, please inform us by:<br/>
@@ -150,7 +149,7 @@ class Register extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <br/>
-                {/* <ContestantFields
+                <ContestantFields
                     memberNumber="2"
                     contestant={this.contestantChange}
                 />
@@ -158,11 +157,11 @@ class Register extends React.Component {
                 <ContestantFields
                     memberNumber="3"
                     contestant={this.contestantChange}
-                /> */}
+                />
                 <Grid align="center">
                     <ReCAPTCHA
                         className="recaptcha"
-                        sitekey="telegram group :)"
+                        sitekey="6LfEJgkUAAAAAOVMfzDA_6E2Mw4jMtjYadVy5upA"
                         onChange={this.onChange}
                     />
                 </Grid>
