@@ -16,6 +16,7 @@ import DeveloperPage from "./components/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegisterView from './components/Register/OnlineRegisterView'
 import PastContestContainer from './components/PastContestContainer'
+import successfulRegistration from "./components/successfulRegistration"
 
 
 class App extends React.Component {
@@ -83,7 +84,10 @@ class App extends React.Component {
                 <Route exact path="/status" component={ListOfTeamsStatusView} />
                 <Route exact path="/PastContest" component={this.pastContestMaker} />
                 <Route exact path="/Rengo" component={DeveloperPage}/>
+                <Route exact path="/successfulRegistration" component={successfulRegistration}/>
                 <Footer/> 
+                
+                
         
             </div>
         )
