@@ -15,8 +15,6 @@ class BodyP4 extends React.Component {
         let apiUrl = process.env.REACT_APP_URL;
         apiUrl += "/api/current";
         axios.get(apiUrl).then(res => {
-            console.log(apiUrl)
-            console.log(res.data[0].poster)
             this.setState({
                 poster: res.data[0].poster,
                 sponsor: res.data[0].sponsor
@@ -29,8 +27,6 @@ class BodyP4 extends React.Component {
     }
     
     render() {
-
-         console.log(process.env.REACT_APP_URL+this.state.sponsor)
         return (
             <div className = "part4-container">
                  <div className = "new-poster" >

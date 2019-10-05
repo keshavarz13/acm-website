@@ -59,7 +59,6 @@ class PosterList extends React.Component {
 
     render () { 
         const posters = this.state.data.map((contest) => <div className = "columns"><Poster contest={contest} pastContestProvider = {this.props.pastContestProvider}/></div>)
-        console.log(this.state.data[0].poster)
         return(
             <div className = "sher-box-container2"> 
                 <div className="row3">

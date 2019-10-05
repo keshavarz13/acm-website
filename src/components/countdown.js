@@ -45,8 +45,6 @@ var FlipDown = function () {
     this.opts = this._parseOptions(opt);
 
     this._setOptions();
-
-    console.log("FlipDown ".concat(this.version, " (Theme: ").concat(this.opts.theme, ")"));
   }
 
   _createClass(FlipDown, [{
