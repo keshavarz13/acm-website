@@ -14,7 +14,6 @@ class contestantFields extends React.Component {
             student_number: "",
             email: "",
             phone_number: "",
-            rules: false,
             local_rules: false,
             regional_rules: false,
         }

@@ -16,6 +16,7 @@ class Register extends React.Component {
             team_name: "",
             institution: "",
             country: "",
+            rules: false,
             contestant1: {
 
             },
@@ -92,19 +93,9 @@ class Register extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        if (typeof this.state.contestant1.rules === 'undefined') {
-            alert("Please check Rules!")
-        }
-        else if (typeof this.state.contestant2.rules === 'undefined') {
-            alert("Please check Rules!")
-        }
-        else if (typeof this.state.contestant3.rules === 'undefined') {
-            alert("Please check Rules!")
-        }
-        else if (!this.state.contestant1.rules === true &&  !this.state.contestant2.rules === true && !this.state.contestant3.rules === true) {
+        if (this.state.rules === true) {
             const teamName = this.state.team_name;
             const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
-            console.log(this.state.country)
             const reqBody = {
                 name: teamName,
                 institution: this.state.institution,
@@ -112,7 +103,6 @@ class Register extends React.Component {
                     cont1, cont2, cont3
                 ]
             }
-            console.log(reqBody)
             axios.post(process.env.REACT_APP_URL+'/api/register/team/onsite', reqBody).then(res => {
                 if (res.status >= 400 && res.status < 500) {
                     console.log("Haji :_");
@@ -124,8 +114,8 @@ class Register extends React.Component {
             })
         }
         else {
-            alert("New Error!")
-        } 
+            alert("Please Check Rules!")
+        }
     }
 
     render() {
