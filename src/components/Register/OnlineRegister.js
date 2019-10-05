@@ -1,10 +1,13 @@
 import React from "react"
-import { Button, Select, Grid, FormControl, Input, InputLabel, MenuItem } from '@material-ui/core';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Select, Grid, 
+         FormControl, Input, InputLabel, MenuItem, Button, Checkbox, } from '@material-ui/core';
 import OnlinecontestantFields from "./OnlinecontestantFields"
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 import axios from 'axios'
+import LocalRules from "./LocalRules"
+import RegionalRules from "./RegionalRules"
 
 class OnlineRegister extends React.Component {
     constructor(props) {
@@ -25,6 +28,11 @@ class OnlineRegister extends React.Component {
         }
         this.contestantChange = this.contestantChange.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
+        this.OpenLocalRules = this.OpenLocalRules.bind(this)
+        this.CloseLocalRules = this.CloseLocalRules.bind(this)
+        this.OpenRegionalRules = this.OpenRegionalRules.bind(this)
+        this.CloseRegionalRules = this.CloseRegionalRules.bind(this)
     }
 
     onChange(value) {
@@ -34,6 +42,33 @@ class OnlineRegister extends React.Component {
     handleChange(event) {
         this.setState({
             [event.target.name] : event.target.value
+        })
+    }
+
+    OpenLocalRules() {
+        this.setState({
+            local_rules: true
+        })
+    }
+    CloseLocalRules() {
+        this.setState({
+            local_rules: false
+        })
+    }
+
+    OpenRegionalRules() {
+        this.setState({
+            regional_rules: true
+        })
+    }
+    CloseRegionalRules() {
+        this.setState({
+            regional_rules: false
+        })
+    }
+    handleCheckboxChange(event) {
+        this.setState({
+            rules: event.target.checked
         })
     }
 
@@ -163,13 +198,59 @@ class OnlineRegister extends React.Component {
                     contestant={this.contestantChange}
                 />
                 <Grid align="center">
+                    <div className="contestant_rule_box">
+                        <div className="contestant_rule_checkbox">
+                            <Checkbox
+                                name="rules"
+                                color="default"
+                                onChange={this.handleCheckboxChange}
+                            />     
+                        </div>       
+                        <h4>
+                            We have read and accept&nbsp;
+                            <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenRegionalRules}>Regional Rules </a> 
+                            and&nbsp;
+                            <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenLocalRules}>Local Rules</a>.
+                        </h4>
+                        <Dialog
+                            open={this.state.regional_rules}
+                            onClose={this.CloseRegionalRules}
+                        >
+                            <DialogTitle>
+                                {"Regional Rules"}
+                            </DialogTitle>
+                            <DialogContent>
+                                <RegionalRules/>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={this.CloseRegionalRules} color="default" autoFocus>
+                                    OK
+                                </Button>
+                            </DialogActions>
+                        </Dialog>
+
+                        <Dialog
+                            open={this.state.local_rules}
+                            onClose={this.CloseLocalRules}
+                        >
+                            <DialogTitle>
+                                {"Amirkabir Local Contest Information and Rules"}
+                            </DialogTitle>
+                            <DialogContent>
+                                <LocalRules/>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={this.CloseLocalRules} color="default" autoFocus>
+                                    OK
+                                </Button>
+                            </DialogActions>
+                        </Dialog>
+                    </div>
                     <ReCAPTCHA
                         className="recaptcha"
                         sitekey="telegram group :)"
                         onChange={this.onChange}
                     />
-                </Grid>
-                <Grid align="center">
                     <Button 
                         style={{fontFamily: "inherit", marginTop: "20px"}} 
                         color="primary" 
