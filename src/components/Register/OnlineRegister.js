@@ -112,6 +112,7 @@ class OnlineRegister extends React.Component {
                 else if (res.status >= 200 && res.status < 300)
                 {
                     console.log("successful");
+                    window.location.replace('/successfulRegistration2')
                 }
             })
         }
