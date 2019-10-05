@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from 'react-router-dom'
 import "./styles/successfulRegisteration.css"
 
 class successfulRegistration extends React.Component {
@@ -9,9 +10,13 @@ class successfulRegistration extends React.Component {
                 <h1>
                     Your registration was successful :)
                 </h1>
-                <div>
-                    Registration Status
-                </div>
+                <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">
+                    <div className = "registration-status-button">
+                        Registration Status
+                    </div>
+                </NavLink>
+                
+                
             </div>
         )
     }
