@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import Register from "./Register"
+import OnlineRegister from "./OnlineRegister"
 
-class RegisterView extends React.Component {
+class OnlineRegisterView extends React.Component {
     state = {
         countries: []
     }
@@ -21,9 +21,9 @@ class RegisterView extends React.Component {
 
     render() {
         return (
-            <Register data={this.state.countries}/>
+            <OnlineRegister data={this.state.countries}/>
         )
     }
 }
 
-export default RegisterView
+export default OnlineRegisterView

@@ -137,12 +137,12 @@ class OnlineRegister extends React.Component {
                                 name="country"
                                 onChange={this.handleChange}
                             >
-                                {/* {this.props.data.map(item => (
+                                {this.props.data.map(item => (
                                         <MenuItem value={item}>
                                             {item.name}
                                         </MenuItem>
                                     ))
-                                } */}
+                                }
                             </Select>
                         </FormControl>
                     </div>
