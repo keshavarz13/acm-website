@@ -14,8 +14,6 @@ class contestantFields extends React.Component {
             student_number: "",
             email: "",
             phone_number: "",
-            local_rules: false,
-            regional_rules: false,
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleContestantChange = this.handleContestantChange.bind(this)

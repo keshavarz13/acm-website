@@ -26,6 +26,8 @@ class OnlineRegister extends React.Component {
             contestant3: {
 
             },
+            local_rules: false,
+            regional_rules: false,
         }
         this.contestantChange = this.contestantChange.bind(this)
         this.handleChange = this.handleChange.bind(this)

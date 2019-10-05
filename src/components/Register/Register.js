@@ -26,6 +26,8 @@ class Register extends React.Component {
             contestant3: {
 
             },
+            local_rules: false,
+            regional_rules: false,
         }
         this.contestantChange = this.contestantChange.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -103,7 +105,8 @@ class Register extends React.Component {
                     cont1, cont2, cont3
                 ]
             }
-            axios.post(process.env.REACT_APP_URL+'/api/register/team/onsite', reqBody).then(res => {
+            console.log(reqBody)
+            axios.post(process.env.REACT_APP_URL+"/api/register/team/onsite", reqBody).then(res => {
                 if (res.status >= 400 && res.status < 500) {
                     console.log("Haji :_");
                 }
