@@ -7,9 +7,9 @@ class SituationCard extends React.Component {
         this.state = { 
             style : {boxShadow: "0 10px 10px 0 rgba(0, 0, 0, 0.4)",backgroundColor : "black"},
             dict : {
-                    'PENDING': 'Pending Payment',
-                    'PAID': 'Paid',
-                    'APPROVED': 'Approved for participation',
+                    'PENDING': 'Pending Approval',
+                    'APPROVED': 'Approved for payment',
+                    'PAID': 'Finalized',
                     'REJECTED': 'Denied Participation',
                     'RESERVED': 'Reserved registration beforehand'
             }
