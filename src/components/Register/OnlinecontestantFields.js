@@ -22,6 +22,8 @@ class OnlinecontestantFields extends React.Component {
     handleChange(event) {
         this.setState({
             [event.target.name] : event.target.value
+        }, () => {
+            this.handleContestantChange()
         })
     }
 
@@ -104,7 +106,7 @@ class OnlinecontestantFields extends React.Component {
                             className="text_box"
                             name="phone_number"
                             type="number"
-                            placeholder="989121111111"
+                            placeholder="09121111111"
                             onChange={this.handleChange}
                         />
                     </FormControl>
