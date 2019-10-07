@@ -7,13 +7,21 @@ class contestantFields extends React.Component {
         super(props)
         this.state = {
             first_name: "",
+            first_name_error: "",
             last_name: "",
+            last_name_error: "",
             gender: "",    
+            gender_error: "",
             shirt_size: "",     
+            shirt_size_error: "",
             edu_level: "",
+            edu_level_error: "",
             student_number: "",
+            student_number_error: "",
             email: "",
+            email_error: "",
             phone_number: "",
+            phone_number_error: "",
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleContestantChange = this.handleContestantChange.bind(this)
@@ -42,6 +50,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="first_name">First Name</InputLabel>
                         <Input
+                            error={this.state.first_name_error}
                             className="text_box"
                             name="first_name"
                             type="text"
@@ -51,6 +60,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="last_name">Last Name</InputLabel>
                         <Input
+                            error={this.state.last_name_error}
                             className="text_box"
                             name="last_name"
                             type="text"
@@ -60,6 +70,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="gender">Gender</InputLabel>
                         <Select 
+                            error={this.state.gender_error}
                             className="text_box"
                             value={this.state.gender}
                             onChange={this.handleChange}
@@ -72,6 +83,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="shirt_size">Shirt</InputLabel>
                         <Select 
+                            error={this.state.shirt_size_error}
                             className="text_box"
                             value={this.state.shirt_size}
                             onChange={this.handleChange}
@@ -88,6 +100,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="student_number">Student Number</InputLabel>
                         <Input
+                            error={this.state.student_number_error}
                             className="text_box"
                             type="number"
                             name="student_number"
@@ -97,6 +110,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required>
                         <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
                         <Select 
+                            error={this.state.edu_level_error}
                             className="text_box"
                             value={this.state.edu_level}
                             onChange={this.handleChange}
@@ -110,6 +124,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="email">Email</InputLabel>
                         <Input
+                            error={this.state.email_error}
                             className="text_box"
                             name="email"
                             onChange={this.handleChange}
@@ -119,6 +134,7 @@ class contestantFields extends React.Component {
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
                         <Input
+                            error={this.state.phone_number_error}
                             className="text_box"
                             name="phone_number"
                             type="number"

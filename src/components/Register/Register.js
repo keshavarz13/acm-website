@@ -14,8 +14,11 @@ class Register extends React.Component {
         super(props)
         this.state = {
             team_name: "",
+            team_error: "",
             institution: "",
+            institution_error: "",
             country: "",
+            country_error: "",
             rules: false,
             contestant1: {
 
@@ -44,7 +47,10 @@ class Register extends React.Component {
 
     handleChange(event) {
         this.setState({
-            [event.target.name] : event.target.value
+            [event.target.name] : event.target.value,
+            team_error: "",
+            institution_error: "",
+            country_error: "",
         })
     }
 
@@ -96,31 +102,49 @@ class Register extends React.Component {
     onSubmit = (event) => {
         event.preventDefault();
         if (this.state.rules === true) {
-            const teamName = this.state.team_name;
-            const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
-            const reqBody = {
-                name: teamName,
-                institution: this.state.institution,
-                contestants : [
-                    cont1, cont2, cont3
-                ]
+            if(this.state.country == "") {
+                this.setState({
+                    country_error: "error"
+                })
             }
-            console.log(reqBody)
-            axios({
-                url : process.env.REACT_APP_URL+"/api/register/team/onsite",
-                method : 'POST',
-                data : reqBody,
-                headers : {
-                    'Content-Type' : 'application/json'
+            if(this.state.team_name == "") {
+                this.setState({
+                    team_error: "error"
+                })
+                alert("Please Complete Team information!")
+            }
+            if(this.state.institution == "") {
+                this.setState({
+                    institution_error: "error"
+                })
+            }
+            else {
+                const teamName = this.state.team_name;
+                const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
+                const reqBody = {
+                    name: teamName,
+                    institution: this.state.institution,
+                    contestants : [
+                        cont1, cont2, cont3
+                    ]
                 }
-            }).then(res => {
-                console.log("successful");
-                window.location.replace('/successfulRegistration')                   
-            }).catch(error => {
-                console.log(error);
-                if(error.response)
-                    console.log(error.response);
-            })
+                console.log(reqBody)
+                axios({
+                    url : process.env.REACT_APP_URL+"/api/register/team/onsite",
+                    method : 'POST',
+                    data : reqBody,
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then(res => {
+                    console.log("successful");
+                    window.location.replace('/successfulRegistration')                   
+                }).catch(error => {
+                    console.log(error);
+                    if(error.response)
+                        console.log(error.response);
+                })
+            }
         }
         else {
             alert("Please Check Rules!")
@@ -157,6 +181,7 @@ class Register extends React.Component {
                         <FormControl required>
                             <InputLabel htmlFor="team_name">Team Name</InputLabel>
                             <Input
+                                error={this.state.team_error}
                                 className="text_box"
                                 name="team_name"
                                 type="text"
@@ -166,6 +191,7 @@ class Register extends React.Component {
                         <FormControl required>
                             <InputLabel htmlFor="institution">Institution</InputLabel>
                             <Input
+                                error={this.state.institution_error}
                                 className="text_box"
                                 name="institution"
                                 type="text"
@@ -176,6 +202,7 @@ class Register extends React.Component {
                         <FormControl required>
                             <InputLabel htmlFor="country">Country</InputLabel>
                             <Select
+                                error={this.state.country_error}
                                 className="text_box"
                                 value={this.state.country}
                                 name="country"
