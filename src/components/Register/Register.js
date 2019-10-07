@@ -139,11 +139,11 @@ class Register extends React.Component {
                     </p>
                     <p>
                         Registration fee for Iranian teams are as follows:<br/>
-                        180,000 Tomans for non-AUT teams.<br/>
-                        150,000 Tomans for teams from Amirkabir University of Technology.
+                        240,000 Tomans for non-AUT teams (80,000 Tomans for each contestant).<br/>
+                        180,000 Tomans for teams from Amirkabir University of Technology (60,000 Tomans for each contestant).
                     </p>
                     <p> 
-                        If your team name was not in the registerd teams list 24 hours after regitration, please inform us by:<br/>
+                        If your team name was not in the registered teams list 24 hours after regitration, please inform us by:<br/>
                         Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
                         Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
                     </p>

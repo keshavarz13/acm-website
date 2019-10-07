@@ -133,7 +133,7 @@ class OnlineRegister extends React.Component {
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="register_page_p">
                     <p> 
-                        If your team name was not in the registerd teams list 24 hours after regitration, please inform us by:<br/>
+                        In case you don't receive a verification email 24 hours after your registration, please inform us by:<br/>
                         Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
                         Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
                     </p>
