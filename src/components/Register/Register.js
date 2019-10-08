@@ -1,13 +1,13 @@
 import React from "react"
 import { Dialog, DialogTitle, DialogContent, DialogActions, Select, Grid, 
-         FormControl, Input, InputLabel, MenuItem, Button, Checkbox, } from '@material-ui/core';
-import ContestantFields from "./contestantFields"
+         FormControl, Input, InputLabel, MenuItem, Button, Checkbox } from '@material-ui/core';
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 import axios from 'axios'
 import LocalRules from "./LocalRules"
 import RegionalRules from "./RegionalRules"
+import PersonIcon from '@material-ui/icons/Person';
 
 class Register extends React.Component {
     constructor(props) {
@@ -20,19 +20,69 @@ class Register extends React.Component {
             country: "",
             country_error: "",
             rules: false,
-            contestant1: {
 
-            },
-            contestant2: {
 
-            },
-            contestant3: {
+            first_name_1: "",
+            last_name_1: "",
+            gender_1: "",    
+            shirt_size_1: "",     
+            edu_level_1: "",
+            student_number_1: "",
+            email_1: "",
+            phone_number_1: "",
 
-            },
+            first_name_1_error: "",
+            last_name_1_error: "",
+            gender_1_error: "",
+            shirt_size_1_error: "",
+            edu_level_1_error: "",
+            student_number_1_error: "",
+            email_1_error: "",
+            phone_number_1_error: "",
+
+
+            first_name_2: "",
+            last_name_2: "",
+            gender_2: "",    
+            shirt_size_2: "",     
+            edu_level_2: "",
+            student_number_2: "",
+            email_2: "",
+            phone_number_2: "",
+
+            first_name_2_error: "",
+            last_name_2_error: "",
+            gender_2_error: "",
+            shirt_size_2_error: "",
+            edu_level_2_error: "",
+            student_number_2_error: "",
+            email_2_error: "",
+            phone_number_2_error: "",
+
+
+            first_name_3: "",
+            last_name_3: "",
+            gender_3: "",    
+            shirt_size_3: "",     
+            edu_level_3: "",
+            student_number_3: "",
+            email_3: "",
+            phone_number_3: "",
+
+            first_name_3_error: "",
+            last_name_3_error: "",
+            gender_3_error: "",
+            shirt_size_3_error: "",
+            edu_level_3_error: "",
+            student_number_3_error: "",
+            email_3_error: "",
+            phone_number_3_error: "",
+            
             local_rules: false,
             regional_rules: false,
+
         }
-        this.contestantChange = this.contestantChange.bind(this)
+        this.field_alert= "0"
         this.handleChange = this.handleChange.bind(this)
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.OpenLocalRules = this.OpenLocalRules.bind(this)
@@ -51,7 +101,36 @@ class Register extends React.Component {
             team_error: "",
             institution_error: "",
             country_error: "",
+
+            first_name_1_error: "",
+            last_name_1_error: "",
+            gender_1_error: "",
+            shirt_size_1_error: "",
+            edu_level_1_error: "",
+            student_number_1_error: "",
+            email_1_error: "",
+            phone_number_1_error: "",
+
+            first_name_2_error: "",
+            last_name_2_error: "",
+            gender_2_error: "",
+            shirt_size_2_error: "",
+            edu_level_2_error: "",
+            student_number_2_error: "",
+            email_2_error: "",
+            phone_number_2_error: "",
+
+            first_name_3_error: "",
+            last_name_3_error: "",
+            gender_3_error: "",
+            shirt_size_3_error: "",
+            edu_level_3_error: "",
+            student_number_3_error: "",
+            email_3_error: "",
+            phone_number_3_error: "",
+
         })
+        this.field_alert= "0"
     }
 
     OpenLocalRules() {
@@ -81,48 +160,215 @@ class Register extends React.Component {
         })
     }
 
-    contestantChange(contestantNumber, contestant) {
-        if (contestantNumber === '1') {
-            this.setState({
-                contestant1: contestant
-            })
-        }
-        else if(contestantNumber === '2') {
-            this.setState({
-                contestant2: contestant
-            })
-        }
-        else if(contestantNumber === '3') {
-            this.setState({
-                contestant3: contestant
-            })
-        }
-    }
-
     onSubmit = (event) => {
         event.preventDefault();
         if (this.state.rules === true) {
             if(this.state.country == "") {
                 this.setState({
-                    country_error: "error"
+                    country_error: "error",
                 })
+                this.field_alert = "1"
             }
             if(this.state.team_name == "") {
                 this.setState({
-                    team_error: "error"
+                    team_error: "error",
                 })
-                alert("Please Complete Team information!")
+                this.field_alert = "1"
             }
             if(this.state.institution == "") {
                 this.setState({
-                    institution_error: "error"
+                    institution_error: "error",
                 })
+                this.field_alert = "1"
             }
+
+
+            if(this.state.first_name_1 == "") {
+                this.setState({
+                    first_name_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_1 == "") {
+                this.setState({
+                    last_name_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_1 == "") {
+                this.setState({
+                    gender_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.shirt_size_1 == "") {
+                this.setState({
+                    shirt_size_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_1 == "") {
+                this.setState({
+                    edu_level_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_1 == "") {
+                this.setState({
+                    student_number_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_1 == "") {
+                this.setState({
+                    email_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_1 == "") {
+                this.setState({
+                    phone_number_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+
+            if(this.state.first_name_2 == "") {
+                this.setState({
+                    first_name_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_2 == "") {
+                this.setState({
+                    last_name_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_2 == "") {
+                this.setState({
+                    gender_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.shirt_size_2 == "") {
+                this.setState({
+                    shirt_size_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_2 == "") {
+                this.setState({
+                    edu_level_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_2 == "") {
+                this.setState({
+                    student_number_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_2 == "") {
+                this.setState({
+                    email_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_2 == "") {
+                this.setState({
+                    phone_number_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+
+            if(this.state.first_name_3 == "") {
+                this.setState({
+                    first_name_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_3 == "") {
+                this.setState({
+                    last_name_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_3 == "") {
+                this.setState({
+                    gender_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.shirt_size_3 == "") {
+                this.setState({
+                    shirt_size_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_3 == "") {
+                this.setState({
+                    edu_level_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_3 == "") {
+                this.setState({
+                    student_number_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_3 == "") {
+                this.setState({
+                    email_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_3 == "") {
+                this.setState({
+                    phone_number_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+            if(this.field_alert == "1") {
+                alert("Please fill empty fields!")
+            }
+            
             else {
-                const teamName = this.state.team_name;
-                const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
+                const cont1 = {
+                    first_name: this.state.first_name_1,
+                    last_name: this.state.last_name_1,
+                    gender: this.state.gender_1,    
+                    shirt_size: this.state.shirt_size_1,     
+                    edu_level: this.state.edu_level_1,
+                    student_number: this.state.student_number_1,
+                    email: this.state.email_1,
+                    phone_number: this.state.phone_number_1,
+                }
+                const cont2 = {
+                    first_name: this.state.first_name_2,
+                    last_name: this.state.last_name_2,
+                    gender: this.state.gender_2,    
+                    shirt_size: this.state.shirt_size_2,     
+                    edu_level: this.state.edu_level_2,
+                    student_number: this.state.student_number_2,
+                    email: this.state.email_2,
+                    phone_number: this.state.phone_number_2,
+                }
+                const cont3 = {
+                    first_name: this.state.first_name_3,
+                    last_name: this.state.last_name_3,
+                    gender: this.state.gender_3,    
+                    shirt_size: this.state.shirt_size_3,     
+                    edu_level: this.state.edu_level_3,
+                    student_number: this.state.student_number_3,
+                    email: this.state.email_3,
+                    phone_number: this.state.phone_number_3,
+                }
                 const reqBody = {
-                    name: teamName,
+                    name: this.state.team_name,
                     institution: this.state.institution,
                     contestants : [
                         cont1, cont2, cont3
@@ -149,6 +395,7 @@ class Register extends React.Component {
         else {
             alert("Please Check Rules!")
         }
+        console.log(this.state.contestant1)
     }
 
     render() {
@@ -163,8 +410,8 @@ class Register extends React.Component {
                     </p>
                     <p>
                         Registration fee for Iranian teams are as follows:<br/>
-                        240,000 Tomans for non-AUT teams (80,000 Tomans for each contestant).<br/>
-                        180,000 Tomans for teams from Amirkabir University of Technology (60,000 Tomans for each contestant).
+                        210,000 Tomans for non-AUT teams (70,000 Tomans for each contestant).<br/>
+                        150,000 Tomans for teams from Amirkabir University of Technology (50,000 Tomans for each contestant).
                     </p>
                     <p> 
                         If your team name was not in the registered teams list 24 hours after regitration, please inform us by:<br/>
@@ -186,6 +433,7 @@ class Register extends React.Component {
                                 name="team_name"
                                 type="text"
                                 onChange={this.handleChange}
+                                inputProps = {{ maxLength: "25" }}
                             />
                         </FormControl>                    
                         <FormControl required>
@@ -197,6 +445,7 @@ class Register extends React.Component {
                                 type="text"
                                 placeholder="Amirkabir University of Technology"
                                 onChange={this.handleChange}
+                                inputProps = {{ maxLength: "50" }}
                             />
                         </FormControl>
                         <FormControl required>
@@ -219,22 +468,322 @@ class Register extends React.Component {
                     </div>
                 </div>
                 <br/>
-                <ContestantFields
-                    memberNumber="1"
-                    contestant={this.contestantChange}
-                />
-                <br/>
-                <ContestantFields
-                    memberNumber="2"
-                    contestant={this.contestantChange}
-                />
-                <br/>
-                <ContestantFields
-                    memberNumber="3"
-                    contestant={this.contestantChange}
-                />
+
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #1</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_1_error}
+                            className="text_box"
+                            name="first_name_1"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_1_error}
+                            className="text_box"
+                            name="last_name_1"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_1_error}
+                            className="text_box"
+                            value={this.state.gender_1}
+                            onChange={this.handleChange}
+                            name="gender_1"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="shirt_size">Shirt</InputLabel>
+                        <Select 
+                            error={this.state.shirt_size_1_error}
+                            className="text_box"
+                            value={this.state.shirt_size_1}
+                            onChange={this.handleChange}
+                            name="shirt_size_1"
+                        >
+                            <MenuItem value={"3XL"}>3X-Large</MenuItem>
+                            <MenuItem value={"2XL"}>2X-Large</MenuItem>
+                            <MenuItem value={"XL"}>X-Large</MenuItem>
+                            <MenuItem value={"L"}>Large</MenuItem>
+                            <MenuItem value={"M"}>Medium</MenuItem>
+                            <MenuItem value={"S"}>Small</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_1_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_1"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_1_error}
+                            className="text_box"
+                            value={this.state.edu_level_1}
+                            onChange={this.handleChange}
+                            name="edu_level_1"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_1_error}
+                            className="text_box"
+                            name="email_1"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_1_error}
+                            className="text_box"
+                            name="phone_number_1"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #2</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_2_error}
+                            className="text_box"
+                            name="first_name_2"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_2_error}
+                            className="text_box"
+                            name="last_name_2"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_2_error}
+                            className="text_box"
+                            value={this.state.gender_2}
+                            onChange={this.handleChange}
+                            name="gender_2"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="shirt_size">Shirt</InputLabel>
+                        <Select 
+                            error={this.state.shirt_size_2_error}
+                            className="text_box"
+                            value={this.state.shirt_size_2}
+                            onChange={this.handleChange}
+                            name="shirt_size_2"
+                        >
+                            <MenuItem value={"3XL"}>3X-Large</MenuItem>
+                            <MenuItem value={"2XL"}>2X-Large</MenuItem>
+                            <MenuItem value={"XL"}>X-Large</MenuItem>
+                            <MenuItem value={"L"}>Large</MenuItem>
+                            <MenuItem value={"M"}>Medium</MenuItem>
+                            <MenuItem value={"S"}>Small</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_2_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_2"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_2_error}
+                            className="text_box"
+                            value={this.state.edu_level_2}
+                            onChange={this.handleChange}
+                            name="edu_level_2"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_2_error}
+                            className="text_box"
+                            name="email_2"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_2_error}
+                            className="text_box"
+                            name="phone_number_2"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #3</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_3_error}
+                            className="text_box"
+                            name="first_name_3"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_3_error}
+                            className="text_box"
+                            name="last_name_3"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_3_error}
+                            className="text_box"
+                            value={this.state.gender_3}
+                            onChange={this.handleChange}
+                            name="gender_3"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="shirt_size">Shirt</InputLabel>
+                        <Select 
+                            error={this.state.shirt_size_3_error}
+                            className="text_box"
+                            value={this.state.shirt_size_3}
+                            onChange={this.handleChange}
+                            name="shirt_size_3"
+                        >
+                            <MenuItem value={"3XL"}>3X-Large</MenuItem>
+                            <MenuItem value={"2XL"}>2X-Large</MenuItem>
+                            <MenuItem value={"XL"}>X-Large</MenuItem>
+                            <MenuItem value={"L"}>Large</MenuItem>
+                            <MenuItem value={"M"}>Medium</MenuItem>
+                            <MenuItem value={"S"}>Small</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_3_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_3"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_3_error}
+                            className="text_box"
+                            value={this.state.edu_level_3}
+                            onChange={this.handleChange}
+                            name="edu_level_3"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_3_error}
+                            className="text_box"
+                            name="email_3"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_3_error}
+                            className="text_box"
+                            name="phone_number_3"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
                 <Grid align="center">
-                <div className="contestant_rule_box">
+                    <div className="contestant_rule_box">
                         <div className="contestant_rule_checkbox">
                             <Checkbox
                                 name="rules"

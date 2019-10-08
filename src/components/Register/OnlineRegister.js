@@ -1,35 +1,82 @@
 import React from "react"
 import { Dialog, DialogTitle, DialogContent, DialogActions, Select, Grid, 
-         FormControl, Input, InputLabel, MenuItem, Button, Checkbox, } from '@material-ui/core';
-import OnlinecontestantFields from "./OnlinecontestantFields"
+         FormControl, Input, InputLabel, MenuItem, Button, Checkbox } from '@material-ui/core';
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
 import "./../styles/register.css"
 import axios from 'axios'
 import LocalRules from "./LocalRules"
 import RegionalRules from "./RegionalRules"
+import PersonIcon from '@material-ui/icons/Person';
 
-class OnlineRegister extends React.Component {
+class Register extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             team_name: "",
+            team_error: "",
             institution: "",
+            institution_error: "",
             country: "",
+            country_error: "",
             rules: false,
-            contestant1: {
 
-            },
-            contestant2: {
 
-            },
-            contestant3: {
+            first_name_1: "",
+            last_name_1: "",
+            gender_1: "",    
+            edu_level_1: "",
+            student_number_1: "",
+            email_1: "",
+            phone_number_1: "",
 
-            },
+            first_name_1_error: "",
+            last_name_1_error: "",
+            gender_1_error: "",
+            edu_level_1_error: "",
+            student_number_1_error: "",
+            email_1_error: "",
+            phone_number_1_error: "",
+
+
+            first_name_2: "",
+            last_name_2: "",
+            gender_2: "",    
+            edu_level_2: "",
+            student_number_2: "",
+            email_2: "",
+            phone_number_2: "",
+
+            first_name_2_error: "",
+            last_name_2_error: "",
+            gender_2_error: "",
+            edu_level_2_error: "",
+            student_number_2_error: "",
+            email_2_error: "",
+            phone_number_2_error: "",
+
+
+            first_name_3: "",
+            last_name_3: "",
+            gender_3: "",    
+            edu_level_3: "",
+            student_number_3: "",
+            email_3: "",
+            phone_number_3: "",
+
+            first_name_3_error: "",
+            last_name_3_error: "",
+            gender_3_error: "",
+            edu_level_3_error: "",
+            student_number_3_error: "",
+            email_3_error: "",
+            phone_number_3_error: "",
+            
             local_rules: false,
             regional_rules: false,
+
         }
-        this.contestantChange = this.contestantChange.bind(this)
+        this.field_alert= "0"
         this.handleChange = this.handleChange.bind(this)
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.OpenLocalRules = this.OpenLocalRules.bind(this)
@@ -39,13 +86,42 @@ class OnlineRegister extends React.Component {
     }
 
     onChange(value) {
-        console.log("Captcha value:", value);
+        console.log("Captcha value:", value)
     }
 
     handleChange(event) {
         this.setState({
-            [event.target.name] : event.target.value
+            [event.target.name] : event.target.value,
+            team_error: "",
+            institution_error: "",
+            country_error: "",
+
+            first_name_1_error: "",
+            last_name_1_error: "",
+            gender_1_error: "",
+            edu_level_1_error: "",
+            student_number_1_error: "",
+            email_1_error: "",
+            phone_number_1_error: "",
+
+            first_name_2_error: "",
+            last_name_2_error: "",
+            gender_2_error: "",
+            edu_level_2_error: "",
+            student_number_2_error: "",
+            email_2_error: "",
+            phone_number_2_error: "",
+
+            first_name_3_error: "",
+            last_name_3_error: "",
+            gender_3_error: "",
+            edu_level_3_error: "",
+            student_number_3_error: "",
+            email_3_error: "",
+            phone_number_3_error: "",
+
         })
+        this.field_alert= "0"
     }
 
     OpenLocalRules() {
@@ -75,64 +151,230 @@ class OnlineRegister extends React.Component {
         })
     }
 
-    contestantChange(contestantNumber, contestant) {
-        if (contestantNumber === '1') {
-            this.setState({
-                contestant1: contestant
-            })
-        }
-        else if(contestantNumber === '2') {
-            this.setState({
-                contestant2: contestant
-            })
-        }
-        else if(contestantNumber === '3') {
-            this.setState({
-                contestant3: contestant
-            })
-        }
-    }
-
     onSubmit = (event) => {
         event.preventDefault();
         if (this.state.rules === true) {
-            const teamName = this.state.team_name;
-            const [cont1, cont2, cont3] = [this.state.contestant1, this.state.contestant2, this.state.contestant3];
-            const reqBody = {
-                name: teamName,
-                institution: this.state.institution,
-                contestants : [
-                    cont1, cont2, cont3
-                ]
+            if(this.state.country == "") {
+                this.setState({
+                    country_error: "error",
+                })
+                this.field_alert = "1"
             }
-            axios({
-                url : process.env.REACT_APP_URL+"/api/register/team/online",
-                method : 'POST',
-                data : reqBody,
-                headers : {
-                    'Content-Type' : 'application/json'
+            if(this.state.team_name == "") {
+                this.setState({
+                    team_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.institution == "") {
+                this.setState({
+                    institution_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+
+            if(this.state.first_name_1 == "") {
+                this.setState({
+                    first_name_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_1 == "") {
+                this.setState({
+                    last_name_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_1 == "") {
+                this.setState({
+                    gender_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_1 == "") {
+                this.setState({
+                    edu_level_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_1 == "") {
+                this.setState({
+                    student_number_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_1 == "") {
+                this.setState({
+                    email_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_1 == "") {
+                this.setState({
+                    phone_number_1_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+
+            if(this.state.first_name_2 == "") {
+                this.setState({
+                    first_name_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_2 == "") {
+                this.setState({
+                    last_name_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_2 == "") {
+                this.setState({
+                    gender_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_2 == "") {
+                this.setState({
+                    edu_level_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_2 == "") {
+                this.setState({
+                    student_number_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_2 == "") {
+                this.setState({
+                    email_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_2 == "") {
+                this.setState({
+                    phone_number_2_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+
+            if(this.state.first_name_3 == "") {
+                this.setState({
+                    first_name_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.last_name_3 == "") {
+                this.setState({
+                    last_name_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.gender_3 == "") {
+                this.setState({
+                    gender_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.edu_level_3 == "") {
+                this.setState({
+                    edu_level_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.student_number_3 == "") {
+                this.setState({
+                    student_number_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.email_3 == "") {
+                this.setState({
+                    email_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+            if(this.state.phone_number_3 == "") {
+                this.setState({
+                    phone_number_3_error: "error",
+                })
+                this.field_alert = "1"
+            }
+
+            if(this.field_alert == "1") {
+                alert("Please fill empty fields!")
+            }
+            
+            else {
+                const cont1 = {
+                    first_name: this.state.first_name_1,
+                    last_name: this.state.last_name_1,
+                    gender: this.state.gender_1,    
+                    edu_level: this.state.edu_level_1,
+                    student_number: this.state.student_number_1,
+                    email: this.state.email_1,
+                    phone_number: this.state.phone_number_1,
                 }
-            }).then(res => {
-                console.log("successful");
-                window.location.replace('/successfulRegistration2')                   
-            }).catch(error => {
-                console.log(error);
-                if(error.response)
-                    console.log(error.response);
-            })
+                const cont2 = {
+                    first_name: this.state.first_name_2,
+                    last_name: this.state.last_name_2,
+                    gender: this.state.gender_2,    
+                    edu_level: this.state.edu_level_2,
+                    student_number: this.state.student_number_2,
+                    email: this.state.email_2,
+                    phone_number: this.state.phone_number_2,
+                }
+                const cont3 = {
+                    first_name: this.state.first_name_3,
+                    last_name: this.state.last_name_3,
+                    gender: this.state.gender_3,    
+                    edu_level: this.state.edu_level_3,
+                    student_number: this.state.student_number_3,
+                    email: this.state.email_3,
+                    phone_number: this.state.phone_number_3,
+                }
+                const reqBody = {
+                    name: this.state.team_name,
+                    institution: this.state.institution,
+                    contestants : [
+                        cont1, cont2, cont3
+                    ]
+                }
+                console.log(reqBody)
+                axios({
+                    url : process.env.REACT_APP_URL+"/api/register/team/online",
+                    method : 'POST',
+                    data : reqBody,
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then(res => {
+                    console.log("successful");
+                    window.location.replace('/successfulRegistration2')                   
+                }).catch(error => {
+                    console.log(error);
+                    if(error.response)
+                        console.log(error.response);
+                })
+            }
         }
         else {
             alert("Please Check Rules!")
         }
+        console.log(this.state.contestant1)
     }
 
     render() {
         return(
             <form className="register_container" onSubmit={this.onSubmit}>                
-                <h1 className="register_page_header">OnLine Contest Registration</h1>
+                <h1 className="register_page_header">Online Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="register_page_p">
-                    <p> 
+                    <p>
                         In case you don't receive a verification email 24 hours after your registration, please inform us by:<br/>
                         Email: <a href="mailto:ceit.ssc94@gmail.com">ceit.ssc94@gmail.com</a><br/>
                         Telegram: <a href="https://t.me/ceitssc">@ceitssc</a> <br/>
@@ -147,25 +389,30 @@ class OnlineRegister extends React.Component {
                         <FormControl required>
                             <InputLabel htmlFor="team_name">Team Name</InputLabel>
                             <Input
+                                error={this.state.team_error}
                                 className="text_box"
                                 name="team_name"
                                 type="text"
                                 onChange={this.handleChange}
+                                inputProps = {{ maxLength: "25" }}
                             />
                         </FormControl>                    
                         <FormControl required>
                             <InputLabel htmlFor="institution">Institution</InputLabel>
                             <Input
+                                error={this.state.institution_error}
                                 className="text_box"
                                 name="institution"
                                 type="text"
                                 placeholder="Amirkabir University of Technology"
                                 onChange={this.handleChange}
+                                inputProps = {{ maxLength: "50" }}
                             />
                         </FormControl>
                         <FormControl required>
                             <InputLabel htmlFor="country">Country</InputLabel>
                             <Select
+                                error={this.state.country_error}
                                 className="text_box"
                                 value={this.state.country}
                                 name="country"
@@ -182,20 +429,269 @@ class OnlineRegister extends React.Component {
                     </div>
                 </div>
                 <br/>
-                <OnlinecontestantFields
-                    memberNumber="1"
-                    contestant={this.contestantChange}
-                />
-                <br/>
-                <OnlinecontestantFields
-                    memberNumber="2"
-                    contestant={this.contestantChange}
-                />
-                <br/>
-                <OnlinecontestantFields
-                    memberNumber="3"
-                    contestant={this.contestantChange}
-                />
+
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #1</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_1_error}
+                            className="text_box"
+                            name="first_name_1"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_1_error}
+                            className="text_box"
+                            name="last_name_1"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_1_error}
+                            className="text_box"
+                            value={this.state.gender_1}
+                            onChange={this.handleChange}
+                            name="gender_1"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_1_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_1"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_1_error}
+                            className="text_box"
+                            value={this.state.edu_level_1}
+                            onChange={this.handleChange}
+                            name="edu_level_1"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_1_error}
+                            className="text_box"
+                            name="email_1"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_1_error}
+                            className="text_box"
+                            name="phone_number_1"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #2</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_2_error}
+                            className="text_box"
+                            name="first_name_2"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_2_error}
+                            className="text_box"
+                            name="last_name_2"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_2_error}
+                            className="text_box"
+                            value={this.state.gender_2}
+                            onChange={this.handleChange}
+                            name="gender_2"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_2_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_2"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_2_error}
+                            className="text_box"
+                            value={this.state.edu_level_2}
+                            onChange={this.handleChange}
+                            name="edu_level_2"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_2_error}
+                            className="text_box"
+                            name="email_2"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_2_error}
+                            className="text_box"
+                            name="phone_number_2"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
+                <div className="contestant_header_box">
+                    <PersonIcon />
+                    <h2 className="contestant_header">Contestant #3</h2>
+                </div>
+                <div className="contestant_box">
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="first_name">First Name</InputLabel>
+                        <Input
+                            error={this.state.first_name_3_error}
+                            className="text_box"
+                            name="first_name_3"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="last_name">Last Name</InputLabel>
+                        <Input
+                            error={this.state.last_name_3_error}
+                            className="text_box"
+                            name="last_name_3"
+                            type="text"
+                            onChange={this.handleChange}
+                            inputProps = {{ maxLength: "30" }}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="gender">Gender</InputLabel>
+                        <Select 
+                            error={this.state.gender_3_error}
+                            className="text_box"
+                            value={this.state.gender_3}
+                            onChange={this.handleChange}
+                            name="gender_3"
+                        >
+                            <MenuItem value={"M"}>Male</MenuItem>
+                            <MenuItem value={"F"}>Female</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="student_number">Student Number</InputLabel>
+                        <Input
+                            error={this.state.student_number_3_error}
+                            className="text_box"
+                            type="number"
+                            name="student_number_3"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required>
+                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
+                        <Select 
+                            error={this.state.edu_level_3_error}
+                            className="text_box"
+                            value={this.state.edu_level_3}
+                            onChange={this.handleChange}
+                            name="edu_level_3"
+                        >
+                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
+                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="email">Email</InputLabel>
+                        <Input
+                            error={this.state.email_3_error}
+                            className="text_box"
+                            name="email_3"
+                            onChange={this.handleChange}
+                            type="email"
+                        />
+                    </FormControl>
+                    <FormControl margin="normal" required >
+                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
+                        <Input
+                            error={this.state.phone_number_3_error}
+                            className="text_box"
+                            name="phone_number_3"
+                            type="number"
+                            placeholder="09121111111"
+                            onChange={this.handleChange}
+                        />
+                    </FormControl>
+                </div>
+
                 <Grid align="center">
                     <div className="contestant_rule_box">
                         <div className="contestant_rule_checkbox">
@@ -247,7 +743,7 @@ class OnlineRegister extends React.Component {
                     </div>
                     <ReCAPTCHA
                         className="recaptcha"
-                        sitekey="telegram group :)"
+                        sitekey="telegram gp :)"
                         onChange={this.onChange}
                     />
                     <Button 
@@ -266,4 +762,4 @@ class OnlineRegister extends React.Component {
     }
 }
 
-export default OnlineRegister
+export default Register
