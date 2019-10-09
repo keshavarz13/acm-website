@@ -12,7 +12,7 @@ class BodyP4 extends React.Component {
     }
 
     fetchCurrentContest = () => {
-        let apiUrl = process.env.REACT_APP_URL;
+        let apiUrl = process.env.REACT_APP_URL || "https://api.icpc.aut.ac.ir";
         console.log(apiUrl)
         apiUrl += "/api/current";
         axios.get(apiUrl).then(res => {
@@ -20,7 +20,7 @@ class BodyP4 extends React.Component {
                 poster: res.data[0].poster,
                 sponsor: res.data[0].sponsor
             }, () => {
-                this.forceUpdate()
+                // this.forceUpdate()
             });
         }).catch(error => {
             console.log(error);
@@ -34,6 +34,7 @@ class BodyP4 extends React.Component {
     }
     
     render() {
+        console.log(this.state)
         return (
             <div className = "part4-container">
                  <div className = "new-poster" >
