@@ -7,7 +7,7 @@ class OnlineRegisterView extends React.Component {
         countries: []
     }
 
-    fetchCountries() {
+    fetchCountries = () => {
         axios.get(process.env.REACT_APP_URL+"/api/countries").then (res => {
             this.setState({
                 countries: res.data

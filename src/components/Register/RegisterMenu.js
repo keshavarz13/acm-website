@@ -65,18 +65,6 @@ export default class RegisterMenu extends React.Component {
         return (
             <div className = "menu-container">
                 <div  className ="card-container" >
-                    <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/onlineRegister">
-                        <div style = {this.state.style1} onMouseEnter={this.onhover} onMouseLeave={this.onleave} className ="register-card">
-                            <div className = "card-image">
-                                <img src = { require("./../../img/online.svg") } width = "200" height = "200"/>
-                            </div>
-                            <div className = "card-text">
-                                <p>
-                                    ONLINE REGISTER
-                                </p>
-                            </div>
-                        </div>
-                    </NavLink>
                     <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/onsiteRegister">
                         <div style = {this.state.style2} onMouseEnter={this.onhover2} onMouseLeave={this.onleave2}   className ="register-card">
                             <div className = "card-image">
@@ -84,7 +72,19 @@ export default class RegisterMenu extends React.Component {
                             </div>  
                             <div className = "card-text">
                                 <p>
-                                    ONSITE REGISTER
+                                    On-Site Register
+                                </p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/onlineRegister">
+                        <div style = {this.state.style1} onMouseEnter={this.onhover} onMouseLeave={this.onleave} className ="register-card">
+                            <div className = "card-image">
+                                <img src = { require("./../../img/online.svg") } width = "200" height = "200"/>
+                            </div>
+                            <div className = "card-text">
+                                <p>
+                                    Online Register
                                 </p>
                             </div>
                         </div>

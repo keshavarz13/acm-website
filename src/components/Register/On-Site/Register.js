@@ -94,6 +94,8 @@ class Register extends React.Component {
         this.CloseLocalRules = this.CloseLocalRules.bind(this)
         this.OpenRegionalRules = this.OpenRegionalRules.bind(this)
         this.CloseRegionalRules = this.CloseRegionalRules.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+        this.onChange = this.onChange.bind(this)
     }
 
     onChange(value) {
@@ -805,7 +807,7 @@ class Register extends React.Component {
                                 onClick={this.OpenRegionalRules}>
                                     Regional Rules 
                             </a> 
-                            and&nbsp;
+                            &nbsp;and&nbsp;
                             <a href="#" 
                                 style={{fontFamily: "inherit", color: "#00b0ff"}} 
                                 onClick={this.OpenLocalRules}>
