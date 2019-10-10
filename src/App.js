@@ -16,8 +16,8 @@ import DeveloperPage from "./components/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegisterView from './components/Register/Online/OnlineRegisterView'
 import PastContestContainer from './components/PastContestContainer'
-import successfulRegistration from "./components/successfulRegistration"
-import successfulRegistration2 from "./components/successfulRegistration2"
+import successfulRegistration from "./components/Register/Successful Registration/successfulRegistration"
+import successfulRegistration2 from "./components/Register/Successful Registration/successfulRegistration2"
 
 
 class App extends React.Component {
