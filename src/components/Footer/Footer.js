@@ -14,7 +14,7 @@ class About extends React.Component {
                         <div className="column1">
                             <a href="https://ceit-ssc.ir">
                                 <img 
-                                    src={require("./../img/ssc-logo.png")} 
+                                    src={require("./../../img/ssc-logo.png")} 
                                     width="300" height="85"
                                 />
                             </a>
@@ -50,11 +50,16 @@ class About extends React.Component {
                    
                 </div>
                 <div className = "deep-footer">
-                    <p>Copyright © 2019 <span><a href = "https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a>.</span> Developed by <span><NavLink onClick = {() => window.scrollTo(0, 0)} exact to="/Rengo">Rengo</NavLink></span> </p>
+                    <p>
+                        Copyright © 2019 <span>
+                            <a href="https://ceit-ssc.ir" target="_blank">AUT CEIT SSC</a>.&nbsp;
+                        </span> 
+                        Developed by <span>
+                            <NavLink onClick = {() => window.scrollTo(0, 0)} exact to="/Rengo">Rengo</NavLink>
+                        </span> 
+                    </p>
                 </div>
-            </div>
-       
-            
+            </div>       
         )
     }
 }

@@ -1,33 +1,33 @@
 import React from "react"
-import "./styles/body-style.css"
+import "./../styles/body-style.css"
 
 class BodyP1 extends React.Component { 
   
     render() {
-        let height = 800 ; 
-        if(window.innerHeight > 800){
-            height = window.innerHeight - 60 ;
+        let height = 800; 
+        if(window.innerHeight > 800) {
+            height = window.innerHeight - 60;
         }
-        if(window.innerWidth < 400 )
+        if(window.innerWidth < 400)
         {
             height = window.innerHeight;
         }
-        return (
+        return(
             <div>
-                <div className= "container2">
+                <div className="container2">
                     <img 
                         className="blur-image" 
-                        src ={ require("./../img/topImage.JPG") } 
+                        src ={require("./../../img/topImage.JPG")} 
                         width="100%" height={height}
                     />
-                    <div className= "dark-layer"></div>
+                    <div className="dark-layer"></div>
                     <div className="banner-container">
-                        <img className="banner1" src ={require("./../img/banner.png")}  />
+                        <img className="banner1" src ={require("./../../img/banner.png")} />
                     </div>
                     <div className="banner-container">
                         <img 
                             className="banner2" 
-                            src={ require("./../img/banner2.png") }  
+                            src={require("./../../img/banner2.png")}  
                         />
                     </div>
                 </div>
@@ -35,6 +35,5 @@ class BodyP1 extends React.Component {
         )
     }
 }
-
 
 export default BodyP1 

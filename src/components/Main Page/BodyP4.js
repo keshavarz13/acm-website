@@ -1,9 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import "./styles/sponsor.css"
+import "./../styles/sponsor.css"
 
 class BodyP4 extends React.Component { 
-
     state = {
         poster: null,
         sponsor: null
@@ -28,7 +27,7 @@ class BodyP4 extends React.Component {
     }
     
     render() {
-        return (
+        return(
             <div className="part4-container">
                  <div className="new-poster" >
                         <img 

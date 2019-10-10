@@ -1,9 +1,9 @@
 import React from "react"
-import "./styles/about.css"
+import "./../styles/about.css"
 
 class About extends React.Component { 
-    render(){
-        return (
+    render() {
+        return(
             <div className = "about-container">
                 <h4>About the ICPC</h4>
                 <div>
@@ -24,10 +24,6 @@ class About extends React.Component {
                         most prestigious programming contest in the world.
                     </p>
                 </div>
-                
-                        
-                
-                
             </div>
         )
     }

@@ -8,23 +8,21 @@ class BodyP2View extends React.Component {
     }
 
     fetchCountdownItem = () => {
-        let apiUrl = process.env.REACT_APP_URL
-        apiUrl = apiUrl +"/api/countdowns/1"
+        let apiUrl = process.env.REACT_APP_URL + "/api/countdowns/1"
         axios.get(apiUrl).then(res => {
             this.setState({
                 countdowns: res.data
-            });
-        });
-    };
+            })
+        })
+    }
 
     componentDidMount() {
-        this.fetchCountdownItem();
+        this.fetchCountdownItem()
     }
 
     render() {
         if (!this.state.countdowns) {
             return <div/>
-
         }
         return (
             <BodyP2 data={this.state.countdowns}></BodyP2>
