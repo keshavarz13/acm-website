@@ -1,30 +1,23 @@
 import React from "react"
 import MapBox from "./MapBox"
-import "./styles/footer-style.css"
+import "./../styles/footer-style.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 import { faTwitter, faTelegram, faGoogle, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-function social ()  { 
-    return(
-        <div>
-               <div className ="social">               
-                    <a href="" className ="social-item"><img src={require ("./../img/domain.svg") }height="30" width = "30" /></a>    
-                    <a href="" className ="social-item"><img src={require ("./../img/telegram.svg")}height="30" width = "30"/></a>    
-                    <a href="" className ="social-item"><img src={require ("./../img/instagram.svg")}height="30" width = "30"/></a>    
-                </div>
-        </div>
-    )
-}
-
 class About extends React.Component { 
     render() {
-        return (
+        return(
             <div>
-                <div className = "footer-container">
-                    <div className = "row2">
-                        <div className = "column1">
-                             <a href = "https://ceit-ssc.ir"><img src = {require("./../img/ssc-logo.png")} width="300" height="85"/></a>
+                <div className="footer-container">
+                    <div className="row2">
+                        <div className="column1">
+                            <a href="https://ceit-ssc.ir">
+                                <img 
+                                    src={require("./../img/ssc-logo.png")} 
+                                    width="300" height="85"
+                                />
+                            </a>
                             <div className="icons">
                                 <div className="social_icon_div">
                                     <a href="mailto:ceit.ssc94@gmail.com" target="_blank">

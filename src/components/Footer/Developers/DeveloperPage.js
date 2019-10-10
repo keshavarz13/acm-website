@@ -1,6 +1,6 @@
 import React from "react"  
 import DeveloperCard from "./DeveloperCard";
-import "./styles/poster.css"
+import "./../../styles/poster.css"
 
 export default class PosterList extends React.Component { 
     render () { 

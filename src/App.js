@@ -4,26 +4,24 @@ import BodyP4 from "./components/BodyP4"
 import Header from "./components/Header"
 import BodyP1 from "./components/BodyP1"
 import About from "./components/About"
-import Footer from "./components/Footer"
+import Footer from "./components/Footer/Footer"
 import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
 import RegisterView from "./components/Register/On-Site/RegisterView"
 import PosterList from "./components/PosterList"
-import PastContest from "./components/PastContest"
 import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
-import DeveloperPage from "./components/DeveloperPage"
+import DeveloperPage from "./components/Footer/Developers/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
 import OnlineRegisterView from './components/Register/Online/OnlineRegisterView'
 import PastContestContainer from './components/PastContestContainer'
 import successfulRegistration from "./components/Register/Successful Registration/successfulRegistration"
 import successfulRegistration2 from "./components/Register/Successful Registration/successfulRegistration2"
 
-
 class App extends React.Component {
     constructor() {
         super() 
-        this.state={
+        this.state = {
             validReq: false, 
         }
         this.pastContestList = this.pastContestList.bind(this)
@@ -48,9 +46,7 @@ class App extends React.Component {
             return(
                 <PosterList pastContestProvider = {this.pastContestProvider} />
             )
-            
         }
-       
     }
 
     pastContestList() {     
@@ -59,7 +55,7 @@ class App extends React.Component {
         )
     }
 
-    home () { 
+    home() { 
         return(
             <div>
                 <BodyP1/>
@@ -72,7 +68,6 @@ class App extends React.Component {
         )
     }
    
-    
     render() {
         return(
             <div>
@@ -88,9 +83,6 @@ class App extends React.Component {
                 <Route exact path="/successfulRegistration" component={successfulRegistration}/>
                 <Route exact path="/successfulRegistration2" component={successfulRegistration2}/>
                 <Footer/> 
-                
-                
-        
             </div>
         )
     }
