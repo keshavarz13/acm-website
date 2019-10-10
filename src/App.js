@@ -8,13 +8,13 @@ import Footer from "./components/Footer"
 import BodyP2View from "./components/BodyP2View"
 import SherBoxContainer from "./components/SherBoxesContainer"
 import TimeLineContainerView from "./components/TimelineContainerView"
-import RegisterView from "./components/Register/RegisterView"
+import RegisterView from "./components/Register/On-Site/RegisterView"
 import PosterList from "./components/PosterList"
 import PastContest from "./components/PastContest"
 import ListOfTeamsStatusView from "./components/ListOfTeamsStatusView"
 import DeveloperPage from "./components/DeveloperPage"
 import RegisterMenu from './components/Register/RegisterMenu'
-import OnlineRegisterView from './components/Register/OnlineRegisterView'
+import OnlineRegisterView from './components/Register/Online/OnlineRegisterView'
 import PastContestContainer from './components/PastContestContainer'
 import successfulRegistration from "./components/successfulRegistration"
 import successfulRegistration2 from "./components/successfulRegistration2"

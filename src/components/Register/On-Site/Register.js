@@ -3,15 +3,16 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, Select, Grid,
          FormControl, Input, InputLabel, MenuItem, Button, Checkbox } from '@material-ui/core';
 import PeopleIcon from '@material-ui/icons/People';
 import ReCAPTCHA from "react-google-recaptcha";
-import "./../styles/register.css"
+import "./../../styles/register.css"
 import axios from 'axios'
-import LocalRules from "./LocalRules"
-import RegionalRules from "./RegionalRules"
+import LocalRules from "../Rules/LocalRules"
+import RegionalRules from "../Rules/RegionalRules"
 import PersonIcon from '@material-ui/icons/Person';
 
 class Register extends React.Component {
     constructor(props) {
         super(props)
+
         this.state = {
             team_name: "",
             team_error: "",
@@ -20,8 +21,11 @@ class Register extends React.Component {
             country: "",
             country_error: "",
             rules: false,
+            local_rules: false,
+            regional_rules: false,
 
-
+            // ### 1 ###
+            //First Contestant Info
             first_name_1: "",
             last_name_1: "",
             gender_1: "",    
@@ -31,6 +35,7 @@ class Register extends React.Component {
             email_1: "",
             phone_number_1: "",
 
+            //First Contestant errors
             first_name_1_error: "",
             last_name_1_error: "",
             gender_1_error: "",
@@ -40,7 +45,8 @@ class Register extends React.Component {
             email_1_error: "",
             phone_number_1_error: "",
 
-
+            // ### 2 ###
+            //Second Contestant Info
             first_name_2: "",
             last_name_2: "",
             gender_2: "",    
@@ -50,6 +56,7 @@ class Register extends React.Component {
             email_2: "",
             phone_number_2: "",
 
+            //Second Contestant errors
             first_name_2_error: "",
             last_name_2_error: "",
             gender_2_error: "",
@@ -59,7 +66,8 @@ class Register extends React.Component {
             email_2_error: "",
             phone_number_2_error: "",
 
-
+            // ### 3 ###
+            //Third Contestant Info
             first_name_3: "",
             last_name_3: "",
             gender_3: "",    
@@ -69,6 +77,7 @@ class Register extends React.Component {
             email_3: "",
             phone_number_3: "",
 
+            //Third Contestant errors
             first_name_3_error: "",
             last_name_3_error: "",
             gender_3_error: "",
@@ -77,10 +86,6 @@ class Register extends React.Component {
             student_number_3_error: "",
             email_3_error: "",
             phone_number_3_error: "",
-            
-            local_rules: false,
-            regional_rules: false,
-
         }
         this.field_alert= "0"
         this.handleChange = this.handleChange.bind(this)
@@ -98,10 +103,11 @@ class Register extends React.Component {
     handleChange(event) {
         this.setState({
             [event.target.name] : event.target.value,
+
             team_error: "",
             institution_error: "",
             country_error: "",
-
+            
             first_name_1_error: "",
             last_name_1_error: "",
             gender_1_error: "",
@@ -128,7 +134,6 @@ class Register extends React.Component {
             student_number_3_error: "",
             email_3_error: "",
             phone_number_3_error: "",
-
         })
         this.field_alert= "0"
     }
@@ -160,7 +165,7 @@ class Register extends React.Component {
         })
     }
 
-    onSubmit = (event) => {
+    onSubmit(event) {
         event.preventDefault();
         if (this.state.rules === true) {
             if(this.state.country == "") {
@@ -374,7 +379,7 @@ class Register extends React.Component {
                         cont1, cont2, cont3
                     ]
                 }
-                console.log(reqBody)
+
                 axios({
                     url : process.env.REACT_APP_URL+"/api/register/team/onsite",
                     method : 'POST',
@@ -386,7 +391,9 @@ class Register extends React.Component {
                     console.log("successful");
                     window.location.replace('/successfulRegistration')                   
                 }).catch(error => {
-                    console.log(error);
+                    console.log("error: " + error);
+                    console.log("error data: " + error.data);
+                    console.log("error response: " + error.response);
                     if(error.response)
                         console.log(error.response);
                 })
@@ -395,12 +402,13 @@ class Register extends React.Component {
         else {
             alert("Please Check Rules!")
         }
-        console.log(this.state.contestant1)
     }
 
     render() {
         return(
-            <form className="register_container" onSubmit={this.onSubmit}>                
+            <form className="register_container" 
+                onSubmit={this.onSubmit}
+            >                
                 <h1 className="register_page_header">OnSite Contest Registration</h1>
                 <h3 className="register_page_second_header">19th Amirkabir International Collegiate Programming Contest - 8th of November 2019</h3>
                 <div className="register_page_p">
@@ -468,7 +476,6 @@ class Register extends React.Component {
                     </div>
                 </div>
                 <br/>
-
 
                 <div className="contestant_header_box">
                     <PersonIcon />
@@ -793,9 +800,17 @@ class Register extends React.Component {
                         </div>       
                         <h4>
                             We have read and accept&nbsp;
-                            <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenRegionalRules}>Regional Rules </a> 
+                            <a href="#" 
+                                style={{fontFamily: "inherit", color: "#00b0ff"}} 
+                                onClick={this.OpenRegionalRules}>
+                                    Regional Rules 
+                            </a> 
                             and&nbsp;
-                            <a href="#" style={{fontFamily: "inherit", color: "#00b0ff"}} onClick={this.OpenLocalRules}>Local Rules</a>.
+                            <a href="#" 
+                                style={{fontFamily: "inherit", color: "#00b0ff"}} 
+                                onClick={this.OpenLocalRules}>
+                                    Local Rules
+                            </a>.
                         </h4>
                         <Dialog
                             open={this.state.regional_rules}
@@ -844,7 +859,7 @@ class Register extends React.Component {
                         type="submit"
                         onClick={this.onSubmit}
                     >
-                        submit
+                        Submit
                     </Button>
                 </Grid>
             </form>
