@@ -18,7 +18,7 @@ function social ()  {
 }
 
 class About extends React.Component { 
-    render(){
+    render() {
         return (
             <div>
                 <div className = "footer-container">

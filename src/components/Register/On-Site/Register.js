@@ -86,6 +86,8 @@ class Register extends React.Component {
             student_number_3_error: "",
             email_3_error: "",
             phone_number_3_error: "",
+
+            recaptcha: "",
         }
         this.field_alert= "0"
         this.handleChange = this.handleChange.bind(this)
@@ -99,7 +101,9 @@ class Register extends React.Component {
     }
 
     onChange(value) {
-        console.log("Captcha value:", value)
+        this.setState({
+            recaptcha: value
+        })
     }
 
     handleChange(event) {
@@ -850,7 +854,7 @@ class Register extends React.Component {
                     </div>
                     <ReCAPTCHA
                         className="recaptcha"
-                        sitekey="telegram gp :)"
+                        sitekey="6LfEJgkUAAAAAOVMfzDA_6E2Mw4jMtjYadVy5upA"
                         onChange={this.onChange}
                     />
                     <Button 
