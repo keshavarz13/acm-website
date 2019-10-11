@@ -1,8 +1,8 @@
 {
-  "name": "acm-website",
+  "name": "acm-icpc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://keshavarz13.github.io/acm-website",
+  "homepage": "https://icpc.aut.ac.ir",
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.55",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
