@@ -169,19 +169,19 @@ class Register extends React.Component {
             if(this.state.email_1 == this.state.email_2 || 
                 this.state.email_1 == this.state.email_3 || 
                 this.state.email_3 == this.state.email_2) {
-                this.errors += "You have entered duplicate Email!\n"
+                this.errors += "You have entered duplicate Email!"
             }
 
             if(this.state.student_number_1 == this.state.student_number_2 || 
                 this.state.student_number_1 == this.state.student_number_3 || 
                 this.state.student_number_2 == this.state.student_number_3) {
-                    this.errors += "You have entered duplicate Student Number!\n"
+                    this.errors += "\nYou have entered duplicate Student Number!"
             }
 
             if(this.state.phone_number_1 == this.state.phone_number_2 || 
                 this.state.phone_number_1 == this.state.phone_number_3 || 
                 this.state.phone_number_2 == this.state.phone_number_3) {
-                    this.errors += "You have entered duplicate Phone Number!\n"
+                    this.errors += "\nYou have entered duplicate Phone Number!"
             }
 
             if(this.state.country == "") {
@@ -338,7 +338,7 @@ class Register extends React.Component {
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
             }
-            if(this.state.errors != "") {
+            else if(this.state.errors != "") {
                 alert(this.errors)
             }
             
@@ -390,9 +390,12 @@ class Register extends React.Component {
                     console.log("successful");
                     window.location.replace('/successfulRegistration2')                   
                 }).catch(error => {
-                    console.log(error);
-                    if(error.response)
+                    if(error.response) {
                         console.log(error.response);
+                        console.log("error status: " + error.response.status);
+                        console.log("error data: " + error.response.data);
+                        console.log("error headers: " + error.response.headers);
+                    }
                 })
             }
         }
