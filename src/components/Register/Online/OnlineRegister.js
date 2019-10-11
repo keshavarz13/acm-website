@@ -163,6 +163,11 @@ class Register extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         if (this.state.rules === true) {
+
+            if(this.state.email_1 == this.state.email_2 || this.state.email_1 == this.state.email_3 || this.state.email_3 == this.state.email_2) {
+                alert("You have entered duplicate email!")
+            }
+
             if(this.state.country == "") {
                 this.setState({
                     country_error: "error",
@@ -316,10 +321,6 @@ class Register extends React.Component {
 
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
-            }
-
-            if(this.state.email_1 == this.state.email_2 || this.state.email_1 == this.state.email_3 || this.state.email_3 == this.state.email_2) {
-                alert("You have entered duplicate email!")
             }
             
             else {
