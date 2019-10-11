@@ -317,6 +317,10 @@ class Register extends React.Component {
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
             }
+
+            if(this.state.email_1 == this.state.email_2 || this.state.email_1 == this.state.email_3 || this.state.email_3 == this.state.email_2) {
+                alert("You have entered duplicate email!")
+            }
             
             else {
                 const cont1 = {
