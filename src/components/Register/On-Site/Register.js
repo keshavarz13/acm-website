@@ -89,7 +89,8 @@ class Register extends React.Component {
 
             recaptcha: "",
         }
-        this.field_alert= "0"
+        this.field_alert = "0"
+        this.errors = ""
         this.handleChange = this.handleChange.bind(this)
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.OpenLocalRules = this.OpenLocalRules.bind(this)
@@ -142,6 +143,7 @@ class Register extends React.Component {
             phone_number_3_error: "",
         })
         this.field_alert= "0"
+        this.errors= ""
     }
 
     OpenLocalRules() {
@@ -174,9 +176,23 @@ class Register extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         if (this.state.rules === true) {
-            
-            if(this.state.email_1 == this.state.email_2 || this.state.email_1 == this.state.email_3 || this.state.email_3 == this.state.email_2) {
-                alert("You have entered duplicate email!")
+
+            if(this.state.email_1 == this.state.email_2 || 
+                this.state.email_1 == this.state.email_3 || 
+                this.state.email_3 == this.state.email_2) {
+                this.errors += "You have entered duplicate Email!\n"
+            }
+
+            if(this.state.student_number_1 == this.state.student_number_2 || 
+                this.state.student_number_1 == this.state.student_number_3 || 
+                this.state.student_number_2 == this.state.student_number_3) {
+                    this.errors += "You have entered duplicate Student Number!\n"
+            }
+
+            if(this.state.phone_number_1 == this.state.phone_number_2 || 
+                this.state.phone_number_1 == this.state.phone_number_3 || 
+                this.state.phone_number_2 == this.state.phone_number_3) {
+                    this.errors += "You have entered duplicate Phone Number!\n"
             }
 
             if(this.state.country == "") {
@@ -351,7 +367,9 @@ class Register extends React.Component {
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
             }
-
+            if(this.state.errors != "") {
+                alert(this.errors)
+            }
             
             
             else {
