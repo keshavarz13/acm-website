@@ -90,7 +90,8 @@ class Register extends React.Component {
             recaptcha: "",
         }
         this.field_alert = "0"
-        this.errors = "0"
+        this.duplication_error_string = ""
+        this.duplication_error_string_alert = "0"
         this.handleChange = this.handleChange.bind(this)
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.OpenLocalRules = this.OpenLocalRules.bind(this)
@@ -143,7 +144,8 @@ class Register extends React.Component {
             phone_number_3_error: "",
         })
         this.field_alert= "0"
-        this.errors= "0"
+        this.duplication_error_string= ""
+        this.duplication_error_string_alert="0"
     }
 
     OpenLocalRules() {
@@ -176,23 +178,25 @@ class Register extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         if (this.state.rules === true) {
-
             if(this.state.email_1 == this.state.email_2 || 
                 this.state.email_1 == this.state.email_3 || 
                 this.state.email_3 == this.state.email_2) {
-                this.errors += "You have entered duplicate Email!"
+                this.duplication_error_string = "You have entered duplicate Email!"
+                this.duplication_error_string_alert = "1"
             }
 
             if(this.state.student_number_1 == this.state.student_number_2 || 
                 this.state.student_number_1 == this.state.student_number_3 || 
                 this.state.student_number_2 == this.state.student_number_3) {
-                    this.errors += "\nYou have entered duplicate Student Number!"
+                    this.duplication_error_string += "\nYou have entered duplicate Student Number!"
+                    this.duplication_error_string_alert = "1"
             }
 
             if(this.state.phone_number_1 == this.state.phone_number_2 || 
                 this.state.phone_number_1 == this.state.phone_number_3 || 
                 this.state.phone_number_2 == this.state.phone_number_3) {
-                    this.errors += "\nYou have entered duplicate Phone Number!\n"
+                    this.duplication_error_string += "\nYou have entered duplicate Phone Number!"
+                    this.duplication_error_string_alert = "1"
             }
 
             if(this.state.country == "") {
@@ -367,8 +371,8 @@ class Register extends React.Component {
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
             }
-            else if(!(this.state.errors == "0")) {
-                alert(this.errors)
+            else if(this.duplication_error_string_alert == "1") {
+                alert(this.duplication_error_string)
             }
             
             else {
@@ -423,9 +427,7 @@ class Register extends React.Component {
                 }).catch(error => {
                     if(error.response) {
                         console.log(error.response);
-                        console.log("error status: " + error.response.status);
-                        console.log("error data: " + error.response.data);
-                        console.log("error headers: " + error.response.headers);
+                        alert(error.response.data);
                     }
                 })
             }
