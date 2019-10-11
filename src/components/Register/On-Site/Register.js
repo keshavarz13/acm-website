@@ -90,7 +90,7 @@ class Register extends React.Component {
             recaptcha: "",
         }
         this.field_alert = "0"
-        this.errors = ""
+        this.errors = "0"
         this.handleChange = this.handleChange.bind(this)
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.OpenLocalRules = this.OpenLocalRules.bind(this)
@@ -143,7 +143,7 @@ class Register extends React.Component {
             phone_number_3_error: "",
         })
         this.field_alert= "0"
-        this.errors= ""
+        this.errors= "0"
     }
 
     OpenLocalRules() {
@@ -367,7 +367,7 @@ class Register extends React.Component {
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
             }
-            else if(this.state.errors != "") {
+            else if(!(this.state.errors == "0")) {
                 alert(this.errors)
             }
             
