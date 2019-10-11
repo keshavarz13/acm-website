@@ -409,6 +409,7 @@ class Register extends React.Component {
                 const reqBody = {
                     name: this.state.team_name,
                     institution: this.state.institution,
+                    recaptcha: this.state.recaptcha,
                     contestants : [
                         cont1, cont2, cont3
                     ]
