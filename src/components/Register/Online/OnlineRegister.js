@@ -349,6 +349,7 @@ class Register extends React.Component {
                 const reqBody = {
                     name: this.state.team_name,
                     institution: this.state.institution,
+                    country: this.state.country,
                     contestants : [
                         cont1, cont2, cont3
                     ]
