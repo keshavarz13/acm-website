@@ -132,9 +132,9 @@ class Register extends React.Component {
             email_3_error: "",
             phone_number_3_error: "",
         })
-        this.field_alert= "0"
-        this.duplication_error_string= ""
-        this.duplication_error_string_alert="0"
+        this.field_alert = "0"
+        this.duplication_error_string = ""
+        this.duplication_error_string_alert = "0"
     }
 
     OpenLocalRules() {
@@ -396,7 +396,6 @@ class Register extends React.Component {
                 }).catch(error => {
                     if(error.response) {
                         console.log(error.response);
-                        alert(error.response.data);
                     }
                 })
             }
