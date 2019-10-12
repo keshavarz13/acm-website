@@ -109,6 +109,7 @@ class Register extends React.Component {
     }
 
     handleChange(event) {
+        console.log(event.target)
         this.setState({
             [event.target.name] : event.target.value,
 
@@ -598,6 +599,7 @@ class Register extends React.Component {
                             className="text_box"
                             name="email_1"
                             onChange={this.handleChange}
+                            inputProps = {{ maxLength: "100" }}
                             type="email"
                         />
                     </FormControl>
@@ -702,6 +704,7 @@ class Register extends React.Component {
                             className="text_box"
                             name="email_2"
                             onChange={this.handleChange}
+                            inputProps = {{ maxLength: "100" }}
                             type="email"
                         />
                     </FormControl>
@@ -805,6 +808,7 @@ class Register extends React.Component {
                             error={this.state.email_3_error}
                             className="text_box"
                             name="email_3"
+                            inputProps = {{ maxLength: "100" }}
                             onChange={this.handleChange}
                             type="email"
                         />

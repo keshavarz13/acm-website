@@ -541,6 +541,7 @@ class Register extends React.Component {
                             className="text_box"
                             name="email_1"
                             onChange={this.handleChange}
+                            inputProps = {{ maxLength: "100" }}
                             type="email"
                         />
                     </FormControl>
@@ -628,6 +629,7 @@ class Register extends React.Component {
                             className="text_box"
                             name="email_2"
                             onChange={this.handleChange}
+                            inputProps = {{ maxLength: "100" }}
                             type="email"
                         />
                     </FormControl>
@@ -715,6 +717,7 @@ class Register extends React.Component {
                             className="text_box"
                             name="email_3"
                             onChange={this.handleChange}
+                            inputProps = {{ maxLength: "100" }}
                             type="email"
                         />
                     </FormControl>
