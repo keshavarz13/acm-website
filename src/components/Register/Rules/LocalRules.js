@@ -34,16 +34,14 @@ function LocalRules() {
 
                 <h4>Development Tools:</h4>
                     CodeBlocks 16.01<br/>
-                    intellij idea community 2017.3<br/>
+                    Intellij idea community 2017.3<br/>
 
                 <h4>Editors:</h4>
                     vim 7.14.1689<br/>
-                    visual studio code 1.18.1<br/>
+                    Visual Studio Code 1.18.1<br/>
                     sublime text build 3126<br/>
-                    kdevelop 4.7.3<br/>
                     kate 15.12.3<br/>
                     gvim 7.14.1689<br/>
-                    Geany 1.2.7<br/>
                     gedit 3.18.3<br/>
                     emacs 24.5.1<br/>
 

@@ -838,12 +838,12 @@ class Register extends React.Component {
                             />     
                         </div>       
                         <h4>
-                            We have read and accept&nbsp;
+                            We have read and accepted&nbsp;
                             <a href="#" 
                                 style={{fontFamily: "inherit", color: "#00b0ff"}} 
                                 onClick={this.OpenRegionalRules}>
                                     Regional Rules 
-                            </a> 
+                            </a>
                             &nbsp;and&nbsp;
                             <a href="#" 
                                 style={{fontFamily: "inherit", color: "#00b0ff"}} 
