@@ -10,7 +10,6 @@ import RegionalRules from "../Rules/RegionalRules"
 import PersonIcon from '@material-ui/icons/Person';
 import validator from 'validator';
 
-
 class Register extends React.Component {
     constructor(props) {
         super(props)
