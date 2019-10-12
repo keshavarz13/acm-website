@@ -18,8 +18,6 @@ class Register extends React.Component {
             team_error: "",
             institution: "",
             institution_error: "",
-            country: "",
-            country_error: "",
             rules: false,
             local_rules: false,
             regional_rules: false,
@@ -115,7 +113,6 @@ class Register extends React.Component {
 
             team_error: "",
             institution_error: "",
-            country_error: "",
             
             first_name_1_error: "",
             last_name_1_error: "",
@@ -200,12 +197,7 @@ class Register extends React.Component {
                     this.duplication_error_string_alert = "1"
             }
 
-            if(this.state.country == "") {
-                this.setState({
-                    country_error: "error",
-                })
-                this.field_alert = "1"
-            }
+
             if(this.state.team_name == "") {
                 this.setState({
                     team_error: "error",
@@ -489,23 +481,6 @@ class Register extends React.Component {
                                 onChange={this.handleChange}
                                 inputProps = {{ maxLength: "50" }}
                             />
-                        </FormControl>
-                        <FormControl required>
-                            <InputLabel htmlFor="country">Country</InputLabel>
-                            <Select
-                                error={this.state.country_error}
-                                className="text_box"
-                                value={this.state.country}
-                                name="country"
-                                onChange={this.handleChange}
-                            >
-                                {this.props.data.map(item => (
-                                        <MenuItem value={item}>
-                                            {item.name}
-                                        </MenuItem>
-                                    ))
-                                }
-                            </Select>
                         </FormControl>
                     </div>
                 </div>
