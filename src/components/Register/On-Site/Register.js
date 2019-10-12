@@ -8,6 +8,8 @@ import axios from 'axios'
 import LocalRules from "../Rules/LocalRules"
 import RegionalRules from "../Rules/RegionalRules"
 import PersonIcon from '@material-ui/icons/Person';
+import validator from 'validator';
+
 
 class Register extends React.Component {
     constructor(props) {
@@ -175,10 +177,36 @@ class Register extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         if (this.state.rules === true) {
+            if(!validator.isEmail(this.state.email_1)) {
+                this.duplication_error_string = "Contestant #1 email is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+            if(!validator.isEmail(this.state.email_2)) {
+                this.duplication_error_string += "\nContestant #2 email is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+            if(!validator.isEmail(this.state.email_3)) {
+                this.duplication_error_string += "\nContestant #3 email is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+
+            if(!validator.isMobilePhone(this.state.phone_number_1, 'fa-IR')) {
+                this.duplication_error_string += "\nContestant #1 Phone Number is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+            if(!validator.isMobilePhone(this.state.phone_number_2, 'fa-IR')) {
+                this.duplication_error_string += "\nContestant #2 Phone Number is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+            if(!validator.isMobilePhone(this.state.phone_number_3, 'fa-IR')) {
+                this.duplication_error_string += "\nContestant #3 Phone Number is invalid!"
+                this.duplication_error_string_alert = "1"
+            }
+
             if(this.state.email_1 == this.state.email_2 || 
                 this.state.email_1 == this.state.email_3 || 
                 this.state.email_3 == this.state.email_2) {
-                this.duplication_error_string = "You have entered duplicate Email!"
+                this.duplication_error_string += "\nYou have entered duplicate Email!"
                 this.duplication_error_string_alert = "1"
             }
 
