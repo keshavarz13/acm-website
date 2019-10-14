@@ -106,7 +106,7 @@ class PastContest extends React.Component {
                 </div>
 
                 <div className="photo-wall">
-                    <Gallery images = {[].concat(this.state.other).concat(this.state.staffs).concat(this.state.teams)} staffs = {this.state.staffs} other = {this.state.other} teams = {this.state.teams}/>
+                    <Gallery images = {[].concat(this.state.other).concat(this.state.teams).concat(this.state.staffs)} staffs = {this.state.staffs} other = {this.state.other} teams = {this.state.teams}/>
                 </div>
                 <h1></h1>
                 
