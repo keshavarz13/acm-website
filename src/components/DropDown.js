@@ -27,11 +27,10 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}><NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/">Home</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/Register">Register</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/PastResult">Past Results</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink onClick={() => window.scrollTo(0, 0)} className="nav-link" exact to="/status">Registration Status</NavLink></MenuItem>
-        
+        <NavLink onClick={() => window.scrollTo(0, 0)} exact to="/" className="nav-links"><MenuItem onClick={handleClose} className="nav-link">Home</MenuItem></NavLink>
+        <NavLink onClick={() => window.scrollTo(0, 0)} exact to="/Register" className="nav-links"><MenuItem onClick={handleClose} className="nav-link">Register</MenuItem></NavLink>
+        <NavLink onClick={() => window.scrollTo(0, 0)} exact to="/PastResult" className="nav-links"><MenuItem onClick={handleClose} className="nav-link">Past Results</MenuItem></NavLink>
+        <NavLink onClick={() => window.scrollTo(0, 0)} exact to="/status" className="nav-links"><MenuItem onClick={handleClose} className="nav-link">Registration Status</MenuItem></NavLink>
       </Menu>
     </div>
   );

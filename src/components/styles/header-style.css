@@ -34,6 +34,11 @@
 
 }
 
+.nav-links {
+    text-decoration: none ; 
+    color: black;
+}
+
 .nav-link {
     text-decoration: none ; 
     color: black;
