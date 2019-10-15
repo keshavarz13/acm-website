@@ -29,21 +29,21 @@ function LocalRules() {
                     Javac (JDK version 1.8)<br/>
                     g++ 5.4<br/>
                     gcc 5.4<br/>
-                    python 2.7.12<br/>
-                    python 3.5.2<br/>
+                    python 2.7<br/>
+                    python 3.5<br/>
 
                 <h4>Development Tools:</h4>
-                    CodeBlocks 16.01<br/>
-                    Intellij idea community 2017.3<br/>
+                    CodeBlocks 13<br/>
+                    Intellij idea Community 2017 (with Python Extension)<br/>
 
                 <h4>Editors:</h4>
-                    vim 7.14.1689<br/>
+                    vim 7.4<br/>
                     Visual Studio Code 1.18.1<br/>
-                    sublime text build 3126<br/>
-                    kate 15.12.3<br/>
-                    gvim 7.14.1689<br/>
-                    gedit 3.18.3<br/>
-                    emacs 24.5.1<br/>
+                    sublime text <br/>
+                    kate 15.12<br/>
+                    gvim 7.4<br/>
+                    gedit 3.18<br/>
+                    emacs 24.5<br/>
 
                 <h4>Contest Environment:</h4>
                     DOMJudge 5.2(<a href="http://www.domjudge.org/docs/team-manual.pdf">DOMJudge Team Guide</a>)
