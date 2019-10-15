@@ -97,7 +97,7 @@ class Gallery extends React.Component {
                 </div>
 
                 <div className = "tabs">
-                        <p style ={this.state.style1} onClick = {()=>{this.setState({images : [].concat(this.props.staffs).concat(this.props.other).concat(this.props.teams),Pindex : 0 ,
+                        <p style ={this.state.style1} onClick = {()=>{this.setState({images : [].concat(this.props.other).concat(this.props.staffs).concat(this.props.teams),Pindex : 0 ,
                         style1 : {
                             backgroundColor : "#2f5725"
                         },
