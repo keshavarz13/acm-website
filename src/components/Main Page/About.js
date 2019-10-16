@@ -8,20 +8,18 @@ class About extends React.Component {
                 <h4>About the ICPC</h4>
                 <div>
                     <p>
-                        The ACM (Association for Computing Machinery) International Collegiate Programming Contest (ICPC) traces
-                        its roots to a competition held at Texas A&M in 1970 hosted by the Alpha Chapter of the UPE Computer
-                        Science Honor Society. The idea quickly gained popularity within the United States and Canada as an
-                        innovative initiative to assist in the development of top students in the emerging field of computer
-                        science.
-                        <br/>The contest evolved into a multi-tier competition with the first Finals held at the ACM Computer Science
-                        Conference in 1977. Headquartered at Baylor University since the 1980s, the contest has expanded into a
-                        global network of universities hosting regional competitions that advance teams to the World Finals.
-                        <br/>Since IBM began its sponsorship of the ACM-ICPC World Finals in 1997, the contest has increased by a
-                        factor of 7.5. Participation has grown to involve several tens of thousands of the finest students and
-                        faculty in computing disciplines at 1,756 universities from 82 countries on six continents.
-                        <br/>The contest fosters creativity, teamwork, and innovation in building new software programs, and enables
-                        students to test their ability to perform under pressure. Quite simply, it is the oldest, largest, and
-                        most prestigious programming contest in the world.
+                        The ICPC traces its roots to 1970 when the first competition was hosted by pioneers of 
+                        the Alpha Chapter of the UPE Computer Science Honor Society. The initiative spread 
+                        quickly within the United States and Canada as an innovative program to raise increase 
+                        ambition, problem-solving aptitude, and opportunities of the strongest students in the field of computing.<br/>
+                        Over time, the contest evolved into a multi-tier competition with the first championship round conducted in 1977. 
+                        Since then, the contest has expanded into a worldwide collaborative of universities hosting regional competitions 
+                        that advance teams to the annual global championship round, the ICPC World Finals.<br/>
+                        The International Collegiate Programming Contest (ICPC) is the premier global programming competition conducted 
+                        by and for the world’s universities. The ICPC is affiliated with the ICPC Foundation and is headquartered at Baylor University.<br/>
+                        The contest fosters creativity, teamwork, and innovation in building new software programs, 
+                        and enables students to test their ability to perform under pressure. The contest has raised 
+                        aspirations and performance of generations of the world’s problem solvers in the computing sciences and engineering.
                     </p>
                 </div>
             </div>
