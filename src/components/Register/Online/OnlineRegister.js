@@ -181,19 +181,6 @@ class Register extends React.Component {
                 this.duplication_error_string_alert = "1"
             }
 
-            if(!validator.isMobilePhone(this.state.phone_number_1, 'fa-IR')) {
-                this.duplication_error_string += "\nContestant #1 Phone Number is invalid!"
-                this.duplication_error_string_alert = "1"
-            }
-            if(!validator.isMobilePhone(this.state.phone_number_2, 'fa-IR')) {
-                this.duplication_error_string += "\nContestant #2 Phone Number is invalid!"
-                this.duplication_error_string_alert = "1"
-            }
-            if(!validator.isMobilePhone(this.state.phone_number_3, 'fa-IR')) {
-                this.duplication_error_string += "\nContestant #3 Phone Number is invalid!"
-                this.duplication_error_string_alert = "1"
-            }
-
             if(this.state.email_1 == this.state.email_2 || 
                 this.state.email_1 == this.state.email_3 || 
                 this.state.email_3 == this.state.email_2) {
@@ -205,13 +192,6 @@ class Register extends React.Component {
                 this.state.student_number_1 == this.state.student_number_3 || 
                 this.state.student_number_2 == this.state.student_number_3) {
                     this.duplication_error_string += "\nYou have entered duplicate Student Number!"
-                    this.duplication_error_string_alert = "1"
-            }
-
-            if(this.state.phone_number_1 == this.state.phone_number_2 || 
-                this.state.phone_number_1 == this.state.phone_number_3 || 
-                this.state.phone_number_2 == this.state.phone_number_3) {
-                    this.duplication_error_string += "\nYou have entered duplicate Phone Number!"
                     this.duplication_error_string_alert = "1"
             }
 
@@ -271,12 +251,6 @@ class Register extends React.Component {
                 })
                 this.field_alert = "1"
             }
-            if(this.state.phone_number_1 == "") {
-                this.setState({
-                    phone_number_1_error: "error",
-                })
-                this.field_alert = "1"
-            }
 
 
             if(this.state.first_name_2 == "") {
@@ -312,12 +286,6 @@ class Register extends React.Component {
             if(this.state.email_2 == "") {
                 this.setState({
                     email_2_error: "error",
-                })
-                this.field_alert = "1"
-            }
-            if(this.state.phone_number_2 == "") {
-                this.setState({
-                    phone_number_2_error: "error",
                 })
                 this.field_alert = "1"
             }
@@ -359,12 +327,7 @@ class Register extends React.Component {
                 })
                 this.field_alert = "1"
             }
-            if(this.state.phone_number_3 == "") {
-                this.setState({
-                    phone_number_3_error: "error",
-                })
-                this.field_alert = "1"
-            }
+
 
             if(this.field_alert == "1") {
                 alert("Please fill empty fields!")
@@ -572,17 +535,6 @@ class Register extends React.Component {
                             type="email"
                         />
                     </FormControl>
-                    <FormControl margin="normal" required >
-                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
-                        <Input
-                            error={this.state.phone_number_1_error}
-                            className="text_box"
-                            name="phone_number_1"
-                            type="number"
-                            placeholder="09121111111"
-                            onChange={this.handleChange}
-                        />
-                    </FormControl>
                 </div>
 
                 <div className="contestant_header_box">
@@ -660,17 +612,6 @@ class Register extends React.Component {
                             type="email"
                         />
                     </FormControl>
-                    <FormControl margin="normal" required >
-                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
-                        <Input
-                            error={this.state.phone_number_2_error}
-                            className="text_box"
-                            name="phone_number_2"
-                            type="number"
-                            placeholder="09121111111"
-                            onChange={this.handleChange}
-                        />
-                    </FormControl>
                 </div>
 
                 <div className="contestant_header_box">
@@ -746,17 +687,6 @@ class Register extends React.Component {
                             onChange={this.handleChange}
                             inputProps = {{ maxLength: "100" }}
                             type="email"
-                        />
-                    </FormControl>
-                    <FormControl margin="normal" required >
-                        <InputLabel htmlFor="phone_number">Phone Number</InputLabel>
-                        <Input
-                            error={this.state.phone_number_3_error}
-                            className="text_box"
-                            name="phone_number_3"
-                            type="number"
-                            placeholder="09121111111"
-                            onChange={this.handleChange}
                         />
                     </FormControl>
                 </div>
