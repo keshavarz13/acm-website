@@ -66,8 +66,11 @@ export default class RegisterMenu extends React.Component {
             <div className="menu-container">
                 <div className="card-container" >
                     <NavLink className="nav-link"
-                        onClick={() => window.scrollTo(0, 0)}  
-                        exact to="/onsiteRegister"
+                        onClick={() => 
+                            alert("On-Site Registration has been Closed! You can register in Online contest.")
+                        }  
+                        // onClick={() => window.scrollTo(0, 0)}  
+                        // exact to="/onsiteRegister"
                     >
                         <div className ="register-card"
                             onMouseEnter={this.onhover2} 
