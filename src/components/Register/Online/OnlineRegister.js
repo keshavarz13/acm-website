@@ -24,57 +24,45 @@ class Register extends React.Component {
             first_name_1: "",
             last_name_1: "",
             gender_1: "",    
-            edu_level_1: "",
             student_number_1: "",
             email_1: "",
-            phone_number_1: "",
 
             //First Contestant errors
             first_name_1_error: "",
             last_name_1_error: "",
             gender_1_error: "",
-            edu_level_1_error: "",
             student_number_1_error: "",
             email_1_error: "",
-            phone_number_1_error: "",
 
             // ### 2 ###
             //Second Contestant Info
             first_name_2: "",
             last_name_2: "",
             gender_2: "",    
-            edu_level_2: "",
             student_number_2: "",
             email_2: "",
-            phone_number_2: "",
 
             //Second Contestant errors
             first_name_2_error: "",
             last_name_2_error: "",
             gender_2_error: "",
-            edu_level_2_error: "",
             student_number_2_error: "",
             email_2_error: "",
-            phone_number_2_error: "",
 
             // ### 3 ###
             //Third Contestant Info
             first_name_3: "",
             last_name_3: "",
             gender_3: "",    
-            edu_level_3: "",
             student_number_3: "",
             email_3: "",
-            phone_number_3: "",
 
             //Third Contestant errors
             first_name_3_error: "",
             last_name_3_error: "",
             gender_3_error: "",
-            edu_level_3_error: "",
             student_number_3_error: "",
             email_3_error: "",
-            phone_number_3_error: "",
 
             recaptcha: "",
         }
@@ -82,7 +70,6 @@ class Register extends React.Component {
         this.duplication_error_string= ""
         this.duplication_error_string_alert="0"
         this.handleChange = this.handleChange.bind(this)
-        this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
         this.onChange = this.onChange.bind(this)
     }
@@ -103,26 +90,20 @@ class Register extends React.Component {
             first_name_1_error: "",
             last_name_1_error: "",
             gender_1_error: "",
-            edu_level_1_error: "",
             student_number_1_error: "",
             email_1_error: "",
-            phone_number_1_error: "",
 
             first_name_2_error: "",
             last_name_2_error: "",
             gender_2_error: "",
-            edu_level_2_error: "",
             student_number_2_error: "",
             email_2_error: "",
-            phone_number_2_error: "",
 
             first_name_3_error: "",
             last_name_3_error: "",
             gender_3_error: "",
-            edu_level_3_error: "",
             student_number_3_error: "",
             email_3_error: "",
-            phone_number_3_error: "",
         })
         this.field_alert = "0"
         this.duplication_error_string = ""
@@ -196,12 +177,6 @@ class Register extends React.Component {
             })
             this.field_alert = "1"
         }
-        if(this.state.edu_level_1 == "") {
-            this.setState({
-                edu_level_1_error: "error",
-            })
-            this.field_alert = "1"
-        }
         if(this.state.student_number_1 == "") {
             this.setState({
                 student_number_1_error: "error",
@@ -231,12 +206,6 @@ class Register extends React.Component {
         if(this.state.gender_2 == "") {
             this.setState({
                 gender_2_error: "error",
-            })
-            this.field_alert = "1"
-        }
-        if(this.state.edu_level_2 == "") {
-            this.setState({
-                edu_level_2_error: "error",
             })
             this.field_alert = "1"
         }
@@ -272,12 +241,6 @@ class Register extends React.Component {
             })
             this.field_alert = "1"
         }
-        if(this.state.edu_level_3 == "") {
-            this.setState({
-                edu_level_3_error: "error",
-            })
-            this.field_alert = "1"
-        }
         if(this.state.student_number_3 == "") {
             this.setState({
                 student_number_3_error: "error",
@@ -304,28 +267,22 @@ class Register extends React.Component {
                 first_name: this.state.first_name_1,
                 last_name: this.state.last_name_1,
                 gender: this.state.gender_1,    
-                edu_level: this.state.edu_level_1,
                 student_number: this.state.student_number_1,
                 email: this.state.email_1,
-                phone_number: this.state.phone_number_1,
             }
             const cont2 = {
                 first_name: this.state.first_name_2,
                 last_name: this.state.last_name_2,
                 gender: this.state.gender_2,    
-                edu_level: this.state.edu_level_2,
                 student_number: this.state.student_number_2,
                 email: this.state.email_2,
-                phone_number: this.state.phone_number_2,
             }
             const cont3 = {
                 first_name: this.state.first_name_3,
                 last_name: this.state.last_name_3,
                 gender: this.state.gender_3,    
-                edu_level: this.state.edu_level_3,
                 student_number: this.state.student_number_3,
                 email: this.state.email_3,
-                phone_number: this.state.phone_number_3,
             }
             const reqBody = {
                 name: this.state.team_name,
@@ -469,19 +426,6 @@ class Register extends React.Component {
                             onChange={this.handleChange}
                         />
                     </FormControl>
-                    <FormControl margin="normal" required>
-                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
-                        <Select 
-                            error={this.state.edu_level_1_error}
-                            className="text_box"
-                            value={this.state.edu_level_1}
-                            onChange={this.handleChange}
-                            name="edu_level_1"
-                        >
-                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
-                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
-                        </Select>
-                    </FormControl>
 
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="email">Email</InputLabel>
@@ -546,19 +490,6 @@ class Register extends React.Component {
                             onChange={this.handleChange}
                         />
                     </FormControl>
-                    <FormControl margin="normal" required>
-                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
-                        <Select 
-                            error={this.state.edu_level_2_error}
-                            className="text_box"
-                            value={this.state.edu_level_2}
-                            onChange={this.handleChange}
-                            name="edu_level_2"
-                        >
-                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
-                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
-                        </Select>
-                    </FormControl>
 
                     <FormControl margin="normal" required >
                         <InputLabel htmlFor="email">Email</InputLabel>
@@ -622,19 +553,6 @@ class Register extends React.Component {
                             name="student_number_3"
                             onChange={this.handleChange}
                         />
-                    </FormControl>
-                    <FormControl margin="normal" required>
-                        <InputLabel htmlFor="edu_level">Current Educational Level</InputLabel>
-                        <Select 
-                            error={this.state.edu_level_3_error}
-                            className="text_box"
-                            value={this.state.edu_level_3}
-                            onChange={this.handleChange}
-                            name="edu_level_3"
-                        >
-                            <MenuItem value={"BSC"}>Undergraduate(BSc.)</MenuItem>
-                            <MenuItem value={"MSC"}>Graduate(MSc.)</MenuItem>
-                        </Select>
                     </FormControl>
 
                     <FormControl margin="normal" required >
