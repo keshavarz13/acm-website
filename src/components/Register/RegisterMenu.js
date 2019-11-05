@@ -90,8 +90,11 @@ export default class RegisterMenu extends React.Component {
                         </div>
                     </NavLink>
                     <NavLink className="nav-link"
-                        onClick={() => window.scrollTo(0, 0)} 
-                        exact to="/onlineRegister"
+                        onClick={() => 
+                            alert("Registration has been Closed!")
+                        } 
+                        // onClick={() => window.scrollTo(0, 0)} 
+                        // exact to="/onlineRegister"
                     >
                         <div className ="register-card"
                             style={this.state.style1} 
