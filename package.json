@@ -22,7 +22,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "validator": "^11.1.0",
+    "validator": "^13.7.0",
     "vertical-timeline-component-for-react": "^1.0.6"
   },
   "scripts": {
